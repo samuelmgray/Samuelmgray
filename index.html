@@ -513,9 +513,38 @@
 
     .book-card:hover::before { opacity: 1; }
 
+    .book-cover-image {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .book-cover-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s ease;
+    }
+
+    .book-card:hover .book-cover-image img {
+      transform: scale(1.03);
+    }
+
+    .book-cover-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--black));
+    }
+
     .book-cover-placeholder {
       width: 100%;
-      height: 180px;
+      height: 280px;
       background: linear-gradient(135deg, var(--anthracite) 0%, var(--dark-gray) 50%, var(--anthracite) 100%);
       display: flex;
       align-items: center;
@@ -535,6 +564,12 @@
       font-size: 4rem;
       font-weight: 400;
       color: rgba(139, 115, 85, 0.12);
+      font-style: italic;
+    }
+
+    .coming-soon-badge {
+      opacity: 1 !important;
+      color: var(--crimson-light) !important;
       font-style: italic;
     }
 
@@ -1164,16 +1199,21 @@
       <div class="section-divider"></div>
       <div class="story-preview">
         <div class="story-meta">
-          <h3 class="story-meta-title">The Arrangement</h3>
-          <p class="story-meta-subtitle">Erotic Thriller — Excerpt</p>
+          <h3 class="story-meta-title">Flight SK4481</h3>
+          <p class="story-meta-subtitle">Chapter 3: The Dare — Excerpt</p>
         </div>
         <div class="story-content" id="storyContent">
-          <!-- PLACEHOLDER: Replace with your actual story excerpt -->
-          <p>The envelope arrived without a return address. Heavy card stock, the color of old ivory, sealed with wax the shade of dried blood. She turned it over twice before opening it, already knowing — the way you know when someone watches you from across a dark room — that whatever was inside would change the terms of her life.</p>
-          <p>Inside: a single card. Handwritten. The penmanship was deliberate, unhurried, the letters pressed deep into the paper as though each word had been chosen at the cost of another.</p>
-          <p>"You've been selected. Not chosen — selected. There is a difference. The chosen have a say in the matter. You do not. Suite 1407. Thursday. 9 PM. Wear nothing you'd want returned."</p>
-          <p>She read it three times. Her pulse did something it hadn't done in years — it obeyed someone else. She set the card on the kitchen counter and poured herself a glass of wine with steady hands, because her hands were always steady, even when the rest of her was not.</p>
-          <p>Thursday was two days away. Two days to decide whether she was the kind of woman who walks into a room because a stranger told her to. She already knew the answer. She had always known. The only question was how long she would pretend otherwise.</p>
+          <p>The plane had reached cruising altitude, and the cabin settled into the muted monotony of long flights. The lights were dimmed. The passengers around us disappeared into their own worlds of movies, music, and sleep. But for me, nothing else existed except the small, electric zone in row 14.</p>
+          <p>Our fingers still lay against each other on the armrest. Neither she nor I had pulled back. It was like a silent wager: who breaks first?</p>
+          <p>Amalie picked up the book again. Her eyes didn't move across the lines. Instead she leaned fractionally closer, and her warm breath reached the side of my neck. "Shall I read aloud to you?" she whispered. Her lips were close enough that I felt the warm breath against my ear.</p>
+          <p>"What's it about right now?" My voice was a hoarse parody of normality.</p>
+          <p>"Two strangers. A train. A wager." She looked at me with those dark eyes. "Want to know what the wager is?"</p>
+          <p>My heart pounded. "Tell me."</p>
+          <p>"They test each other. One dare at a time. When one does something bold, the other has to match — or give up." She closed the book and placed it in the seat pocket. "It's very simple. And very dangerous."</p>
+          <p>The silence between us was charged like a capacitor. It hummed through my whole body — the tension, the charge just waiting to discharge.</p>
+          <p>"Are you the type who gives up, Sander?"</p>
+          <p>"No." The word came faster than thought. A reflex. And the moment I said it, I knew something had changed. Not between us — inside me. The controlled, rational engineering student who always planned three steps ahead had just thrown away the map. And the strange thing was that it didn't feel like a loss. It felt like the first time I'd breathed properly in three years.</p>
+          <p>She smiled. Slowly. "Then I'll begin."</p>
         </div>
         <div class="story-fade">
           <p>The story continues...</p>
@@ -1192,67 +1232,41 @@
       <div class="books-grid">
 
         <div class="book-card" onclick="openBookModal(0)">
-          <div class="book-cover-placeholder">
-            <span class="cover-numeral">I</span>
+          <div class="book-cover-image">
+            <img src="assets/images/covers/Cover_The_Bus_ride.png" alt="The Bus Ride — Cover" loading="lazy">
           </div>
           <div class="book-card-body">
             <p class="book-number">Story I</p>
-            <h3 class="book-title">The Arrangement</h3>
-            <p class="book-genre">Erotic Thriller</p>
-            <p class="book-excerpt">"Every contract has a clause written in the dark."</p>
+            <h3 class="book-title">The Bus Ride</h3>
+            <p class="book-genre">Erotic Short Story</p>
+            <p class="book-excerpt">"Some rides take you further than you planned."</p>
             <p class="book-expand-hint">Click to explore →</p>
           </div>
         </div>
 
         <div class="book-card" onclick="openBookModal(1)">
-          <div class="book-cover-placeholder">
-            <span class="cover-numeral">II</span>
+          <div class="book-cover-image">
+            <img src="assets/images/covers/cover_the_bait.png" alt="Posed: The Bait — Cover" loading="lazy">
           </div>
           <div class="book-card-body">
             <p class="book-number">Story II</p>
-            <h3 class="book-title">Beneath the Surface</h3>
-            <p class="book-genre">Dark Drama</p>
-            <p class="book-excerpt">"She didn't fall — she descended, eyes open."</p>
-            <p class="book-expand-hint">Click to explore →</p>
+            <h3 class="book-title">Posed: The Bait</h3>
+            <p class="book-genre">Erotic Short Story</p>
+            <p class="book-excerpt">"She set the trap. He walked in willingly."</p>
+            <p class="book-expand-hint coming-soon-badge">Coming Soon</p>
           </div>
         </div>
 
         <div class="book-card" onclick="openBookModal(2)">
-          <div class="book-cover-placeholder">
-            <span class="cover-numeral">III</span>
+          <div class="book-cover-image">
+            <img src="assets/images/covers/Cover_Flight_SK4481.png" alt="Flight SK4481 — Cover" loading="lazy">
           </div>
           <div class="book-card-body">
             <p class="book-number">Story III</p>
-            <h3 class="book-title">The Glass Room</h3>
-            <p class="book-genre">Psychological Erotica</p>
-            <p class="book-excerpt">"Transparency is the cruelest form of power."</p>
-            <p class="book-expand-hint">Click to explore →</p>
-          </div>
-        </div>
-
-        <div class="book-card" onclick="openBookModal(3)">
-          <div class="book-cover-placeholder">
-            <span class="cover-numeral">IV</span>
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">Story IV</p>
-            <h3 class="book-title">What We Bury</h3>
-            <p class="book-genre">Erotic Thriller</p>
-            <p class="book-excerpt">"Some secrets keep you. Not the other way around."</p>
-            <p class="book-expand-hint">Click to explore →</p>
-          </div>
-        </div>
-
-        <div class="book-card" onclick="openBookModal(4)">
-          <div class="book-cover-placeholder">
-            <span class="cover-numeral">V</span>
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">Story V</p>
-            <h3 class="book-title">The Last Negotiation</h3>
-            <p class="book-genre">Dark Drama</p>
-            <p class="book-excerpt">"He offered everything. That was the warning."</p>
-            <p class="book-expand-hint">Click to explore →</p>
+            <h3 class="book-title">Flight SK4481</h3>
+            <p class="book-genre">Erotic Short Story</p>
+            <p class="book-excerpt">"30,000 feet. No rules. No turning back."</p>
+            <p class="book-expand-hint coming-soon-badge">Coming Soon</p>
           </div>
         </div>
 
@@ -1336,7 +1350,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p class="footer-name">Samuel M. Gray</p>
-    <p class="footer-copy">&copy; 2025 Samuel M. Gray. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
     <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
   </footer>
 
@@ -1402,60 +1416,66 @@
       {
         numeral: 'I',
         number: 'Story I',
-        title: 'The Arrangement',
-        genre: 'Erotic Thriller',
-        description: 'A woman receives an anonymous invitation to a hotel suite — no name, no explanation, only a command. What begins as a single night of surrender becomes a carefully orchestrated game of psychological control, where the boundaries between captor and willing participant dissolve with every encounter. She tells herself she can leave at any time. That is the first lie.',
-        quote: 'Every contract has a clause written in the dark.',
-        link: '#'
+        title: 'The Bus Ride',
+        genre: 'Erotic Short Story',
+        description: 'A routine bus ride through the city becomes anything but ordinary when two strangers find themselves drawn into a charged, wordless exchange. What begins as stolen glances escalates into something neither of them expected — a journey that blurs the line between public composure and private desire. Some destinations aren\'t on the map.',
+        quote: 'Some rides take you further than you planned.',
+        link: '#',
+        cover: 'assets/images/covers/Cover_The_Bus_ride.png',
+        comingSoon: false
       },
       {
         numeral: 'II',
         number: 'Story II',
-        title: 'Beneath the Surface',
-        genre: 'Dark Drama',
-        description: 'A marriage counselor with a pristine reputation begins treating a couple whose dynamic unsettles her in ways she cannot name. As she peels back the layers of their relationship, she finds not dysfunction but a mirror — one that reflects desires she has spent a lifetime burying. Session by session, the professional distance collapses.',
-        quote: 'She didn\'t fall — she descended, eyes open.',
-        link: '#'
+        title: 'Posed: The Bait',
+        genre: 'Erotic Short Story',
+        description: 'She knows exactly what she\'s doing — every angle, every glance, every carefully constructed moment of vulnerability. He thinks he\'s the one in control. But the line between photographer and subject, between watching and being caught, has never been thinner. The question isn\'t who set the trap. It\'s who wanted to be trapped.',
+        quote: 'She set the trap. He walked in willingly.',
+        link: '#',
+        cover: 'assets/images/covers/cover_the_bait.png',
+        comingSoon: true
       },
       {
         numeral: 'III',
         number: 'Story III',
-        title: 'The Glass Room',
-        genre: 'Psychological Erotica',
-        description: 'An architect is commissioned to design a private space with unusual specifications: every wall must be transparent. The client — enigmatic, wealthy, precise — reveals nothing about the room\'s purpose. As the project evolves, the architect realizes the room is not a space for watching. It is a space for being watched. And she is already inside it.',
-        quote: 'Transparency is the cruelest form of power.',
-        link: '#'
-      },
-      {
-        numeral: 'IV',
-        number: 'Story IV',
-        title: 'What We Bury',
-        genre: 'Erotic Thriller',
-        description: 'Two strangers share a secret after a single reckless night — one that could destroy both their public lives. They agree to forget it ever happened. But forgetting requires distance, and distance requires honesty, and honesty is the one thing neither of them can afford. The past does not stay buried when the body still remembers.',
-        quote: 'Some secrets keep you. Not the other way around.',
-        link: '#'
-      },
-      {
-        numeral: 'V',
-        number: 'Story V',
-        title: 'The Last Negotiation',
-        genre: 'Dark Drama',
-        description: 'A high-stakes divorce mediator meets a client who refuses to negotiate in the traditional sense. Instead of assets and custody, he wants to negotiate something far more intimate: one final night with his ex-wife, under conditions she sets. What unfolds is not reconciliation but a reckoning — with power, with loss, and with the fictions people construct to survive love.',
-        quote: 'He offered everything. That was the warning.',
-        link: '#'
+        title: 'Flight SK4481',
+        genre: 'Erotic Short Story',
+        description: 'A chance encounter at 30,000 feet between two strangers who have no business talking to each other. What starts as an accidental touch on a shared armrest becomes a game of dares — each one bolder than the last, each one harder to walk away from. Somewhere between Oslo and Amsterdam, the rules of the ground stop applying.',
+        quote: '30,000 feet. No rules. No turning back.',
+        link: '#',
+        cover: 'assets/images/covers/Cover_Flight_SK4481.png',
+        comingSoon: true
       }
     ];
 
     // --- Book modal ---
     function openBookModal(index) {
       var book = books[index];
-      document.getElementById('modalNumeral').textContent = book.numeral;
+      var coverEl = document.querySelector('.book-modal-cover');
+      if (book.cover) {
+        coverEl.innerHTML = '<img src="' + book.cover + '" alt="' + book.title + ' — Cover" style="width:100%;height:100%;object-fit:cover;object-position:top center;">';
+      } else {
+        coverEl.innerHTML = '<span class="modal-numeral">' + book.numeral + '</span>';
+      }
       document.getElementById('modalNumber').textContent = book.number;
       document.getElementById('modalTitle').textContent = book.title;
       document.getElementById('modalGenre').textContent = book.genre;
       document.getElementById('modalDescription').textContent = book.description;
       document.getElementById('modalQuote').textContent = book.quote;
-      document.getElementById('modalCta').href = book.link;
+      var ctaEl = document.getElementById('modalCta');
+      if (book.comingSoon) {
+        ctaEl.textContent = 'Coming Soon';
+        ctaEl.href = '#';
+        ctaEl.style.borderColor = 'var(--crimson)';
+        ctaEl.style.color = 'var(--crimson-light)';
+        ctaEl.style.pointerEvents = 'none';
+      } else {
+        ctaEl.textContent = 'Read on Amazon →';
+        ctaEl.href = book.link;
+        ctaEl.style.borderColor = '';
+        ctaEl.style.color = '';
+        ctaEl.style.pointerEvents = '';
+      }
       document.getElementById('bookModal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
