@@ -28,9 +28,9 @@
       --gold: #c9a961;
       --gold-dark: #8b7355;
       --gold-glow: rgba(201, 169, 97, 0.15);
-      --crimson: #8b2020;
-      --crimson-light: #a63030;
-      --crimson-glow: rgba(139, 32, 32, 0.15);
+      --crimson: #c9a961;
+      --crimson-light: #c9a961;
+      --crimson-glow: rgba(201, 169, 97, 0.15);
       --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
     }
 
@@ -569,7 +569,7 @@
 
     .coming-soon-badge {
       opacity: 1 !important;
-      color: var(--crimson-light) !important;
+      color: var(--mid-gray) !important;
       font-style: italic;
     }
 
@@ -783,7 +783,7 @@
       font-size: 0.95rem;
       padding: 1.2rem;
       background: var(--anthracite);
-      border: 1px solid rgba(139, 32, 32, 0.2);
+      border: 1px solid rgba(201, 169, 97, 0.2);
       color: var(--off-white);
       resize: vertical;
       outline: none;
@@ -861,7 +861,7 @@
     .confessions-success {
       display: none;
       padding: 1.5rem;
-      border: 1px solid rgba(139, 32, 32, 0.3);
+      border: 1px solid rgba(201, 169, 97, 0.3);
       text-align: center;
     }
 
@@ -1324,8 +1324,8 @@
         <p class="section-label" style="text-align:center;">The Inner Circle</p>
         <h2 class="section-title" style="text-align:center;">Join the Shadows</h2>
         <div class="section-divider" style="margin: 0.8rem auto 1.5rem;"></div>
-        <p class="newsletter-text">New stories. Exclusive content. No noise.</p>
-        <p class="newsletter-exclusive">Subscribe now and receive an exclusive short story — available only to members.</p>
+        <p class="newsletter-text">New releases. Exclusive stories. No noise.</p>
+        <p class="newsletter-exclusive">Subscribe now and receive an exclusive story that will never be sold — only for those who enter the shadows.</p>
         <div class="ml-embedded" data-form="0yEjb2"></div>
         <p class="newsletter-note">No spam. Unsubscribe at any time. Your darkness is your own.</p>
       </div>
@@ -1466,8 +1466,8 @@
       if (book.comingSoon) {
         ctaEl.textContent = 'Coming Soon';
         ctaEl.href = '#';
-        ctaEl.style.borderColor = 'var(--crimson)';
-        ctaEl.style.color = 'var(--crimson-light)';
+        ctaEl.style.borderColor = 'var(--mid-gray)';
+        ctaEl.style.color = 'var(--mid-gray)';
         ctaEl.style.pointerEvents = 'none';
       } else {
         ctaEl.textContent = 'Read on Amazon →';
@@ -1526,6 +1526,10 @@
       });
     });
   </script>
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- End Vercel Analytics -->
 
   <!-- MailerLite Universal -->
   <script>
