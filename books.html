@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Works — Samuel M. Gray</title>
+  <meta name="description" content="Browse all stories by Samuel M. Gray. Dark, psychological erotic fiction — filter by theme, setting, and mood.">
+  <meta name="author" content="Samuel M. Gray">
+  <meta property="og:title" content="All Works — Samuel M. Gray">
+  <meta property="og:description" content="Browse all stories by Samuel M. Gray. Filter by theme, setting, and mood.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samuelmgray.com/books.html">
+  <meta property="og:image" content="https://samuelmgray.com/assets/images/Logo/SMG_logo_social_512.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/Logo/SMG_favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/Logo/SMG_logo_transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0a0a0a;
+      --anthracite: #1a1a1a;
+      --dark-gray: #2a2a2a;
+      --mid-gray: #888888;
+      --off-white: #e8e4de;
+      --gold: #c9a961;
+      --gold-dark: #a08860;
+      --gold-glow: rgba(201, 169, 97, 0.15);
+      --crimson: #c9a961;
+      --crimson-light: #c9a961;
+      --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      font-family: var(--serif);
+      background: var(--black);
+      color: var(--off-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
+    a:hover { color: var(--off-white); }
+
+    ::selection { background: var(--gold-dark); color: var(--off-white); }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(160, 136, 96, 0.08);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      height: 32px;
+      width: auto;
+      transition: opacity 0.3s ease;
+    }
+    .nav-logo-img:hover { opacity: 0.8; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--off-white); }
+    .nav-links a.active { color: var(--gold); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 22px;
+      height: 1px;
+      background: var(--off-white);
+      transition: all 0.3s ease;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      padding: 8rem 2.5rem 3rem;
+      text-align: center;
+    }
+    .page-header .section-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 30px rgba(201, 169, 97, 0.08);
+    }
+    .page-header h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--off-white);
+      letter-spacing: 0.02em;
+      text-shadow: 0 0 40px rgba(201, 169, 97, 0.1);
+    }
+    .section-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold-dark);
+      margin: 1rem auto 0;
+    }
+
+    /* ===== TAG FILTER ===== */
+    .tag-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0 2.5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .tag-pill {
+      font-family: var(--serif);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      background: transparent;
+      border: 1px solid var(--dark-gray);
+      color: var(--mid-gray);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .tag-pill:hover {
+      border-color: var(--gold-dark);
+      color: var(--gold-dark);
+    }
+    .tag-pill.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 169, 97, 0.08);
+    }
+
+    /* ===== BOOKS GRID ===== */
+    .books-page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 1rem 2.5rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .book-card {
+      background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.1);
+      padding: 0;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .book-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .book-card:hover {
+      border-color: rgba(160, 136, 96, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    .book-card:hover::before { opacity: 1; }
+
+    .book-card.faded {
+      opacity: 0.2;
+      transform: scale(0.97);
+      filter: grayscale(0.5);
+    }
+
+    .book-cover-image {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .book-cover-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .book-card:hover .book-cover-image img {
+      transform: scale(1.03);
+    }
+    .book-cover-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--anthracite));
+    }
+
+    .book-card-body {
+      padding: 1.5rem;
+    }
+    .book-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.6rem;
+    }
+    .book-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--off-white);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+    .book-genre {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--crimson-light);
+      margin-bottom: 0.8rem;
+    }
+    .book-excerpt {
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+    .book-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .book-tag {
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      background: rgba(160, 136, 96, 0.06);
+      border: 1px solid rgba(160, 136, 96, 0.15);
+      color: var(--gold-dark);
+    }
+
+    .book-amazon-link {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .book-amazon-link:hover {
+      background: var(--gold-dark);
+      color: var(--black);
+    }
+
+    .coming-soon-badge {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--mid-gray);
+      border: 1px solid var(--dark-gray);
+      background: transparent;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(160, 136, 96, 0.08);
+    }
+    .footer-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--off-white);
+      margin-bottom: 0.5rem;
+    }
+    .footer-copy, .footer-mature {
+      font-size: 0.7rem;
+      color: var(--mid-gray);
+      margin-bottom: 0.3rem;
+    }
+
+    /* ===== BACK LINK ===== */
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+    .back-link:hover { color: var(--gold); }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .nav { padding: 0.8rem 1.2rem; }
+      .nav-links {
+        position: fixed;
+        top: 0; right: -280px;
+        width: 280px; height: 100vh;
+        background: var(--black);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        border-left: 1px solid rgba(160, 136, 96, 0.1);
+      }
+      .nav-links.open { right: 0; }
+      .hamburger { display: flex; }
+      .page-header { padding: 6rem 1.5rem 2rem; }
+      .tag-filter { padding: 0 1.5rem 1.5rem; }
+      .books-page-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem 1.5rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="#" class="active">Works</a>
+      <a href="index.html#newsletter">Newsletter</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <p class="section-label">Bibliography</p>
+    <h1>All Works</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- ===== TAG FILTER ===== -->
+  <div class="tag-filter" id="tagFilter">
+    <button class="tag-pill active" data-tag="all" onclick="filterBooks('all', this)">All</button>
+  </div>
+
+  <!-- ===== BOOKS GRID ===== -->
+  <div class="books-page-grid" id="booksGrid"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-name">Samuel M. Gray</p>
+    <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
+    <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
+    <a href="index.html" class="back-link">&larr; Back to Main Site</a>
+  </footer>
+
+  <script>
+    // --- Mobile menu ---
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    // --- Book data with tags ---
+    var books = [
+      {
+        number: 'Story I',
+        title: 'The Bus Ride',
+        genre: 'Erotic Short Story',
+        excerpt: 'Some rides take you further than you planned.',
+        description: 'Two strangers. One bus. No words spoken \u2014 just a slow, deliberate escalation that neither of them has the decency to stop.',
+        cover: 'assets/images/covers/Cover_The_Bus_ride.png',
+        link: 'https://www.amazon.com/dp/B0GQZ5YMSD',
+        comingSoon: false,
+        tags: ['stranger encounter', 'public setting', 'slow burn', 'tension', 'voyeurism']
+      },
+      {
+        number: 'Story II',
+        title: 'Posed: The Bait',
+        genre: 'Erotic Short Story',
+        excerpt: 'She set the trap. He walked in willingly.',
+        description: 'She knows exactly what she\u2019s doing \u2014 every angle, every glance, every carefully staged moment of vulnerability.',
+        cover: 'assets/images/covers/cover_the_bait_2.png',
+        link: 'https://www.amazon.com/dp/B0GR73K6DQ',
+        comingSoon: false,
+        tags: ['power play', 'art', 'manipulation', 'seduction', 'control']
+      },
+      {
+        number: 'Story III',
+        title: 'Flight SK4481',
+        genre: 'Erotic Short Story',
+        excerpt: '30,000 feet. No rules. No turning back.',
+        description: 'A shared armrest. An accidental touch. A game of dares at 30,000 feet \u2014 each one bolder than the last.',
+        cover: 'assets/images/covers/Cover_Flight_SK4481.png',
+        link: '#',
+        comingSoon: true,
+        tags: ['stranger encounter', 'airplane', 'dare', 'escalation', 'intense']
+      },
+      {
+        number: 'Story IV',
+        title: 'The Reflection',
+        genre: 'Psychological Erotica',
+        excerpt: 'Desire is a mirror \u2014 and nobody\u2019s face emerges unchanged.',
+        description: 'Two identical faces. One reflection becomes the other. What starts as impersonation becomes a calculated seduction.',
+        cover: 'assets/images/covers/Cover_The_Reflection.png',
+        link: '#',
+        comingSoon: true,
+        tags: ['psychological', 'identity', 'deception', 'dark', 'voyeurism']
+      }
+    ];
+
+    // --- Build tag filter pills ---
+    var allTags = [];
+    books.forEach(function(book) {
+      book.tags.forEach(function(tag) {
+        if (allTags.indexOf(tag) === -1) allTags.push(tag);
+      });
+    });
+    allTags.sort();
+    var filterContainer = document.getElementById('tagFilter');
+    allTags.forEach(function(tag) {
+      var btn = document.createElement('button');
+      btn.className = 'tag-pill';
+      btn.setAttribute('data-tag', tag);
+      btn.textContent = tag;
+      btn.onclick = function() { filterBooks(tag, this); };
+      filterContainer.appendChild(btn);
+    });
+
+    // --- Render books ---
+    function renderBooks() {
+      var grid = document.getElementById('booksGrid');
+      grid.innerHTML = '';
+      books.forEach(function(book) {
+        var card = document.createElement('div');
+        card.className = 'book-card';
+        card.setAttribute('data-tags', book.tags.join(','));
+
+        var tagsHtml = book.tags.map(function(t) {
+          return '<span class="book-tag">' + t + '</span>';
+        }).join('');
+
+        var ctaHtml = book.comingSoon
+          ? '<span class="coming-soon-badge">Coming Soon</span>'
+          : '<a href="' + book.link + '" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>';
+
+        card.innerHTML =
+          '<div class="book-cover-image">' +
+            '<img src="' + book.cover + '" alt="' + book.title + ' \u2014 Cover" loading="lazy">' +
+          '</div>' +
+          '<div class="book-card-body">' +
+            '<p class="book-number">' + book.number + '</p>' +
+            '<h3 class="book-title">' + book.title + '</h3>' +
+            '<p class="book-genre">' + book.genre + '</p>' +
+            '<p class="book-excerpt">\u201C' + book.excerpt + '\u201D</p>' +
+            '<div class="book-tags">' + tagsHtml + '</div>' +
+            '<p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">' + book.description + '</p>' +
+            ctaHtml +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    }
+
+    // --- Filter logic ---
+    var activeTag = 'all';
+
+    function filterBooks(tag, btn) {
+      activeTag = tag;
+      // Update pill states
+      document.querySelectorAll('.tag-pill').forEach(function(p) {
+        p.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      // Filter cards
+      var cards = document.querySelectorAll('.book-card');
+      cards.forEach(function(card) {
+        var cardTags = card.getAttribute('data-tags');
+        if (tag === 'all' || cardTags.indexOf(tag) !== -1) {
+          card.classList.remove('faded');
+        } else {
+          card.classList.add('faded');
+        }
+      });
+    }
+
+    // Initial render
+    renderBooks();
+  </script>
+</body>
+</html>
