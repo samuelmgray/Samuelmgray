@@ -1513,7 +1513,7 @@
 
         <div class="book-card" onclick="openBookModal(5)">
           <div class="book-cover-image">
-            <img src="assets/images/covers/cover_the_beach.jpg" alt="The Beach — Cover" loading="lazy">
+            <img src="assets/images/covers/Cover_The_Beach.jpg" alt="The Beach — Cover" loading="lazy">
           </div>
           <div class="book-card-body">
             <p class="book-number">Story VI</p>
@@ -1521,7 +1521,7 @@
             <p class="book-genre">Erotic Short Story</p>
             <p class="book-excerpt">"Two years of silence unraveled in a single afternoon."</p>
             <span class="free-badge">Free Story</span>
-            <a href="#newsletter" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>
+            <a href="the-beach.html" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>
           </div>
         </div>
 
@@ -1768,8 +1768,8 @@
         genre: 'Erotic Short Story',
         description: 'Two years of watching her from the safe side of friendship. On a sun-drenched beach day, she asks him to rub sunscreen on her back. What follows is an afternoon of escalating signals \u2014 a deliberate touch underwater, a bikini top removed with casual defiance, a command disguised as a favor. A slow-burn story about cowardice, desire, and the terrifying distance between wanting and doing.',
         quote: 'Two years of silence unraveled in a single afternoon.',
-        link: '#newsletter',
-        cover: 'assets/images/covers/cover_the_beach.jpg',
+        link: 'the-beach.html',
+        cover: 'assets/images/covers/Cover_The_Beach.jpg',
         comingSoon: false,
         free: true
       }
@@ -1792,17 +1792,11 @@
       var ctaEl = document.getElementById('modalCta');
       ctaEl.onclick = null;
       if (book.free) {
-        ctaEl.textContent = 'Read Free — Subscribe →';
-        ctaEl.href = '#newsletter';
+        ctaEl.textContent = 'Read Free →';
+        ctaEl.href = book.link;
         ctaEl.style.borderColor = 'var(--gold)';
         ctaEl.style.color = 'var(--gold)';
         ctaEl.style.pointerEvents = 'auto';
-        ctaEl.onclick = function(e) {
-          e.preventDefault();
-          document.getElementById('bookModal').classList.remove('active');
-          document.body.style.overflow = '';
-          document.getElementById('newsletter').scrollIntoView({ behavior: 'smooth' });
-        };
       } else if (book.comingSoon) {
         ctaEl.textContent = 'Subscribe to get notified →';
         ctaEl.href = '#newsletter';

@@ -499,8 +499,8 @@
         genre: 'Erotic Short Story',
         excerpt: 'Two years of silence unraveled in a single afternoon.',
         description: 'She asked him to rub sunscreen on her back. Two years of silence unraveled in a single afternoon. A slow-burn beach story about the unbearable space between wanting and touching.',
-        cover: 'assets/images/covers/cover_the_beach.jpg',
-        link: '#newsletter',
+        cover: 'assets/images/covers/Cover_The_Beach.jpg',
+        link: 'the-beach.html',
         comingSoon: false,
         free: true,
         tags: ['novelle', 'FM', 'slow burn', 'stranger encounter', 'FREE']
@@ -539,7 +539,7 @@
         }).join('');
 
         var ctaHtml = book.free
-          ? '<span class="free-badge">Free Story</span><a href="#newsletter" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>'
+          ? '<span class="free-badge">Free Story</span><a href="' + book.link + '" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>'
           : book.comingSoon
             ? '<span class="coming-soon-badge">Coming Soon</span>'
             : '<a href="' + book.link + '" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>';
