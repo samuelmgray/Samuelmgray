@@ -795,21 +795,28 @@
       background: transparent;
     }
 
-    .free-badge {
+    .book-read-link {
       display: inline-block;
       margin-top: 0.5rem;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold);
-      border: 1px solid var(--gold-dark);
-      background: transparent;
+      font-family: 'EB Garamond', serif;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+    .book-read-link:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
     }
 
-    .book-free-link {
-      display: inline-block;
+    .free-story-label {
+      display: block;
       margin-top: 0.4rem;
       font-size: 0.65rem;
       letter-spacing: 0.15em;
@@ -817,7 +824,6 @@
       font-family: var(--serif);
       color: var(--gold);
     }
-    .book-free-link:hover { color: var(--off-white); }
 
     .book-notify-link {
       display: inline-block;
@@ -1520,8 +1526,8 @@
             <h3 class="book-title">The Beach</h3>
             <p class="book-genre">Erotic Short Story</p>
             <p class="book-excerpt">"Two years of silence unraveled in a single afternoon."</p>
-            <span class="free-badge">Free Story</span>
-            <a href="the-beach.html" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>
+            <a href="the-beach.html" class="book-read-link" onclick="event.stopPropagation()">Read</a>
+            <span class="free-story-label">Free Story</span>
           </div>
         </div>
 
@@ -1792,10 +1798,11 @@
       var ctaEl = document.getElementById('modalCta');
       ctaEl.onclick = null;
       if (book.free) {
-        ctaEl.textContent = 'Read Free →';
+        ctaEl.textContent = 'Read — Free Story →';
         ctaEl.href = book.link;
-        ctaEl.style.borderColor = 'var(--gold)';
-        ctaEl.style.color = 'var(--gold)';
+        ctaEl.style.borderColor = '';
+        ctaEl.style.color = '';
+        ctaEl.style.background = '';
         ctaEl.style.pointerEvents = 'auto';
       } else if (book.comingSoon) {
         ctaEl.textContent = 'Subscribe to get notified →';

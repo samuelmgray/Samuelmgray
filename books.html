@@ -309,21 +309,28 @@
       background: transparent;
     }
 
-    .free-badge {
+    .book-read-link {
       display: inline-block;
-      margin-top: 0.3rem;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      margin-top: 0.5rem;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold);
-      border: 1px solid var(--gold-dark);
-      background: transparent;
+      font-family: 'EB Garamond', serif;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+    .book-read-link:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
     }
 
-    .book-free-link {
-      display: inline-block;
+    .free-story-label {
+      display: block;
       margin-top: 0.4rem;
       font-size: 0.65rem;
       letter-spacing: 0.15em;
@@ -331,7 +338,6 @@
       font-family: var(--serif);
       color: var(--gold);
     }
-    .book-free-link:hover { color: var(--off-white); }
 
     /* ===== FOOTER ===== */
     .footer {
@@ -539,7 +545,7 @@
         }).join('');
 
         var ctaHtml = book.free
-          ? '<span class="free-badge">Free Story</span><a href="' + book.link + '" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>'
+          ? '<a href="' + book.link + '" class="book-read-link" onclick="event.stopPropagation()">Read</a><span class="free-story-label">Free Story</span>'
           : book.comingSoon
             ? '<span class="coming-soon-badge">Coming Soon</span>'
             : '<a href="' + book.link + '" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>';
