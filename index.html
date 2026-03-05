@@ -322,6 +322,27 @@
       animation: fadeUp 1s ease 1.5s forwards;
     }
 
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.5s forwards;
+    }
+    .hero-cta {
+      animation: none;
+      opacity: 1;
+    }
+    .hero-cta-secondary {
+      border-color: var(--dark-gray);
+      color: var(--mid-gray);
+    }
+    .hero-cta-secondary:hover {
+      background: var(--gold-dark);
+      color: var(--black);
+      border-color: var(--gold-dark);
+    }
     .hero-cta:hover {
       background: var(--gold);
       color: var(--black);
@@ -1350,7 +1371,10 @@
       <h1>Samuel M. Gray</h1>
       <div class="hero-divider"></div>
       <p class="hero-tagline">The darkest labyrinths of the human psyche.<br>Where desire meets consequence.</p>
-      <a href="#books" class="hero-cta">Explore the Works</a>
+      <div class="hero-buttons">
+        <a href="#books" class="hero-cta">Explore the Works</a>
+        <a href="#newsletter" class="hero-cta hero-cta-secondary">Subscribe for Free Story</a>
+      </div>
     </div>
     <div class="scroll-indicator">
       <span>Scroll</span>
@@ -1708,10 +1732,11 @@
       }
     });
 
-    // --- Books carousel ---
+    // --- Books carousel (infinite loop) ---
     function scrollCarousel(dir) {
       var carousel = document.getElementById('booksCarousel');
-      var cardWidth = carousel.querySelector('.book-card').offsetWidth + 24; // card + gap
+      var cards = carousel.querySelectorAll('.book-card:not(.clone)');
+      var cardWidth = cards[0].offsetWidth + 24;
       carousel.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
     }
 
@@ -1737,15 +1762,57 @@
       });
     }
 
-    // Attach carousel scroll listener after DOM ready
+    // Infinite loop: clone cards and reset scroll position
     (function() {
       var carousel = document.getElementById('booksCarousel');
-      if (carousel) {
-        carousel.addEventListener('scroll', updateCarouselEdges);
-        // Initial call
-        setTimeout(updateCarouselEdges, 100);
-        window.addEventListener('resize', updateCarouselEdges);
-      }
+      if (!carousel) return;
+
+      var cards = Array.from(carousel.querySelectorAll('.book-card'));
+      // Clone all cards and append/prepend for seamless loop
+      cards.forEach(function(card) {
+        var clone = card.cloneNode(true);
+        clone.classList.add('clone');
+        carousel.appendChild(clone);
+      });
+      cards.forEach(function(card) {
+        var clone = card.cloneNode(true);
+        clone.classList.add('clone');
+        carousel.insertBefore(clone, carousel.firstChild);
+      });
+
+      // Start scrolled to the real first card
+      var cardWidth = cards[0].offsetWidth + 24;
+      carousel.scrollLeft = cardWidth * cards.length;
+
+      // When scroll nears edges, jump to the mirrored position
+      var jumping = false;
+      carousel.addEventListener('scroll', function() {
+        if (jumping) return;
+        var totalReal = cardWidth * cards.length;
+        var scrollPos = carousel.scrollLeft;
+
+        if (scrollPos <= cardWidth * 0.5) {
+          jumping = true;
+          carousel.style.scrollBehavior = 'auto';
+          carousel.scrollLeft = scrollPos + totalReal;
+          carousel.style.scrollBehavior = '';
+          setTimeout(function() { jumping = false; }, 50);
+        } else if (scrollPos >= totalReal * 2 - cardWidth * 0.5) {
+          jumping = true;
+          carousel.style.scrollBehavior = 'auto';
+          carousel.scrollLeft = scrollPos - totalReal;
+          carousel.style.scrollBehavior = '';
+          setTimeout(function() { jumping = false; }, 50);
+        }
+
+        updateCarouselEdges();
+      });
+
+      setTimeout(updateCarouselEdges, 100);
+      window.addEventListener('resize', function() {
+        carousel.scrollLeft = cardWidth * cards.length;
+        updateCarouselEdges();
+      });
     })();
 
     // --- Story excerpt toggle ---
