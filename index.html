@@ -641,6 +641,26 @@
 
     .book-card:hover .book-expand-hint { opacity: 1; }
 
+    .book-amazon-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: 'EB Garamond', serif;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+    .book-amazon-link:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
+    }
+
     /* ===== BOOK MODAL ===== */
     .book-modal-overlay {
       position: fixed;
@@ -1270,6 +1290,7 @@
             <p class="book-genre">Erotic Short Story</p>
             <p class="book-excerpt">"Some rides take you further than you planned."</p>
             <p class="book-expand-hint">Click to explore →</p>
+            <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
           </div>
         </div>
 
@@ -1282,7 +1303,8 @@
             <h3 class="book-title">Posed: The Bait</h3>
             <p class="book-genre">Erotic Short Story</p>
             <p class="book-excerpt">"She set the trap. He walked in willingly."</p>
-            <p class="book-expand-hint coming-soon-badge">Coming Soon</p>
+            <p class="book-expand-hint">Click to explore →</p>
+            <a href="https://www.amazon.com/dp/B0GR73K6DQ" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
           </div>
         </div>
 
@@ -1474,9 +1496,9 @@
         genre: 'Erotic Short Story',
         description: 'She knows exactly what she\'s doing — every angle, every glance, every carefully staged moment of vulnerability. He thinks he\'s in control. But the distance between photographer and subject, between watching and being watched, has never been more dangerous. The question isn\'t who set the trap. It\'s who wanted to be caught.',
         quote: 'She set the trap. He walked in willingly.',
-        link: '#',
+        link: 'https://www.amazon.com/dp/B0GR73K6DQ',
         cover: 'assets/images/covers/cover_the_bait_2.png',
-        comingSoon: true
+        comingSoon: false
       },
       {
         numeral: 'III',
