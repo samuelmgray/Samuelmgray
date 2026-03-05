@@ -309,6 +309,30 @@
       background: transparent;
     }
 
+    .free-badge {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      background: transparent;
+    }
+
+    .book-free-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--gold);
+    }
+    .book-free-link:hover { color: var(--off-white); }
+
     /* ===== FOOTER ===== */
     .footer {
       text-align: center;
@@ -468,6 +492,18 @@
         link: '#',
         comingSoon: true,
         tags: ['novelle', 'FM', 'slow burn', 'power play', 'psychological', 'medical']
+      },
+      {
+        number: 'Story VI',
+        title: 'The Beach',
+        genre: 'Erotic Short Story',
+        excerpt: 'Two years of silence unraveled in a single afternoon.',
+        description: 'She asked him to rub sunscreen on her back. Two years of silence unraveled in a single afternoon. A slow-burn beach story about the unbearable space between wanting and touching.',
+        cover: 'assets/images/covers/cover_the_beach.jpg',
+        link: '#newsletter',
+        comingSoon: false,
+        free: true,
+        tags: ['novelle', 'FM', 'slow burn', 'stranger encounter', 'FREE']
       }
     ];
 
@@ -502,9 +538,11 @@
           return '<span class="book-tag">' + t + '</span>';
         }).join('');
 
-        var ctaHtml = book.comingSoon
-          ? '<span class="coming-soon-badge">Coming Soon</span>'
-          : '<a href="' + book.link + '" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>';
+        var ctaHtml = book.free
+          ? '<span class="free-badge">Free Story</span><a href="#newsletter" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>'
+          : book.comingSoon
+            ? '<span class="coming-soon-badge">Coming Soon</span>'
+            : '<a href="' + book.link + '" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>';
 
         card.innerHTML =
           '<div class="book-cover-image">' +

@@ -795,6 +795,30 @@
       background: transparent;
     }
 
+    .free-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      background: transparent;
+    }
+
+    .book-free-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--gold);
+    }
+    .book-free-link:hover { color: var(--off-white); }
+
     .book-notify-link {
       display: inline-block;
       margin-top: 0.4rem;
@@ -1487,6 +1511,20 @@
           </div>
         </div>
 
+        <div class="book-card" onclick="openBookModal(5)">
+          <div class="book-cover-image">
+            <img src="assets/images/covers/cover_the_beach.jpg" alt="The Beach — Cover" loading="lazy">
+          </div>
+          <div class="book-card-body">
+            <p class="book-number">Story VI</p>
+            <h3 class="book-title">The Beach</h3>
+            <p class="book-genre">Erotic Short Story</p>
+            <p class="book-excerpt">"Two years of silence unraveled in a single afternoon."</p>
+            <span class="free-badge">Free Story</span>
+            <a href="#newsletter" class="book-free-link" onclick="event.stopPropagation()">Read Free &rarr;</a>
+          </div>
+        </div>
+
       </div>
       <a href="books.html" class="books-view-all">View All Works &rarr;</a>
       </div>
@@ -1722,6 +1760,18 @@
         link: '#',
         cover: 'assets/images/covers/The Forbidden Touch - Book Cover.jpg',
         comingSoon: true
+      },
+      {
+        numeral: 'VI',
+        number: 'Story VI',
+        title: 'The Beach',
+        genre: 'Erotic Short Story',
+        description: 'Two years of watching her from the safe side of friendship. On a sun-drenched beach day, she asks him to rub sunscreen on her back. What follows is an afternoon of escalating signals \u2014 a deliberate touch underwater, a bikini top removed with casual defiance, a command disguised as a favor. A slow-burn story about cowardice, desire, and the terrifying distance between wanting and doing.',
+        quote: 'Two years of silence unraveled in a single afternoon.',
+        link: '#newsletter',
+        cover: 'assets/images/covers/cover_the_beach.jpg',
+        comingSoon: false,
+        free: true
       }
     ];
 
@@ -1740,12 +1790,31 @@
       document.getElementById('modalDescription').textContent = book.description;
       document.getElementById('modalQuote').textContent = book.quote;
       var ctaEl = document.getElementById('modalCta');
-      if (book.comingSoon) {
-        ctaEl.textContent = 'Coming Soon';
-        ctaEl.href = '#';
-        ctaEl.style.borderColor = 'var(--mid-gray)';
-        ctaEl.style.color = 'var(--mid-gray)';
-        ctaEl.style.pointerEvents = 'none';
+      ctaEl.onclick = null;
+      if (book.free) {
+        ctaEl.textContent = 'Read Free — Subscribe →';
+        ctaEl.href = '#newsletter';
+        ctaEl.style.borderColor = 'var(--gold)';
+        ctaEl.style.color = 'var(--gold)';
+        ctaEl.style.pointerEvents = 'auto';
+        ctaEl.onclick = function(e) {
+          e.preventDefault();
+          document.getElementById('bookModal').classList.remove('active');
+          document.body.style.overflow = '';
+          document.getElementById('newsletter').scrollIntoView({ behavior: 'smooth' });
+        };
+      } else if (book.comingSoon) {
+        ctaEl.textContent = 'Subscribe to get notified →';
+        ctaEl.href = '#newsletter';
+        ctaEl.style.borderColor = 'var(--gold)';
+        ctaEl.style.color = 'var(--gold)';
+        ctaEl.style.pointerEvents = 'auto';
+        ctaEl.onclick = function(e) {
+          e.preventDefault();
+          document.getElementById('bookModal').classList.remove('active');
+          document.body.style.overflow = '';
+          document.getElementById('newsletter').scrollIntoView({ behavior: 'smooth' });
+        };
       } else {
         ctaEl.textContent = 'Read on Amazon →';
         ctaEl.href = book.link;
