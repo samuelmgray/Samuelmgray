@@ -289,6 +289,96 @@
       text-shadow: 0 0 40px rgba(201, 169, 97, 0.1);
     }
 
+    .hero-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+      margin: 0 auto 1.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.9s forwards;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--gold-dark);
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.2s forwards;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      padding: 0.9rem 2.8rem;
+      transition: all 0.4s ease;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.5s forwards;
+    }
+
+    .hero-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 2s forwards;
+    }
+
+    .scroll-indicator span {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold-dark), transparent);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 6rem 2rem; }
+
+    .section-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--off-white);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 30px rgba(201, 169, 97, 0.08);
+    }
+
     .section-divider {
       width: 60px;
       height: 1px;
@@ -418,6 +508,97 @@
       color: var(--gold-dark);
     }
 
+    .story-cta {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      padding: 0.8rem 2.5rem;
+      transition: all 0.4s ease;
+    }
+
+    .story-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    /* ===== BOOKS ===== */
+    #books { background: var(--anthracite); }
+
+    .books-carousel-wrapper {
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .books-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1.5rem;
+      padding: 2rem 3rem 4rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .books-grid::-webkit-scrollbar { display: none; }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: rgba(10, 10, 10, 0.8);
+      border: 1px solid rgba(160, 136, 96, 0.3);
+      color: var(--gold);
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-family: var(--serif);
+    }
+    .carousel-arrow:hover {
+      background: rgba(160, 136, 96, 0.15);
+      border-color: var(--gold);
+    }
+    .carousel-arrow.left { left: 0; }
+    .carousel-arrow.right { right: 0; }
+
+    .books-view-all {
+      display: block;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: var(--serif);
+      color: var(--gold-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .books-view-all:hover { color: var(--gold); }
+
+    .book-card {
+      background: var(--black);
+      border: 1px solid rgba(160, 136, 96, 0.1);
+      padding: 0;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: visible;
+      cursor: pointer;
+      flex: 0 0 260px;
+      scroll-snap-align: center;
+    }
+
+    .book-card.carousel-edge {
+      transform: scale(0.88);
+      opacity: 0.5;
+      filter: brightness(0.7);
     }
 
     .book-card::before {
@@ -609,6 +790,335 @@
       color: var(--gold);
     }
 
+    /* ===== BOOK MODAL ===== */
+    .book-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      padding: 2rem;
+    }
+
+    .book-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .book-modal {
+      background: var(--anthracite);
+      border: 1px solid rgba(139, 115, 85, 0.15);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: var(--mid-gray);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      z-index: 2;
+      line-height: 1;
+    }
+
+    .book-modal-close:hover { color: var(--gold); }
+
+    .book-modal-cover {
+      width: 100%;
+      height: 240px;
+      background: linear-gradient(135deg, var(--dark-gray) 0%, var(--anthracite-light) 50%, var(--dark-gray) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .book-modal-cover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--anthracite));
+    }
+
+    .book-modal-cover .modal-numeral {
+      font-size: 6rem;
+      font-weight: 400;
+      color: rgba(139, 115, 85, 0.1);
+      font-style: italic;
+    }
+
+    .book-modal-body {
+      padding: 2rem 2.5rem 2.5rem;
+    }
+
+    .book-modal-body .book-number {
+      margin-bottom: 0.4rem;
+    }
+
+    .book-modal-body .book-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-modal-body .book-genre {
+      margin-bottom: 1.5rem;
+    }
+
+    .book-modal-description {
+      color: var(--light-gray);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .book-modal-quote {
+      border-left: 2px solid var(--crimson);
+      padding-left: 1.2rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--mid-gray);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .book-modal-cta {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      padding: 0.9rem 2.8rem;
+      transition: all 0.4s ease;
+      margin-top: 1rem;
+    }
+
+    .book-modal-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    /* ===== CONFESSIONS ===== */
+    #confessions {
+      background: var(--black);
+      position: relative;
+    }
+
+    #confessions::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--crimson), transparent);
+    }
+
+    .confessions-intro {
+      max-width: 620px;
+      color: var(--light-gray);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .confessions-form {
+      max-width: 620px;
+    }
+
+    .confessions-form textarea {
+      width: 100%;
+      min-height: 160px;
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      padding: 1.2rem;
+      background: var(--anthracite);
+      border: 1px solid rgba(201, 169, 97, 0.2);
+      color: var(--off-white);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.3s ease;
+      line-height: 1.7;
+    }
+
+    .confessions-form textarea::placeholder {
+      color: var(--mid-gray);
+      font-style: italic;
+    }
+
+    .confessions-form textarea:focus {
+      border-color: var(--crimson);
+    }
+
+    .confessions-optional {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .confessions-optional input {
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      padding: 0.8rem 1rem;
+      background: var(--anthracite);
+      border: 1px solid rgba(139, 115, 85, 0.15);
+      color: var(--off-white);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .confessions-optional input::placeholder {
+      color: var(--mid-gray);
+      font-style: italic;
+    }
+
+    .confessions-optional input:focus {
+      border-color: var(--gold-dark);
+    }
+
+    .confessions-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .confessions-submit {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.5rem;
+      background: transparent;
+      border: 1px solid var(--crimson);
+      color: var(--crimson-light);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .confessions-submit:hover {
+      background: var(--crimson);
+      color: var(--off-white);
+    }
+
+    .confessions-privacy {
+      font-size: 0.72rem;
+      color: var(--mid-gray);
+      font-style: italic;
+    }
+
+    .confessions-success {
+      display: none;
+      padding: 1.5rem;
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      text-align: center;
+    }
+
+    .confessions-success.show { display: block; }
+
+    .confessions-success p {
+      color: var(--crimson-light);
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    #newsletter {
+      background: var(--anthracite);
+      text-align: center;
+    }
+
+    .newsletter-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .newsletter-icon {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .newsletter-text {
+      color: var(--light-gray);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-exclusive {
+      color: var(--gold);
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-note {
+      font-size: 0.72rem;
+      color: var(--mid-gray);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .newsletter-delivery-note {
+      font-size: 0.78rem;
+      color: var(--gold);
+      margin-top: 0.6rem;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    /* ===== MAILERLITE OVERRIDES ===== */
+    .ml-embedded {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .ml-embedded .ml-form-embedWrapper {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .ml-embedded .ml-form-embedBody {
+      background: transparent !important;
+      padding: 0 !important;
+    }
+
+    .ml-embedded .ml-form-embedBody .ml-form-embedContent {
+      display: none !important;
+    }
+
+    .ml-embedded .ml-form-formContent {
+      padding: 0 !important;
+    }
+
+    .ml-embedded .ml-form-fieldRow input[type="email"] {
+      font-family: var(--serif) !important;
+      font-size: 0.85rem !important;
+      padding: 0.85rem 1.2rem !important;
+      background: var(--dark-gray) !important;
+      border: 1px solid rgba(160, 136, 96, 0.25) !important;
       color: var(--off-white) !important;
       border-radius: 0 !important;
       outline: none !important;
@@ -947,7 +1457,7 @@
         <p class="book-genre" id="modalGenre"></p>
         <p class="book-modal-description" id="modalDescription"></p>
         <blockquote class="book-modal-quote" id="modalQuote"></blockquote>
-        <a class="book-modal-cta" id="modalCta" href="#" target="_blank" rel="noopener">Read on Amazon &rarr;</a>
+        <a href="#" class="book-modal-cta" id="modalCta" target="_blank" rel="noopener">Read on Amazon →</a>
       </div>
     </div>
   </div>
@@ -961,25 +1471,25 @@
       <div class="story-preview">
         <div class="story-meta">
           <h3 class="story-meta-title">Flight SK4481</h3>
-          <p class="story-meta-subtitle">Chapter 3: The Dare &mdash; Excerpt</p>
+          <p class="story-meta-subtitle">Chapter 3: The Dare — Excerpt</p>
         </div>
         <div class="story-content" id="storyContent">
-          <p><span class="drop-cap">T</span>he seatbelt sign had been off for twenty minutes when she felt it. Not a touch exactly. More like a shift in pressure, as though the air between their armrests had quietly renegotiated its boundaries.</p>
-          <p>She didn&rsquo;t look. Not yet.</p>
-          <p>Instead she studied the in-flight magazine with an intensity it absolutely did not deserve, her eyes tracking a paragraph about Bergen&rsquo;s fish market for the third time while every nerve in her left arm catalogued the precise distance between her sleeve and his.</p>
-          <p>Two centimetres. Maybe less.</p>
-          <p>He smelled like cedar and something darker. Leather, possibly. Or the particular scent of a man who had showered carefully before a flight, which was either considerate or premeditated, and she hadn&rsquo;t decided which.</p>
-          <p>&ldquo;Anything from the trolley?&rdquo;</p>
+          <p>The plane had reached cruising altitude, and the cabin settled into the muted monotony of long flights. The lights were dimmed. The passengers around us disappeared into their own worlds of movies, music, and sleep. But for me, nothing else existed except the small, electric zone in row 14.</p>
+          <p>Our fingers still lay against each other on the armrest. Neither she nor I had pulled back. It was like a silent wager: who breaks first?</p>
+          <p>Amalie picked up the book again. Her eyes didn't move across the lines. Instead she leaned fractionally closer, and her warm breath reached the side of my neck. "Shall I read aloud to you?" she whispered. Her lips were close enough that I felt the warm breath against my ear.</p>
+          <p>"What's it about right now?" My voice was a hoarse parody of normality.</p>
+          <p>"Two strangers. A train. A wager." She looked at me with those dark eyes. "Want to know what the wager is?"</p>
+          <p>My heart pounded. "Tell me."</p>
         </div>
         <div class="story-expanded" id="storyExpanded" style="display:none;">
-          <p>The flight attendant appeared like a deus ex machina, all pressed uniform and professional smile, and the spell cracked just enough for her to glance sideways.</p>
-          <p>Mistake.</p>
-          <p>He was looking at her. Not at the trolley, not at his phone, not at the window where Norway was becoming a patchwork of grey-green far below. At her. With an expression that was either amusement or challenge &mdash; the difference, she was learning, was mostly a matter of who blinked first.</p>
-          <p>&ldquo;Coffee,&rdquo; he said, still watching her. &ldquo;Black.&rdquo;</p>
-          <p>&ldquo;The same,&rdquo; she heard herself say, though she never drank coffee black and they both knew it.</p>
+          <p>"They test each other. One dare at a time. When one does something bold, the other has to match — or give up." She closed the book and placed it in the seat pocket. "It's very simple. And very dangerous."</p>
+          <p>The silence between us was charged like a capacitor. It hummed through my whole body — the tension, the charge just waiting to discharge.</p>
+          <p>"Are you the type who gives up, Sander?"</p>
+          <p>"No." The word came faster than thought. A reflex. And the moment I said it, I knew something had changed. Not between us — inside me. The controlled, rational engineering student who always planned three steps ahead had just thrown away the map. And the strange thing was that it didn't feel like a loss. It felt like the first time I'd breathed properly in three years.</p>
+          <p>She smiled. Slowly. "Then I'll begin."</p>
         </div>
         <div class="story-fade">
-          <button class="story-toggle" id="storyToggle" onclick="toggleExcerpt()">Continue reading&hellip;</button>
+          <button class="story-toggle" id="storyToggle" onclick="toggleExcerpt()">Continue reading...</button>
           <a href="#newsletter" class="story-cta">Subscribe for Full Stories</a>
         </div>
       </div>
