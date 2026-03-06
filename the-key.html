@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Key — A Free Dark Erotic Story by Samuel M. Gray</title>
+  <meta name="description" content="Read 'The Key' for free — a dark erotic confession about obsession, boundaries, and the space between watching and being invited. By Samuel M. Gray.">
+  <meta name="author" content="Samuel M. Gray">
+  <meta property="og:title" content="The Key — The Confession Series by Samuel M. Gray">
+  <meta property="og:description" content="He has the key to her house. She has no idea. Or does she? A confession. A story. A boundary crossed.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://samuelmgray.com/the-key.html">
+  <meta property="og:image" content="https://samuelmgray.com/assets/images/covers/cover_the_key.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/Logo/SMG_favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/Logo/SMG_logo_transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0a0a0a;
+      --anthracite: #1a1a1a;
+      --dark-gray: #2a2a2a;
+      --mid-gray: #888888;
+      --light-gray: #cccccc;
+      --off-white: #e8e4de;
+      --gold: #c9a961;
+      --gold-dark: #a08860;
+      --gold-glow: rgba(201, 169, 97, 0.15);
+      --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      font-family: var(--serif);
+      background: var(--black);
+      color: var(--off-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
+    a:hover { color: var(--off-white); }
+
+    ::selection { background: var(--gold-dark); color: var(--off-white); }
+
+    /* ===== AGE GATE ===== */
+    .age-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .age-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .age-gate-box { text-align: center; max-width: 480px; padding: 3rem 2rem; }
+    .age-gate-box h2 { font-size: 1.8rem; font-weight: 500; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .age-gate-box .divider-sm { width: 60px; height: 1px; background: var(--gold-dark); margin: 1rem auto 1.5rem; }
+    .age-gate-box p { color: var(--mid-gray); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.6; }
+    .age-gate-buttons { display: flex; gap: 1rem; justify-content: center; }
+    .age-gate-buttons button { font-family: var(--serif); font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.8rem 2.5rem; border: 1px solid var(--gold-dark); cursor: pointer; transition: all 0.3s ease; }
+    .btn-enter { background: transparent; color: var(--gold); }
+    .btn-enter:hover { background: var(--gold); color: var(--black); }
+    .btn-leave { background: transparent; color: var(--mid-gray); border-color: var(--dark-gray); }
+    .btn-leave:hover { border-color: var(--mid-gray); color: var(--off-white); }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2.5rem;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(160, 136, 96, 0.08);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img { height: 32px; width: auto; transition: opacity 0.3s ease; }
+    .nav-logo-img:hover { opacity: 0.8; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-gray); transition: color 0.3s ease; }
+    .nav-links a:hover { color: var(--off-white); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 22px; height: 1px; background: var(--off-white); transition: all 0.3s ease; }
+
+    /* ===== STORY HEADER ===== */
+    .story-header {
+      padding: 10rem 2rem 3rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .story-badge {
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      margin-bottom: 2rem;
+    }
+    .series-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.8rem;
+    }
+    .story-header h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--off-white);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 40px rgba(201, 169, 97, 0.1);
+    }
+    .story-tagline {
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .story-author {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 1rem;
+    }
+    .story-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+      margin: 1.5rem auto;
+    }
+    .content-warning {
+      font-size: 0.75rem;
+      color: var(--mid-gray);
+      font-style: italic;
+    }
+
+    /* ===== STORY BODY ===== */
+    .story-body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+    .story-body p {
+      color: var(--light-gray);
+      font-size: 1.05rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.9;
+    }
+    .story-body p:first-of-type::first-letter {
+      font-size: 3.5rem;
+      float: left;
+      line-height: 1;
+      margin-right: 0.5rem;
+      margin-top: 0.1rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .story-body p em {
+      color: var(--off-white);
+    }
+    .scene-break {
+      text-align: center;
+      color: var(--gold-dark);
+      font-size: 1.2rem;
+      letter-spacing: 0.5em;
+      margin: 2.5rem 0;
+      opacity: 0.6;
+    }
+    .story-coda {
+      text-align: center;
+      font-style: italic;
+      color: var(--mid-gray);
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+    .story-coda .signature {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--gold-dark);
+      font-style: italic;
+    }
+
+    /* ===== END CTA ===== */
+    .story-end {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+      text-align: center;
+      border-top: 1px solid rgba(160, 136, 96, 0.15);
+    }
+    .story-end h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .story-end p {
+      color: var(--mid-gray);
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .story-end-cta {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      padding: 0.9rem 2.8rem;
+      transition: all 0.4s ease;
+    }
+    .story-end-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+    .story-end .back-link {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+    .story-end .back-link:hover { color: var(--gold); }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(139, 115, 85, 0.1);
+      text-align: center;
+      background: var(--black);
+    }
+    .footer-name { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.5rem; }
+    .footer-copy { font-size: 0.75rem; color: var(--mid-gray); }
+    .footer-mature { font-size: 0.65rem; color: var(--mid-gray); margin-top: 0.8rem; font-style: italic; opacity: 0.6; }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      html { font-size: 16px; }
+      .nav { padding: 0.8rem 1.2rem; }
+      .nav-links {
+        position: fixed; top: 0; right: -280px;
+        width: 280px; height: 100vh;
+        background: var(--black); flex-direction: column;
+        padding: 5rem 2rem 2rem; gap: 1.5rem;
+        transition: right 0.3s ease;
+        border-left: 1px solid rgba(160, 136, 96, 0.1);
+      }
+      .nav-links.open { right: 0; }
+      .hamburger { display: flex; }
+      .story-header { padding: 7rem 1.5rem 2rem; }
+      .story-header h1 { font-size: 2.2rem; }
+      .story-body { padding: 1.5rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 480px) {
+      .age-gate-buttons { flex-direction: column; }
+      .age-gate-buttons button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== AGE GATE ===== -->
+  <div class="age-gate" id="ageGate">
+    <div class="age-gate-box">
+      <h2>Age Verification</h2>
+      <div class="divider-sm"></div>
+      <p>This story contains explicit content intended for adults only. By continuing, you confirm that you are at least 18 years of age.</p>
+      <div class="age-gate-buttons">
+        <button class="btn-enter" onclick="enterSite()">I Am 18+</button>
+        <button class="btn-leave" onclick="leaveSite()">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#books">Works</a>
+      <a href="index.html#newsletter">Newsletter</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== STORY HEADER ===== -->
+  <div class="story-header">
+    <span class="story-badge">The Confession Series</span>
+    <span class="series-label">Confession I</span>
+    <h1>The Key</h1>
+    <p class="story-tagline">A confession. A story. A boundary crossed.</p>
+    <p class="story-author">Samuel M. Gray</p>
+    <div class="story-divider"></div>
+    <p class="content-warning">Based on a real confession. This story contains voyeurism, obsession, explicit sexual content, and moral ambiguity. Intended for readers 18 and older.</p>
+  </div>
+
+  <!-- ===== STORY ===== -->
+  <div class="story-body">
+
+    <p>I know exactly when the kitchen light goes off. 10:43 PM. Every night. So precise that I once wondered if she'd set an alarm for it &mdash; a reminder to put the day behind her, as though darkness were something you chose.</p>
+
+    <p>The bedroom light burns until midnight. Always the dim, golden lamp on the nightstand, never the overhead. I watch it through the curtains like a pulse. A slow, warm pulse. Sometimes her silhouette drifts past the window &mdash; a shadow crossing from one side to the other, and I follow it with my eyes the way you follow a pendulum.</p>
+
+    <p>The bathroom fan runs for exactly seven minutes. I've counted. Many times.</p>
+
+    <p>I don't have a name. Not for you. Call me what you want &mdash; the observer, the shadow, the quiet one. Call me the one who loves without being invited.</p>
+
+    <p>I've never been anything else. Not to anyone.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>They gave me the key four years ago. Katrine and Erik. For emergencies, they said. To feed the cat when they went on holiday. To be <em>the one you trust</em>. They put it in an envelope with a Post-it: <em>Thanks for looking out for us!</em> with a smiley face. Yellow. Sticky. Her handwriting &mdash; round, slightly childish, with a little circle over the i instead of a dot.</p>
+
+    <p>They forgot about it. I didn't.</p>
+
+    <p>The key lives in the right pocket of my jacket. Always. Not on the keyring with my own &mdash; it deserves its own pocket, its own warmth. Sometimes, when I walk, I feel it through the fabric. The hard, cold metal against my thigh. A secret that weighs almost nothing and means everything.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The first time was an accident. At least, that's what I tell myself.</p>
+
+    <p>I was in the neighborhood. Late. One of those evenings where you walk because your apartment feels too small, too quiet, too much like your own. My legs carried me there. Past the driveway, past the low hedge with the winter-brown leaves that never quite fall off, past the bins that always sit slightly crooked because Erik can't be bothered to straighten them.</p>
+
+    <p>The door. The light was off. The car gone. Nobody home.</p>
+
+    <p>I took out the key. Just to see if it still worked.</p>
+
+    <p>It worked.</p>
+
+    <p>The click of the lock was so faint it nearly vanished into the silence. But I heard it. It sounded like a pact. Something opened that couldn't be closed again.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The air inside was different. Thicker. Warmer than outside, but with a strange coolness, as though the house were holding its breath. And the smell &mdash; the smell is what I remember most. Not perfume. Not food. Something deeper. Personal. Like standing inside someone else's breathing.</p>
+
+    <p>Katrine uses a body lotion with an almond scent. It hangs in the hallway air, barely detectable, like the trace of something that just passed through. In the living room there's another smell &mdash; Erik's, I think. Wood and tobacco, even though he quit smoking two years ago. Smells never fully disappear. They settle into the fabric, the walls, the house itself.</p>
+
+    <p>I didn't touch anything. I just looked.</p>
+
+    <p>Family photos on the staircase wall. Katrine and Erik on a beach somewhere warm. She's smiling with her eyes closed and sand in her hair. He's looking into the camera with that expression men get when they know they have something they don't deserve. His look said: <em>she's mine</em>. And the worst part was that he was right.</p>
+
+    <p>Notes on the fridge. <em>Get milk. Wednesday = yoga. E home late Thursday.</em> Her handwriting again. Round. Circle over the i.</p>
+
+    <p>A jacket draped over the back of a chair. Tossed, not hung. She'd be right back. The jacket was dark blue, thin, with a small stain on the sleeve that could have been coffee or chocolate. I leaned closer. Coffee.</p>
+
+    <p>I left before they came home. Locked the door. Slipped the key back in my pocket. My pulse wasn't even elevated.</p>
+
+    <p>That's the part that scares me.</p>
+
+    <p>No. That's not true. What scares me is that it was the closest I'd been to another human being in four years. Alone in a house that smells of someone else. Surrounded by evidence of a life being lived. And the total silence &mdash; it wasn't empty. It was full of everything I don't have.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The second time was three weeks later. This time I knew they were away. I'd seen the luggage in the driveway that morning, the grey suitcase and the small red weekender bag that's hers.</p>
+
+    <p>I waited for dark. Until the street was quiet. Until the last dog had been walked and the last car had parked.</p>
+
+    <p>This time I went upstairs.</p>
+
+    <p>The bedroom.</p>
+
+    <p>The bed was unmade. Katrine's side &mdash; left, always left &mdash; had a deeper impression in the mattress, as though her body were still lying there, invisible. The pillow had a shallow hollow that fit her head.</p>
+
+    <p>I sat on the edge of the bed. Her side. The mattress gave under my weight, and in that moment &mdash; in the lingering warmth that was of course only imagined &mdash; I felt something I can't explain in words you'd accept.</p>
+
+    <p>It was like lying down inside someone else's life.</p>
+
+    <p>The nightstand drawer. I opened it. Carefully. My fingers didn't tremble &mdash; they were steady, surgically steady, and that was perhaps the most disturbing part.</p>
+
+    <p>A book. Reading glasses. Cherry-flavored lip balm. Earplugs in a small plastic bag. And in the back, beneath a half-read novel with a dog-ear on page 84 &mdash;</p>
+
+    <p>A mask. Black silk. The kind you wear to sleep, or to pretend you can't see.</p>
+
+    <p>I held it up. The fabric was thin, smooth, nearly weightless between my fingers. It smelled of her. Of the almond cream, but also of what lay underneath &mdash; saltier, warmer, what only exists in the darkness between skin and cloth.</p>
+
+    <p>I put it back. Exactly as it had been. Checked the impression. Perfect.</p>
+
+    <p>For a moment &mdash; just a moment &mdash; I laid my head in the hollow of her pillow. Closed my eyes. Almond cream and warmth and something that resembled sleep. When I got up, I smoothed the pillow with the same care as a surgeon closing an incision.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The third time, I brought something.</p>
+
+    <p>Not from the house. To it.</p>
+
+    <p>A coffee mug. My coffee mug. The one I drink from every morning, the one with the small chip on the rim that my lips find automatically. I washed it. Dried it with a dish towel still warm from the dryer. Held it up to the hallway light &mdash; made sure it was clean, truly clean, free of any trace of me. And yet I knew my fingers remained in the ceramic, invisible, like fingerprints only skin can read.</p>
+
+    <p>I placed it in the cabinet among the other mugs, behind the blue striped one that nobody uses. The cabinet door let out a faint clink as I closed it &mdash; a small, metallic hello from my mug to all the others.</p>
+
+    <p>No one would notice. An extra mug among twenty. But I knew it was there. A piece of me, inside their life, invisible and permanent.</p>
+
+    <p>The next morning, drinking coffee from a new mug at home &mdash; a white, anonymous thing with no history &mdash; I thought of Katrine opening the cabinet door. Maybe her fingertips brushed across my mug without knowing. Maybe she took it down. Maybe she stood at the kitchen counter with my lips against hers, mediated through ceramic and chance.</p>
+
+    <p>The thought started in my stomach and spread outward, like a drop of ink in warm water.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>It changed the evening she came home early.</p>
+
+    <p>I was in the living room. I know, I know &mdash; it was stupid, it was reckless, it was beyond any limit. But you don't understand. The silence in a house that isn't yours. The things left behind as proof of a life you only see from outside. The air that carries traces of touches you'll never receive.</p>
+
+    <p>My hands lay flat on the kitchen counter. Her kitchen counter. Fingers spread. I was trying to absorb what I could through the wood &mdash; a temperature, a memory, a trace of her.</p>
+
+    <p>I heard the car. The engine cutting off. The car door.</p>
+
+    <p>Three seconds. That's all I had.</p>
+
+    <p>I reached the back door. Silent. Through the garden. Over the hedge. Into the dark.</p>
+
+    <p>The heart. Finally the heart. It was beating so hard I could taste it &mdash; copper and adrenaline, like biting into a coin.</p>
+
+    <p>But as I turned &mdash; once, just one look back &mdash; the kitchen light was on. And Katrine was standing at the window. Her face turned toward the garden. Toward me.</p>
+
+    <p>She was looking right at me.</p>
+
+    <p>And she smiled.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>I didn't sleep that night. Of course I didn't. I lay in my own bed &mdash; the narrow one, the cold one, the one that holds only one impression &mdash; and stared at the ceiling. My heart hammered, but not from fear. From something else &mdash; I had no word for it. A hybrid. A crossing of panic and desire that sat in my solar plexus like a clenched fist.</p>
+
+    <p>My hands smelled of her house. Faintly. Almond cream and wood. I didn't wash them.</p>
+
+    <p>She had seen me. She had seen me, and she had smiled.</p>
+
+    <p>What does that mean? What does a smile through a kitchen window in the dark mean when it's aimed at someone who just left your house?</p>
+
+    <p>Three possibilities. My brain sorted them like documents in a folder.</p>
+
+    <p><em>One:</em> She hadn't seen me. The smile was directed at her own reflection in the glass, a reflex, an evening thought.</p>
+
+    <p><em>Two:</em> She'd seen me and hadn't recognized me. A shadow in the garden. Odd, but not threatening. Maybe an animal.</p>
+
+    <p><em>Three:</em> She'd seen me. Recognized me. And smiled.</p>
+
+    <p>I turned the third possibility over and over in my mind like a coin between my fingers. It was the least likely. It was the only one I could think about.</p>
+
+    <p>Toward dawn I got up and walked to the window. The street was empty. Their house sat dark and still. But something had changed. Not in the house. In the air between us. In the invisible space between two windows facing each other over a hedge that never quite loses its leaves.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The next evening I walked past the house again. Not to go in &mdash; just to look. The streetlamp on the corner cast a pale, orange light across the facade. The kitchen light was off. 10:43. As always.</p>
+
+    <p>But something was different.</p>
+
+    <p>The bedroom curtains had been pulled aside.</p>
+
+    <p>All the way aside.</p>
+
+    <p>For the first time in four years of watching, the window stood uncovered, like a stage waiting for its audience.</p>
+
+    <p>The golden light from the nightstand lamp filled the room with shadows and warmth. And Katrine &mdash;</p>
+
+    <p>Katrine was standing in front of the mirror.</p>
+
+    <p>She was wearing a nightgown. Thin, white, in a fabric that caught the light and let it through at the same time. Not see-through, but transparent enough that her contour traced itself beneath the cloth like a secret almost told.</p>
+
+    <p>She was brushing her hair. Long, slow strokes. Head tilted slightly. Eyes closed.</p>
+
+    <p>And on the nightstand, clearly visible, placed like a jewel on a display case:</p>
+
+    <p>The black silk mask.</p>
+
+    <p>The world narrowed. The street vanished. The streetlamp, the cars, the cold air against my face &mdash; everything pulled back to the edges of my vision and became nothing. The only thing that existed was the golden rectangle of the window and the woman inside it.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>I stood there for eleven minutes. I know because I counted the seconds. Six hundred and sixty. Every single one.</p>
+
+    <p>She put down the brush. Picked up the mask. Held it between her hands for a moment &mdash; an assessment, an invitation, a decision. Then she placed it over her eyes.</p>
+
+    <p>Blindfolded. In her own bedroom. With the curtains open to the night.</p>
+
+    <p>She lay down on the bed. Not on her side. On <em>the left</em>. My side. Her head in the hollow I had made without knowing &mdash; or had I known? Had my body left a message in the mattress that only her body could read?</p>
+
+    <p>And then &mdash; with a movement that was anything but accidental &mdash; her hands slid down her body. Over the nightgown's thin fabric. Slowly. As though her fingers were exploring something unknown. Or something that belonged to someone else.</p>
+
+    <p>I stopped breathing. My shoulders were rigid, my fingers cold around the iron railing in front of me. My breath settled like mist on the night air.</p>
+
+    <p>Her hands stopped at her hips. Her fingers curled into the fabric, gripped, released. Again. As though she were negotiating with herself. There was a boundary here &mdash; a final boundary &mdash; and she was standing at its edge, feeling for the wind.</p>
+
+    <p>Then she pulled the nightgown up.</p>
+
+    <p>Not fast. Inch by inch. The fabric folded over her thighs like a curtain being opened &mdash; so slowly I could count the heartbeats between each inch. The white cotton crept over her knees, up her thighs, and the golden light from the nightstand lamp found the skin beneath. Her thighs were slightly parted. Just slightly. Enough for the shadow between them to deepen.</p>
+
+    <p>She stopped there. The nightgown bunched over her stomach, her hands resting on the inside of her thighs. Her chest rose. Fell. Rose again, faster now. Her lips parted.</p>
+
+    <p>My fingers were white around the iron railing. I didn't notice. All that existed was the lit rectangle of the window and her body inside it, lit and open and not mine &mdash; never mine &mdash; and yet offered as if it were.</p>
+
+    <p>Her right hand. It slid inward. Her fingers followed the soft line along the inside of her thigh &mdash; upward, upward &mdash; and I saw the moment she reached herself. Not in her hand. In her face. In the way her chin tipped back, almost imperceptibly. In the mouth that opened without sound. In the shoulders that pressed down into the mattress as if something were pressing her down.</p>
+
+    <p>A faint breath escaped &mdash; not a moan, just an exhale released from somewhere deeper than the lungs. It didn't reach me through the glass, but I saw it. The chest rising. The ribs tracing themselves beneath the nightgown's thin fabric.</p>
+
+    <p>Her fingers moved. At first, small circular motions that she performed with closed eyes and open mouth, and I stood out there in the dark counting and counting and stopping because the numbers didn't work anymore, because my brain had stopped sorting and just <em>received</em>.</p>
+
+    <p>She bent one knee. Foot flat against the sheet. Her hips lifted &mdash; just a couple of inches &mdash; but it was enough to change the entire shape of her body. Narrower at the waist. Tighter. The arch of her back like a string being drawn. The other hand gripped the sheet beside her head, clenched, released, clenched again.</p>
+
+    <p>Faster now. The movements were no longer careful. They were rhythmic, insistent, and I could see the muscles in her thighs tense and release in a rhythm that didn't belong to me but that my body recognized anyway. My pulse had synchronized. I felt it in my throat, in my temples, in a place further down that I won't name.</p>
+
+    <p>Her head pressed back into the pillow. <em>My</em> hollow. Her throat was bared, long and white in the lamplight, and a tendon tightened beneath the skin like a rope held taut from both ends.</p>
+
+    <p>And then &mdash; a moment of stillness. She arched up from the mattress. Hips, back, shoulders &mdash; everything lifted in a curve that was too slow to be involuntary and too raw to be staged. Her stomach trembled. Her thighs closed around her own hand. Her lips shaped something I couldn't read &mdash; a word, a name, a sound the glass stole from me.</p>
+
+    <p>Then she fell back.</p>
+
+    <p>Her body sank into the mattress. Her arms dropped to her sides. Her chest went up and down, up and down, fast, then slower. The nightgown still lay bunched over her stomach. She didn't fix it. Let it stay.</p>
+
+    <p>And the whole time. The whole time. The mask over her eyes, blind but not unaware. Not unaware at all.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>This is where the story splits. This is where you, reading this confession, have to make a choice.</p>
+
+    <p>Because either this is the story of a man who broke into a house and fantasizes that she knew. That the smile was for him. That the curtains were for him. That the mask, the fingers, the slow undressing &mdash; all of it was an answer to his invisible presence.</p>
+
+    <p>Or this is the story of a woman who found a coffee mug in her cabinet that wasn't hers. Who noticed the subtle hollow in the mattress. Who caught a stranger's scent in the pillow. And who, instead of calling the police, instead of changing the locks, instead of telling Erik &mdash;</p>
+
+    <p>&mdash; pulled the curtains aside.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>The key is still in my pocket. I can feel it now, as I write this. The hard metal against my thigh. Warm from my body.</p>
+
+    <p>Tonight the kitchen light will go off at 10:43. The bedroom light will come on. The bathroom fan will run for seven minutes.</p>
+
+    <p>And the curtains?</p>
+
+    <p>That's the only thing I can't predict. The only thing that still belongs to her. The only thing that makes me dizzy with something that lives somewhere between fear and desire, between guilt and longing, between being seen and being chosen.</p>
+
+    <p>Some nights they're closed. Those nights I go to bed and think about the mask in the drawer.</p>
+
+    <p>Some nights they're open.</p>
+
+    <p>Those nights I don't go to bed.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p>Tonight the curtains are open.</p>
+
+    <p>I see her. The mask is on. The nightgown is the white one, the thin one. She's lying on the left side. My side.</p>
+
+    <p>But something is different.</p>
+
+    <p>On the nightstand, next to the mask &mdash; something that wasn't there before. Something that doesn't belong to the room. I have to concentrate, press my gaze through the darkness and the distance and the golden light that distorts everything.</p>
+
+    <p>A mug.</p>
+
+    <p>White ceramic. Small chip on the rim.</p>
+
+    <p>My mug.</p>
+
+    <p>The one I placed in the cabinet among the others. The one I washed and dried and hid behind the blue striped one. She found it. Took it out. Placed it on her nightstand, next to the mask, as though they belong together. As though <em>I</em> belong there.</p>
+
+    <p>My fingers find the key in my pocket. It's warm.</p>
+
+    <p>Katrine lies still with the mask over her eyes. The curtains are open. The mug sits on the nightstand. The house is dark except for the one room that glows like a lantern in the November night.</p>
+
+    <p>And the door.</p>
+
+    <p>I can't see it from here. The back door, the one that faces the garden. The one I always use.</p>
+
+    <p>But I already know. I can feel it in my fingertips, in the hard metal against my thigh, in something hammering behind my ribs.</p>
+
+    <p>I know it's unlocked.</p>
+
+    <div class="scene-break">* * *</div>
+
+    <p class="story-coda">Based on a real confession. Everything else is fiction. Or is it?<span class="signature">&mdash; S. M. G.</span></p>
+
+  </div>
+
+  <!-- ===== END CTA — CONFESSIONS ===== -->
+  <div class="story-end">
+    <h3>Your Turn</h3>
+    <p>Everyone carries a story they'll never tell out loud &mdash; a fantasy that keeps them awake, a memory they can't shake, a moment that crossed every line. The ones that haunt me most become stories.</p>
+    <a href="index.html#confessions" class="story-end-cta">Send Your Confession</a>
+    <a href="index.html#books" class="back-link">&larr; Explore All Works</a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-name">Samuel M. Gray</p>
+    <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
+    <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
+  </footer>
+
+  <script>
+    // Age gate
+    function enterSite() {
+      document.getElementById('ageGate').classList.add('hidden');
+      sessionStorage.setItem('ageVerified', 'true');
+      document.body.style.overflow = '';
+    }
+    function leaveSite() { window.location.href = 'https://google.com'; }
+    (function() {
+      if (sessionStorage.getItem('ageVerified') === 'true') {
+        document.getElementById('ageGate').classList.add('hidden');
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
+    })();
+
+    // Mobile menu
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+  </script>
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+</body>
+</html>
