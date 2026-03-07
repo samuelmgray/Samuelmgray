@@ -1305,6 +1305,137 @@
       transform: translateY(0);
     }
 
+    /* ===== READ FREE SECTION ===== */
+    .read-free-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 2rem auto 0;
+    }
+    .read-free-card {
+      background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.15);
+      overflow: hidden;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .read-free-card:hover {
+      border-color: rgba(160, 136, 96, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      color: var(--off-white);
+    }
+    .read-free-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .read-free-card:hover img {
+      transform: scale(1.03);
+    }
+    .read-free-card-body {
+      padding: 1.2rem 1.5rem;
+    }
+    .read-free-card-body .free-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+    .read-free-card-body h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--off-white);
+      margin-bottom: 0.4rem;
+    }
+    .read-free-card-body p {
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .read-free-card-body .read-now-link {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ===== REVIEWS / READERS SAY ===== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 2rem auto 0;
+    }
+    .review-card {
+      background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.1);
+      padding: 1.5rem;
+    }
+    .review-stars {
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+    }
+    .review-text {
+      font-size: 0.9rem;
+      color: var(--light-gray);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+    .review-source {
+      font-size: 0.7rem;
+      color: var(--gold-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ===== NEW HERE ===== */
+    .new-here {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      padding: 1.5rem;
+      background: rgba(201, 169, 97, 0.04);
+      border: 1px solid rgba(160, 136, 96, 0.12);
+    }
+    .new-here p {
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      margin-bottom: 0.6rem;
+    }
+    .new-here a {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ===== BOOK MODAL ENHANCEMENTS ===== */
+    .book-modal-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .book-modal-meta span {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      padding: 0.25rem 0.6rem;
+      border: 1px solid rgba(160, 136, 96, 0.2);
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       html { font-size: 16px; }
@@ -1347,6 +1478,15 @@
       .hero h1 { font-size: 2.2rem; }
 
       .scroll-indicator { display: none; }
+
+      .read-free-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
 
       .confessions-optional {
         grid-template-columns: 1fr;
@@ -1391,11 +1531,11 @@
   <nav class="nav" id="mainNav">
     <a href="#hero" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img"></a>
     <div class="nav-links" id="navLinks">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="the-beach.html" onclick="closeMenu()">Read</a>
+      <a href="#read-free" onclick="closeMenu()">Read Free</a>
       <a href="#books" onclick="closeMenu()">Works</a>
-      <a href="#confessions" onclick="closeMenu()">Confess</a>
+      <a href="#about" onclick="closeMenu()">About</a>
       <a href="#newsletter" onclick="closeMenu()">Newsletter</a>
+      <a href="#confessions" onclick="closeMenu()">Confess</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1413,8 +1553,8 @@
       <div class="hero-divider"></div>
       <p class="hero-tagline">The darkest labyrinths of the human psyche.<br>Where desire meets consequence.</p>
       <div class="hero-buttons">
-        <a href="#books" class="hero-cta">Explore the Works</a>
-        <a href="#newsletter" class="hero-cta hero-cta-secondary">Subscribe for Free Story</a>
+        <a href="the-beach.html" class="hero-cta">Read a Free Story</a>
+        <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="hero-cta hero-cta-secondary">The Bus Ride — #1 Bestseller</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -1423,17 +1563,31 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
+  <!-- ===== READ FREE ===== -->
+  <section id="read-free">
     <div class="section-inner reveal">
-      <p class="section-label">The Author</p>
-      <h2 class="section-title">Who Is Samuel M. Gray?</h2>
+      <p class="section-label">Start Here</p>
+      <h2 class="section-title">Read for Free</h2>
       <div class="section-divider"></div>
-      <div class="about-text">
-        <p>Some stories are not written — they are excavated. Samuel M. Gray works in the space between confession and fiction, pulling narratives from the shadows that most writers refuse to enter. His work explores psychological dominance, forbidden arrangements, and the volatile territory where power and vulnerability collide.</p>
-        <p>Gray's protagonists are never simple. They are architects of their own ruin, negotiators of dangerous bargains, and seekers of truths that come at devastating cost. Each story is a closed room with no safe exit — only the slow unraveling of what it means to want something you cannot control.</p>
-        <p>Nothing is known of Gray beyond the page. He offers no interviews, no appearances, and no apologies. The work speaks. The rest is silence.</p>
-        <p class="about-signature">— The Storyteller of Shadows</p>
+      <div class="read-free-cards">
+        <a href="the-beach.html" class="read-free-card">
+          <img src="assets/images/covers/Cover_The_Beach.jpg" alt="The Beach — Cover" loading="lazy">
+          <div class="read-free-card-body">
+            <p class="free-label">Free Story</p>
+            <h3>The Beach</h3>
+            <p>Two years of silence unraveled in a single afternoon.</p>
+            <span class="read-now-link">Read Now &rarr;</span>
+          </div>
+        </a>
+        <a href="the-key.html" class="read-free-card">
+          <img src="assets/images/covers/cover_the_key.png" alt="The Key — Cover" loading="lazy">
+          <div class="read-free-card-body">
+            <p class="free-label">Confession I &mdash; Free</p>
+            <h3>The Key</h3>
+            <p>He has the key to her house. She has no idea. Or does she?</p>
+            <span class="read-now-link">Read Now &rarr;</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1444,6 +1598,9 @@
       <p class="section-label">Bibliography</p>
       <h2 class="section-title">Works</h2>
       <div class="section-divider"></div>
+      <div class="new-here">
+        <p>New here? Start with <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener">The Bus Ride</a> — the story that started it all. Or <a href="the-beach.html">read one free</a>.</p>
+      </div>
       <div class="books-carousel-wrapper">
         <button class="carousel-arrow left" onclick="scrollCarousel(-1)" aria-label="Previous">&#8249;</button>
         <button class="carousel-arrow right" onclick="scrollCarousel(1)" aria-label="Next">&#8250;</button>
@@ -1503,20 +1660,6 @@
 
         <div class="book-card" onclick="openBookModal(4)">
           <div class="book-cover-image">
-            <img src="assets/images/covers/Cover_The_Reflection.png" alt="The Reflection — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">Story V</p>
-            <h3 class="book-title">The Reflection</h3>
-            <p class="book-genre">Psychological Erotica</p>
-            <p class="book-excerpt">"Desire is a mirror — and nobody's face emerges unchanged."</p>
-            <span class="coming-soon-badge">Coming Soon</span>
-            <a href="#newsletter" class="book-notify-link" onclick="event.stopPropagation()">Notify me</a>
-          </div>
-        </div>
-
-        <div class="book-card" onclick="openBookModal(5)">
-          <div class="book-cover-image">
             <img src="assets/images/covers/The Forbidden Touch - Book Cover.jpg" alt="The Forbidden Touch — Cover" loading="lazy">
           </div>
           <div class="book-card-body">
@@ -1524,12 +1667,11 @@
             <h3 class="book-title">The Forbidden Touch</h3>
             <p class="book-genre">Literary Erotica</p>
             <p class="book-excerpt">"A line was crossed."</p>
-            <span class="coming-soon-badge">Coming Soon</span>
-            <a href="#newsletter" class="book-notify-link" onclick="event.stopPropagation()">Notify me</a>
+            <a href="https://www.amazon.com/dp/B0GRPV79R3" class="book-amazon-link" target="_blank" onclick="event.stopPropagation()">Read on Amazon →</a>
           </div>
         </div>
 
-        <div class="book-card" onclick="openBookModal(6)">
+        <div class="book-card" onclick="openBookModal(5)">
           <div class="book-cover-image">
             <img src="assets/images/covers/Cover_The_Beach.jpg" alt="The Beach — Cover" loading="lazy">
           </div>
@@ -1543,7 +1685,7 @@
           </div>
         </div>
 
-        <div class="book-card" onclick="openBookModal(7)">
+        <div class="book-card" onclick="openBookModal(6)">
           <div class="book-cover-image">
             <img src="assets/images/covers/cover_the_key.png" alt="The Key — Cover" loading="lazy">
           </div>
@@ -1574,12 +1716,75 @@
         <p class="book-number" id="modalNumber"></p>
         <h3 class="book-title" id="modalTitle"></h3>
         <p class="book-genre" id="modalGenre"></p>
+        <div class="book-modal-meta" id="modalMeta"></div>
         <p class="book-modal-description" id="modalDescription"></p>
         <blockquote class="book-modal-quote" id="modalQuote"></blockquote>
         <a href="#" class="book-modal-cta" id="modalCta" target="_blank" rel="noopener">Read on Amazon →</a>
       </div>
     </div>
   </div>
+
+  <!-- ===== WHAT READERS SAY ===== -->
+  <section id="reviews">
+    <div class="section-inner reveal">
+      <p class="section-label">From the Shadows</p>
+      <h2 class="section-title">What Readers Say</h2>
+      <div class="section-divider"></div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"I finished it in one sitting. My hands were shaking by the end."</p>
+          <p class="review-source">Amazon Reader</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Not your typical erotica. This is psychological, layered, and genuinely surprising."</p>
+          <p class="review-source">Amazon Reader</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Gray writes desire the way it actually feels — messy, obsessive, and impossible to look away from."</p>
+          <p class="review-source">Amazon Reader</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"The dual perspective blew my mind. You think you know who's in control — then everything flips."</p>
+          <p class="review-source">Amazon Reader</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner reveal">
+      <p class="section-label">The Author</p>
+      <h2 class="section-title">Who Is Samuel M. Gray?</h2>
+      <div class="section-divider"></div>
+      <div class="about-text">
+        <p>Some stories are not written — they are excavated. Samuel M. Gray works in the space between confession and fiction, pulling narratives from the shadows that most writers refuse to enter. His work explores psychological dominance, forbidden arrangements, and the volatile territory where power and vulnerability collide.</p>
+        <p>Nothing is known of Gray beyond the page. He offers no interviews, no appearances, and no apologies. The work speaks. The rest is silence.</p>
+        <p class="about-signature">— The Storyteller of Shadows</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section id="newsletter">
+    <div class="section-inner reveal">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">✦</div>
+        <p class="section-label" style="text-align:center;">The Inner Circle</p>
+        <h2 class="section-title" style="text-align:center;">Join the Shadows</h2>
+        <div class="section-divider" style="margin: 0.8rem auto 1.5rem;"></div>
+        <p class="newsletter-text">Subscribe and receive <em>The Night Shift: Maria's Perspective</em> — an exclusive retelling you can't buy anywhere. See the story through her eyes. Free. Instant download.</p>
+        <p class="newsletter-exclusive">Plus: early access to new releases, subscriber-only stories, and the confessions that inspired them.</p>
+        <div class="ml-embedded" data-form="0yEjb2"></div>
+        <p class="newsletter-delivery-note">After signing up, check your Promotions or Spam folder — and drag the email to your Primary inbox so you never miss a story.</p>
+        <p class="newsletter-note">No spam. Unsubscribe at any time. Your darkness is your own.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== CONFESSIONS ===== -->
   <section id="confessions">
@@ -1601,23 +1806,6 @@
       </form>
       <div class="confessions-success" id="confessionSuccess">
         <p>Your confession has been received. If it haunts me enough — it will become a story.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NEWSLETTER ===== -->
-  <section id="newsletter">
-    <div class="section-inner reveal">
-      <div class="newsletter-inner">
-        <div class="newsletter-icon">✦</div>
-        <p class="section-label" style="text-align:center;">The Inner Circle</p>
-        <h2 class="section-title" style="text-align:center;">Join the Shadows</h2>
-        <div class="section-divider" style="margin: 0.8rem auto 1.5rem;"></div>
-        <p class="newsletter-text">New releases. Exclusive stories. No noise.</p>
-        <p class="newsletter-exclusive">Subscribe now and receive an exclusive story that will never be sold — only for those who enter the shadows.</p>
-        <div class="ml-embedded" data-form="0yEjb2"></div>
-        <p class="newsletter-delivery-note">After signing up, check your Promotions or Spam folder — and drag the email to your Primary inbox so you never miss a story.</p>
-        <p class="newsletter-note">No spam. Unsubscribe at any time. Your darkness is your own.</p>
       </div>
     </div>
   </section>
@@ -1713,7 +1901,10 @@
         quote: 'Some rides take you further than you planned.',
         link: 'https://www.amazon.com/dp/B0GQZ5YMSD',
         cover: 'assets/images/covers/Cover_The_Bus_ride.png',
-        comingSoon: false
+        comingSoon: false,
+        price: '$0.99',
+        readTime: '20 min',
+        ku: true
       },
       {
         numeral: 'II',
@@ -1724,7 +1915,10 @@
         quote: 'She set the trap. He walked in willingly.',
         link: 'https://www.amazon.com/dp/B0GR73K6DQ',
         cover: 'assets/images/covers/cover_the_bait_2.png',
-        comingSoon: false
+        comingSoon: false,
+        price: '$2.99',
+        readTime: '45 min',
+        ku: true
       },
       {
         numeral: 'III',
@@ -1735,7 +1929,10 @@
         quote: '30,000 feet. No rules. No turning back.',
         link: 'https://www.amazon.com/dp/B0GRNNMCZG',
         cover: 'assets/images/covers/Cover_Flight_SK4481.png',
-        comingSoon: false
+        comingSoon: false,
+        price: '$0.99',
+        readTime: '25 min',
+        ku: true
       },
       {
         numeral: 'IV',
@@ -1746,18 +1943,10 @@
         quote: 'The most dangerous person in the building isn\'t wearing a suit — she\'s wearing scrubs.',
         link: 'https://www.amazon.com/dp/B0GRMRVKLQ',
         cover: 'assets/images/covers/TheNightShift_cover.jpg',
-        comingSoon: false
-      },
-      {
-        numeral: 'V',
-        number: 'Story V',
-        title: 'The Reflection',
-        genre: 'Psychological Erotica',
-        description: 'Two identical faces. One reflection becomes the other. When Silje glimpses herself in her twin sister\'s bathroom, she makes a choice that will unravel three lives. What starts as impersonation becomes a calculated seduction so intricate that nobody — not her sister, not Jakob — sees the trap until it\'s too late. But there\'s a twist that shatters everything: he knew it was her from the start.',
-        quote: 'Desire is a mirror — and nobody\'s face emerges unchanged.',
-        link: '#',
-        cover: 'assets/images/covers/Cover_The_Reflection.png',
-        comingSoon: true
+        comingSoon: false,
+        price: '$2.99',
+        readTime: '1 hour',
+        ku: true
       },
       {
         numeral: 'VI',
@@ -1766,9 +1955,12 @@
         genre: 'Literary Erotica',
         description: 'A barbed wire fence. A torn thigh. A late-night emergency room where the fluorescent light kills all shadows. Thea sits half-naked on an examination table while a young resident stitches her wound. His touch is precise, clinical, utterly professional. But something changes — millimeter by millimeter, breath by breath — and in the sterile silence between them, a single thumb begins to trace slow, forbidden circles on her skin. Neither of them says a word about it.',
         quote: 'A line was crossed.',
-        link: '#',
+        link: 'https://www.amazon.com/dp/B0GRPV79R3',
         cover: 'assets/images/covers/The Forbidden Touch - Book Cover.jpg',
-        comingSoon: true
+        comingSoon: false,
+        price: '$2.99',
+        readTime: '40 min',
+        ku: true
       },
       {
         numeral: 'VII',
@@ -1808,6 +2000,17 @@
       document.getElementById('modalNumber').textContent = book.number;
       document.getElementById('modalTitle').textContent = book.title;
       document.getElementById('modalGenre').textContent = book.genre;
+      // Meta badges (price, read time, KU)
+      var metaEl = document.getElementById('modalMeta');
+      var metaHtml = '';
+      if (book.free) {
+        metaHtml += '<span>Free</span>';
+      } else if (book.price) {
+        metaHtml += '<span>' + book.price + '</span>';
+      }
+      if (book.readTime) metaHtml += '<span>' + book.readTime + ' read</span>';
+      if (book.ku) metaHtml += '<span>Free on Kindle Unlimited</span>';
+      metaEl.innerHTML = metaHtml;
       document.getElementById('modalDescription').textContent = book.description;
       document.getElementById('modalQuote').textContent = book.quote;
       var ctaEl = document.getElementById('modalCta');

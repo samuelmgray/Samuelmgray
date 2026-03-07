@@ -422,8 +422,18 @@
     <button class="tag-pill active" data-tag="all" onclick="filterBooks('all', this)">All</button>
   </div>
 
-  <!-- ===== BOOKS GRID ===== -->
+  <!-- ===== BOOKS GRID (published only) ===== -->
   <div class="books-page-grid" id="booksGrid"></div>
+
+  <!-- ===== COMING SOON ===== -->
+  <div id="comingSoonSection" style="display:none;">
+    <div class="page-header" style="padding-top:2rem;">
+      <p class="section-label">On the Horizon</p>
+      <h1 style="font-size:1.6rem;">Coming Soon</h1>
+      <div class="section-divider"></div>
+    </div>
+    <div class="books-page-grid" id="comingSoonGrid" style="padding-top:0;"></div>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -506,8 +516,8 @@
         excerpt: 'A line was crossed.',
         description: 'A late-night emergency room. A young resident stitches her wound. His touch is clinical \u2014 until it isn\u2019t.',
         cover: 'assets/images/covers/The Forbidden Touch - Book Cover.jpg',
-        link: '#',
-        comingSoon: true,
+        link: 'https://www.amazon.com/dp/B0GRPV79R3',
+        comingSoon: false,
         tags: ['novelle', 'FM', 'slow burn', 'power play', 'psychological', 'medical']
       },
       {
@@ -557,7 +567,12 @@
     // --- Render books ---
     function renderBooks() {
       var grid = document.getElementById('booksGrid');
+      var comingSoonGrid = document.getElementById('comingSoonGrid');
+      var comingSoonSection = document.getElementById('comingSoonSection');
       grid.innerHTML = '';
+      comingSoonGrid.innerHTML = '';
+      var hasComingSoon = false;
+
       books.forEach(function(book) {
         var card = document.createElement('div');
         card.className = 'book-card';
@@ -587,8 +602,15 @@
             ctaHtml +
           '</div>';
 
-        grid.appendChild(card);
+        if (book.comingSoon) {
+          comingSoonGrid.appendChild(card);
+          hasComingSoon = true;
+        } else {
+          grid.appendChild(card);
+        }
       });
+
+      comingSoonSection.style.display = hasComingSoon ? 'block' : 'none';
     }
 
     // --- Multi-select filter logic ---

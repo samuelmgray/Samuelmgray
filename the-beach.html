@@ -182,11 +182,41 @@
       margin-top: 0.3rem;
     }
 
+    /* ===== MID-STORY CTA ===== */
+    .mid-story-cta {
+      max-width: 500px;
+      margin: 2.5rem auto;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      background: rgba(201, 169, 97, 0.04);
+      border: 1px solid rgba(160, 136, 96, 0.15);
+    }
+    .mid-story-cta p {
+      color: var(--mid-gray) !important;
+      font-size: 0.85rem !important;
+      font-style: italic;
+      margin-bottom: 0.8rem !important;
+    }
+    .mid-story-cta a {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dark);
+      padding: 0.6rem 1.8rem;
+      transition: all 0.3s ease;
+    }
+    .mid-story-cta a:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
     /* ===== END CTA ===== */
     .story-end {
       max-width: 640px;
       margin: 0 auto;
-      padding: 3rem 2rem 5rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
       border-top: 1px solid rgba(160, 136, 96, 0.15);
     }
@@ -222,6 +252,51 @@
     }
     .story-end .back-link:hover { color: var(--gold); }
 
+    /* ===== BOOK RECOMMENDATIONS ===== */
+    .book-recs {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      text-align: center;
+    }
+    .book-recs h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .book-recs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .book-rec-card {
+      display: block;
+      text-decoration: none;
+      background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .book-rec-card:hover {
+      border-color: rgba(160, 136, 96, 0.3);
+      transform: translateY(-3px);
+      color: var(--off-white);
+    }
+    .book-rec-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .book-rec-card span {
+      display: block;
+      padding: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--off-white);
+      text-align: center;
+    }
+
     /* ===== FOOTER ===== */
     .footer {
       padding: 3rem 2rem;
@@ -250,6 +325,7 @@
       .story-header { padding: 7rem 1.5rem 2rem; }
       .story-header h1 { font-size: 2.2rem; }
       .story-body { padding: 1.5rem 1.5rem 3rem; }
+      .book-recs-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
     }
 
     @media (max-width: 480px) {
@@ -356,6 +432,11 @@
     <p>Martin had taken the newspaper off his face. He looked at me with an expression that was a blend of pity and half-suppressed laughter.</p>
 
     <div class="scene-break">* * *</div>
+
+    <div class="mid-story-cta">
+      <p>Enjoying the story? Subscribe and get another one free — an exclusive novella only for subscribers.</p>
+      <a href="https://samuelmgray.com/index.html#newsletter">Get Your Free Story</a>
+    </div>
 
     <p>"Should we swim?"</p>
 
@@ -531,9 +612,28 @@
 
   <!-- ===== END CTA ===== -->
   <div class="story-end">
-    <p>If this story kept you reading, there's more where it came from. Subscribe and receive an exclusive story that will never be sold &mdash; only for those who enter the shadows.</p>
-    <a href="index.html#newsletter" class="story-end-cta">Subscribe for More</a>
+    <p>If this kept you reading, there's more. Subscribe and get an exclusive novella &mdash; <em>The Night Shift: Maria's Perspective</em> &mdash; free, only for subscribers.</p>
+    <a href="index.html#newsletter" class="story-end-cta">Subscribe &amp; Get Your Free Story</a>
     <a href="index.html#books" class="back-link">&larr; Explore All Works</a>
+  </div>
+
+  <!-- ===== BOOK RECOMMENDATIONS ===== -->
+  <div class="book-recs">
+    <h3>If you liked The Beach, try these:</h3>
+    <div class="book-recs-grid">
+      <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="book-rec-card">
+        <img src="assets/images/covers/Cover_The_Bus_ride.png" alt="The Bus Ride" loading="lazy">
+        <span>The Bus Ride</span>
+      </a>
+      <a href="https://www.amazon.com/dp/B0GRNNMCZG" target="_blank" rel="noopener" class="book-rec-card">
+        <img src="assets/images/covers/Cover_Flight_SK4481.png" alt="Flight SK4481" loading="lazy">
+        <span>Flight SK4481</span>
+      </a>
+      <a href="https://www.amazon.com/dp/B0GRPV79R3" target="_blank" rel="noopener" class="book-rec-card">
+        <img src="assets/images/covers/The Forbidden Touch - Book Cover.jpg" alt="The Forbidden Touch" loading="lazy">
+        <span>The Forbidden Touch</span>
+      </a>
+    </div>
   </div>
 
   <!-- ===== FOOTER ===== -->
