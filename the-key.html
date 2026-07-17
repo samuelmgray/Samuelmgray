@@ -33,7 +33,7 @@
   <link rel="apple-touch-icon" href="assets/images/Logo/SMG_logo_transparent.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -48,6 +48,7 @@
       --gold-dark: #a08860;
       --gold-glow: rgba(201, 169, 97, 0.15);
       --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      --display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
     }
 
     html { scroll-behavior: smooth; font-size: 18px; }
@@ -59,6 +60,16 @@
       line-height: 1.7;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
@@ -133,8 +144,10 @@
       margin-bottom: 0.8rem;
     }
     .story-header h1 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-family: var(--display);
+      font-size: 3.4rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
       color: var(--off-white);
       margin-bottom: 0.8rem;
       text-shadow: 0 0 40px rgba(201, 169, 97, 0.1);
@@ -706,9 +719,9 @@
   <div class="book-recs">
     <h3>More dark stories:</h3>
     <div class="book-recs-grid">
-      <a href="https://www.amazon.com/dp/B0GRMRVKLQ" target="_blank" rel="noopener" class="book-rec-card">
+      <a href="the-night-shift.html" class="book-rec-card">
         <img src="assets/images/covers/TheNightShift_cover.jpg" alt="The Night Shift" loading="lazy">
-        <span>The Night Shift</span>
+        <span>The Night Shift &middot; Free</span>
       </a>
       <a href="https://www.amazon.com/dp/B0GR73K6DQ" target="_blank" rel="noopener" class="book-rec-card">
         <img src="assets/images/covers/cover_the_bait_2.png" alt="Posed: The Bait" loading="lazy">
