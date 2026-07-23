@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Works — Samuel M. Gray</title>
-  <meta name="description" content="Browse all stories by Samuel M. Gray. Dark, psychological erotic fiction — filter by theme, setting, and mood.">
+  <title>The Library — All Works by Samuel M. Gray</title>
+  <meta name="description" content="Browse the full library of stories and novellas by Samuel M. Gray. Dark, psychological erotic fiction — find your next story by mood, pairing, or series.">
   <meta name="author" content="Samuel M. Gray">
-  <meta property="og:title" content="All Works — Samuel M. Gray">
-  <meta property="og:description" content="Browse all stories by Samuel M. Gray. Filter by theme, setting, and mood.">
+  <meta property="og:title" content="The Library — All Works by Samuel M. Gray">
+  <meta property="og:description" content="Find your next story by mood, pairing, or series. Dark, psychological erotic fiction.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samuelmgray.com/books.html">
   <meta property="og:image" content="https://samuelmgray.com/assets/images/og/site-og.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="All Works — Samuel M. Gray">
+  <meta name="twitter:title" content="The Library — All Works by Samuel M. Gray">
   <meta name="twitter:description" content="Browse all stories by Samuel M. Gray. Dark, psychological erotic fiction.">
   <meta name="twitter:image" content="https://samuelmgray.com/assets/images/og/site-og.jpg">
   <meta name="robots" content="index, follow">
@@ -33,9 +33,6 @@
       --off-white: #e8e4de;
       --gold: #c9a961;
       --gold-dark: #a08860;
-      --gold-glow: rgba(201, 169, 97, 0.15);
-      --crimson: #c9a961;
-      --crimson-light: #c9a961;
       --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
       --display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
     }
@@ -53,362 +50,236 @@
 
     body::after {
       content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.03;
+      position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.03;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
     a:hover { color: var(--off-white); }
-
     ::selection { background: var(--gold-dark); color: var(--off-white); }
 
     /* ===== NAV ===== */
     .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 1rem 2.5rem;
       background: rgba(10, 10, 10, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(160, 136, 96, 0.08);
     }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo-img {
-      height: 32px;
-      width: auto;
-      transition: opacity 0.3s ease;
-    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img { height: 32px; width: auto; transition: opacity 0.3s ease; }
     .nav-logo-img:hover { opacity: 0.8; }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    .nav-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--mid-gray);
-      transition: color 0.3s ease;
-    }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-gray); }
     .nav-links a:hover { color: var(--off-white); }
     .nav-links a.active { color: var(--gold); }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .hamburger span {
-      width: 22px;
-      height: 1px;
-      background: var(--off-white);
-      transition: all 0.3s ease;
-    }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 22px; height: 1px; background: var(--off-white); }
 
     /* ===== PAGE HEADER ===== */
-    .page-header {
-      padding: 8rem 2.5rem 3rem;
-      text-align: center;
-    }
+    .page-header { padding: 8rem 2.5rem 2rem; text-align: center; }
     .page-header .section-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 0.8rem;
-      text-shadow: 0 0 30px rgba(201, 169, 97, 0.08);
+      font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold-dark); margin-bottom: 0.8rem;
     }
     .page-header h1 {
-      font-family: var(--display);
-      font-size: 2.8rem;
-      font-weight: 500;
-      color: var(--off-white);
-      letter-spacing: 0.02em;
+      font-family: var(--display); font-size: 2.8rem; font-weight: 500;
+      color: var(--off-white); letter-spacing: 0.02em;
       text-shadow: 0 0 40px rgba(201, 169, 97, 0.1);
     }
-    .section-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--gold-dark);
-      margin: 1rem auto 0;
+    .page-header .library-sub {
+      color: var(--mid-gray); font-style: italic; margin-top: 0.8rem; font-size: 0.95rem;
     }
+    .section-divider { width: 40px; height: 1px; background: var(--gold-dark); margin: 1rem auto 0; }
 
-    /* ===== TAG FILTER ===== */
-    .tag-filter {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0 2.5rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+    /* ===== CONTROLS ===== */
+    .library-controls { max-width: 1000px; margin: 0 auto; padding: 1rem 2rem 0.5rem; }
+    .control-row { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    #libSearch {
+      font-family: var(--serif); font-size: 0.9rem; padding: 0.6rem 1.1rem;
+      background: var(--anthracite); border: 1px solid rgba(160, 136, 96, 0.25);
+      color: var(--off-white); outline: none; width: min(340px, 100%);
+      transition: border-color 0.3s ease;
+    }
+    #libSearch::placeholder { color: var(--mid-gray); font-style: italic; }
+    #libSearch:focus { border-color: var(--gold-dark); }
+    #libSort {
+      font-family: var(--serif); font-size: 0.8rem; padding: 0.6rem 0.9rem;
+      background: var(--anthracite); border: 1px solid rgba(160, 136, 96, 0.25);
+      color: var(--mid-gray); outline: none; cursor: pointer;
+    }
+    .filter-group { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 0.7rem; }
+    .filter-label {
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold-dark); min-width: 4.2rem; text-align: right;
     }
     .tag-pill {
-      font-family: var(--serif);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.9rem;
-      background: transparent;
-      border: 1px solid var(--dark-gray);
-      color: var(--mid-gray);
-      cursor: pointer;
-      transition: all 0.3s ease;
+      font-family: var(--serif); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 0.35rem 0.9rem; background: transparent; border: 1px solid var(--dark-gray);
+      color: var(--mid-gray); cursor: pointer; transition: all 0.3s ease;
     }
-    .tag-pill:hover {
-      border-color: var(--gold-dark);
-      color: var(--gold-dark);
+    .tag-pill:hover { border-color: var(--gold-dark); color: var(--gold-dark); }
+    .tag-pill.active { border-color: var(--gold); color: var(--gold); background: rgba(201, 169, 97, 0.08); }
+    .filter-status {
+      display: flex; justify-content: center; align-items: center; gap: 1.2rem;
+      margin-top: 0.8rem; font-size: 0.75rem; color: var(--mid-gray);
     }
-    .tag-pill.active {
-      border-color: var(--gold);
-      color: var(--gold);
-      background: rgba(201, 169, 97, 0.08);
+    #libReset {
+      font-family: var(--serif); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      background: none; border: none; color: var(--gold-dark); cursor: pointer; display: none;
     }
+    #libReset:hover { color: var(--gold); }
+    #libReset.show { display: inline; }
 
-    /* ===== BOOKS GRID ===== */
-    .books-page-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 1rem 2.5rem 4rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* ===== SHELVES ===== */
+    .shelf { max-width: 1200px; margin: 0 auto; padding: 2rem 2.5rem 1rem; }
+    .shelf-head { margin-bottom: 1.4rem; }
+    .shelf-head .section-label {
+      font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold-dark); margin-bottom: 0.3rem;
     }
+    .shelf-head h2 {
+      font-family: var(--display); font-size: 1.7rem; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--off-white);
+    }
+    .shelf-head .shelf-divider { width: 40px; height: 1px; background: var(--gold-dark); margin-top: 0.7rem; }
 
-    .book-card {
-      background: var(--anthracite);
-      border: 1px solid rgba(160, 136, 96, 0.1);
-      padding: 0;
+    /* start here */
+    .start-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .start-card {
+      display: flex; gap: 1.1rem; background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.12); padding: 1.1rem;
+      transition: all 0.4s ease; align-items: center;
+    }
+    .start-card:hover { border-color: rgba(160, 136, 96, 0.35); transform: translateY(-3px); }
+    .start-card img { width: 88px; height: auto; display: block; border: 1px solid var(--dark-gray); flex-shrink: 0; }
+    .start-kicker { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+    .start-card h3 { font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--off-white); line-height: 1.2; }
+    .start-tag { font-size: 0.78rem; color: var(--mid-gray); font-style: italic; line-height: 1.45; margin-top: 0.25rem; }
+    .start-meta { display: block; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); margin-top: 0.4rem; }
+
+    /* series shelf */
+    .series-shelf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .series-shelf-card {
+      display: flex; gap: 1.2rem; background: var(--anthracite);
+      border: 1px solid rgba(160, 136, 96, 0.12); padding: 1.2rem;
       transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
     }
-    .book-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
+    .series-shelf-card:hover { border-color: rgba(160, 136, 96, 0.4); transform: translateY(-3px); color: var(--off-white); }
+    .series-shelf-card img { width: 110px; height: auto; align-self: flex-start; display: block; border: 1px solid var(--dark-gray); flex-shrink: 0; }
+    .series-shelf-body .book-title { font-size: 1.3rem; margin-bottom: 0.2rem; }
+    .series-status { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .series-cta { display: inline-block; margin-top: 0.5rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dark); }
+    .series-shelf-card:hover .series-cta { color: var(--gold); }
+
+    /* book grid */
+    .books-page-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;
+    }
+    .lib-card {
+      background: var(--anthracite); border: 1px solid rgba(160, 136, 96, 0.1);
+      transition: all 0.4s ease; position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .lib-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.4s ease;
+      opacity: 0; transition: opacity 0.4s ease; z-index: 1;
     }
-    .book-card:hover {
-      border-color: rgba(160, 136, 96, 0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    }
-    .book-card:hover::before { opacity: 1; }
-
-    .book-card.faded {
-      opacity: 0.2;
-      transform: scale(0.97);
-      filter: grayscale(0.5);
-    }
-
-    .book-cover-image {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
-    .book-cover-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-    .book-card:hover .book-cover-image img {
-      transform: scale(1.03);
-    }
-    .book-cover-image::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 60px;
+    .lib-card:hover { border-color: rgba(160, 136, 96, 0.3); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
+    .lib-card:hover::before { opacity: 1; }
+    .lib-cover { display: block; position: relative; overflow: hidden; }
+    .lib-cover img { width: 100%; height: auto; display: block; transition: transform 0.6s ease; }
+    .lib-card:hover .lib-cover img { transform: scale(1.03); }
+    .lib-cover::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
       background: linear-gradient(to bottom, transparent, var(--anthracite));
     }
-
-    .book-card-body {
-      padding: 1.5rem;
+    .ribbon {
+      position: absolute; top: 0.8rem; left: 0; z-index: 2;
+      font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase;
+      padding: 0.28rem 0.8rem 0.28rem 0.9rem;
     }
-    .book-number {
-      font-size: 0.65rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 0.6rem;
-    }
-    .book-title {
-      font-family: var(--display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--off-white);
-      margin-bottom: 0.4rem;
-      line-height: 1.25;
-    }
-    .book-genre {
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--crimson-light);
-      margin-bottom: 0.8rem;
-    }
-    .book-excerpt {
-      font-size: 0.85rem;
-      color: var(--mid-gray);
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
-    }
-    .book-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 1rem;
-    }
+    .ribbon-new { background: var(--gold); color: var(--black); }
+    .ribbon-badge { background: rgba(10,10,10,0.85); color: var(--gold); border: 1px solid var(--gold-dark); border-left: none; top: 2.6rem; }
+    .lib-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .book-number { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.6rem; }
+    .book-title { font-family: var(--display); font-size: 1.5rem; font-weight: 600; color: var(--off-white); margin-bottom: 0.4rem; line-height: 1.25; }
+    .book-title a { color: inherit; }
+    .book-genre { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .lib-series { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 0.5rem; }
+    .book-excerpt { font-size: 0.85rem; color: var(--mid-gray); font-style: italic; line-height: 1.6; margin-bottom: 0.7rem; }
+    .lib-desc { font-size: 0.8rem; color: var(--mid-gray); line-height: 1.6; margin-bottom: 0.8rem; }
+    .lib-meta { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.8rem; }
+    .book-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1rem; }
     .book-tag {
-      font-size: 0.55rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.5rem;
-      background: rgba(160, 136, 96, 0.06);
-      border: 1px solid rgba(160, 136, 96, 0.15);
-      color: var(--gold-dark);
+      font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.2rem 0.5rem; background: rgba(160, 136, 96, 0.06);
+      border: 1px solid rgba(160, 136, 96, 0.15); color: var(--gold-dark);
     }
-
+    .lib-cta-row { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
     .book-amazon-link {
-      display: inline-block;
-      margin-top: 0.3rem;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--black);
-      background: var(--gold);
-      border: none;
-      text-decoration: none;
+      display: inline-block; padding: 0.45rem 1.2rem; font-size: 0.72rem;
+      letter-spacing: 0.13em; text-transform: uppercase; font-family: var(--serif);
+      color: var(--black); background: var(--gold); text-decoration: none;
       transition: background 0.3s ease;
-      cursor: pointer;
     }
-    .book-amazon-link:hover {
-      background: var(--gold-dark);
-      color: var(--black);
-    }
-
-    .coming-soon-badge {
-      display: inline-block;
-      margin-top: 0.3rem;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--mid-gray);
-      border: 1px solid var(--dark-gray);
-      background: transparent;
-    }
-
+    .book-amazon-link:hover { background: var(--gold-dark); color: var(--black); }
     .book-read-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: 'EB Garamond', serif;
-      color: var(--black);
-      background: var(--gold);
-      border: none;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
+      display: inline-block; padding: 0.45rem 1.2rem; font-size: 0.72rem;
+      letter-spacing: 0.13em; text-transform: uppercase; font-family: var(--serif);
+      color: var(--black); background: var(--gold); text-decoration: none;
+      transition: all 0.3s ease;
     }
-    .book-read-link:hover {
-      background: var(--gold-dark);
-      transform: translateY(-1px);
+    .book-read-link:hover { background: var(--gold-dark); color: var(--black); }
+    .book-read-link.ghost { background: transparent; border: 1px solid var(--gold-dark); color: var(--gold); }
+    .book-read-link.ghost:hover { background: var(--gold); color: var(--black); }
+    .coming-soon-badge {
+      display: inline-block; padding: 0.3rem 0.9rem; font-size: 0.65rem;
+      letter-spacing: 0.2em; text-transform: uppercase; font-family: var(--serif);
+      color: var(--mid-gray); border: 1px solid var(--dark-gray); background: transparent;
+    }
+    .free-story-label {
+      display: block; width: 100%; font-size: 0.62rem; letter-spacing: 0.15em;
+      text-transform: uppercase; font-family: var(--serif); color: var(--gold); margin-top: 0.2rem;
     }
 
-    .free-story-label {
-      display: block;
-      margin-top: 0.4rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold);
+    .no-results {
+      display: none; text-align: center; color: var(--mid-gray); font-style: italic;
+      padding: 3rem 2rem;
     }
+    .no-results.show { display: block; }
 
     /* ===== FOOTER ===== */
-    .footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      border-top: 1px solid rgba(160, 136, 96, 0.08);
-    }
-    .footer-name {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--off-white);
-      margin-bottom: 0.5rem;
-    }
-    .footer-copy, .footer-mature {
-      font-size: 0.7rem;
-      color: var(--mid-gray);
-      margin-bottom: 0.3rem;
-    }
-
-    /* ===== BACK LINK ===== */
+    .footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(160, 136, 96, 0.08); margin-top: 3rem; }
+    .footer-name { font-size: 1rem; font-weight: 500; color: var(--off-white); margin-bottom: 0.5rem; }
+    .footer-copy, .footer-mature { font-size: 0.7rem; color: var(--mid-gray); margin-bottom: 0.3rem; }
     .back-link {
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
+      display: inline-block; margin-top: 1rem; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold-dark);
     }
     .back-link:hover { color: var(--gold); }
 
     /* ===== MOBILE ===== */
+    @media (max-width: 900px) {
+      .start-grid, .series-shelf-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       .nav { padding: 0.8rem 1.2rem; }
       .nav-links {
-        position: fixed;
-        top: 0; right: -280px;
-        width: 280px; height: 100vh;
-        background: var(--black);
-        flex-direction: column;
-        padding: 5rem 2rem 2rem;
-        gap: 1.5rem;
-        transition: right 0.3s ease;
+        position: fixed; top: 0; right: -280px; width: 280px; height: 100vh;
+        background: var(--black); flex-direction: column;
+        padding: 5rem 2rem 2rem; gap: 1.5rem; transition: right 0.3s ease;
         border-left: 1px solid rgba(160, 136, 96, 0.1);
       }
       .nav-links.open { right: 0; }
       .hamburger { display: flex; }
-      .page-header { padding: 6rem 1.5rem 2rem; }
-      .tag-filter { padding: 0 1.5rem 1.5rem; }
-      .books-page-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem 1.5rem 3rem;
-      }
+      .page-header { padding: 6rem 1.5rem 1.5rem; }
+      .library-controls { padding: 0.5rem 1.2rem 0; }
+      .filter-label { min-width: 0; text-align: left; width: 100%; }
+      .shelf { padding: 1.5rem 1.5rem 0.5rem; }
+      .books-page-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -420,7 +291,7 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="index.html#about">About</a>
-      <a href="#" class="active">Works</a>
+      <a href="#" class="active">Library</a>
       <a href="index.html#newsletter">Newsletter</a>
       <a href="index.html#contact">Contact</a>
     </div>
@@ -431,344 +302,473 @@
 
   <!-- ===== PAGE HEADER ===== -->
   <div class="page-header">
-    <p class="section-label">Bibliography</p>
-    <h1>All Works</h1>
+    <p class="section-label">The Collection</p>
+    <h1>The Library</h1>
     <div class="section-divider"></div>
+    <p class="library-sub">22 stories and novellas. What are you in the mood for tonight?</p>
   </div>
 
-  <!-- ===== TAG FILTER ===== -->
-  <div class="tag-filter" id="tagFilter">
-    <button class="tag-pill active" data-tag="all" onclick="filterBooks('all', this)">All</button>
-    <button class="tag-pill" data-tag="BDSM" onclick="toggleTag('BDSM', this)">BDSM</button>
-    <button class="tag-pill" data-tag="FF" onclick="toggleTag('FF', this)">FF</button>
-    <button class="tag-pill" data-tag="FM" onclick="toggleTag('FM', this)">FM</button>
-    <button class="tag-pill" data-tag="FMM" onclick="toggleTag('FMM', this)">FMM</button>
-    <button class="tag-pill" data-tag="FREE" onclick="toggleTag('FREE', this)">FREE</button>
-    <button class="tag-pill" data-tag="MFF" onclick="toggleTag('MFF', this)">MFF</button>
-    <button class="tag-pill" data-tag="MFM" onclick="toggleTag('MFM', this)">MFM</button>
-    <button class="tag-pill" data-tag="art" onclick="toggleTag('art', this)">art</button>
-    <button class="tag-pill" data-tag="awakening" onclick="toggleTag('awakening', this)">awakening</button>
-    <button class="tag-pill" data-tag="club" onclick="toggleTag('club', this)">club</button>
-    <button class="tag-pill" data-tag="confession" onclick="toggleTag('confession', this)">confession</button>
-    <button class="tag-pill" data-tag="contract" onclick="toggleTag('contract', this)">contract</button>
-    <button class="tag-pill" data-tag="dare" onclick="toggleTag('dare', this)">dare</button>
-    <button class="tag-pill" data-tag="dark" onclick="toggleTag('dark', this)">dark</button>
-    <button class="tag-pill" data-tag="dark desire" onclick="toggleTag('dark desire', this)">dark desire</button>
-    <button class="tag-pill" data-tag="deception" onclick="toggleTag('deception', this)">deception</button>
-    <button class="tag-pill" data-tag="escalation" onclick="toggleTag('escalation', this)">escalation</button>
-    <button class="tag-pill" data-tag="exploration" onclick="toggleTag('exploration', this)">exploration</button>
-    <button class="tag-pill" data-tag="first time" onclick="toggleTag('first time', this)">first time</button>
-    <button class="tag-pill" data-tag="hotwife" onclick="toggleTag('hotwife', this)">hotwife</button>
-    <button class="tag-pill" data-tag="identity" onclick="toggleTag('identity', this)">identity</button>
-    <button class="tag-pill" data-tag="masks" onclick="toggleTag('masks', this)">masks</button>
-    <button class="tag-pill" data-tag="medical" onclick="toggleTag('medical', this)">medical</button>
-    <button class="tag-pill" data-tag="novelle" onclick="toggleTag('novelle', this)">novelle</button>
-    <button class="tag-pill" data-tag="obsession" onclick="toggleTag('obsession', this)">obsession</button>
-    <button class="tag-pill" data-tag="power play" onclick="toggleTag('power play', this)">power play</button>
-    <button class="tag-pill" data-tag="psychological" onclick="toggleTag('psychological', this)">psychological</button>
-    <button class="tag-pill" data-tag="public setting" onclick="toggleTag('public setting', this)">public setting</button>
-    <button class="tag-pill" data-tag="seduction" onclick="toggleTag('seduction', this)">seduction</button>
-    <button class="tag-pill" data-tag="series" onclick="toggleTag('series', this)">series</button>
-    <button class="tag-pill" data-tag="slow burn" onclick="toggleTag('slow burn', this)">slow burn</button>
-    <button class="tag-pill" data-tag="stranger encounter" onclick="toggleTag('stranger encounter', this)">stranger encounter</button>
-    <button class="tag-pill" data-tag="trust" onclick="toggleTag('trust', this)">trust</button>
-    <button class="tag-pill" data-tag="voyeurism" onclick="toggleTag('voyeurism', this)">voyeurism</button>
+  <!-- ===== CONTROLS ===== -->
+  <div class="library-controls">
+    <div class="control-row">
+      <input type="search" id="libSearch" placeholder="Search titles, moods, descriptions&hellip;" oninput="applyFilter()">
+      <select id="libSort" onchange="applySort()">
+        <option value="default">Sort: Featured</option>
+        <option value="newest">Sort: Newest first</option>
+        <option value="az">Sort: A&ndash;Z</option>
+      </select>
+    </div>
+    <div class="filter-group"><span class="filter-label">Mood</span>
+        <button class="tag-pill" data-group="mood" data-tag="power play" onclick="toggleTag(this)">power play</button>
+        <button class="tag-pill" data-group="mood" data-tag="dare" onclick="toggleTag(this)">dare</button>
+        <button class="tag-pill" data-group="mood" data-tag="slow burn" onclick="toggleTag(this)">slow burn</button>
+        <button class="tag-pill" data-group="mood" data-tag="dark" onclick="toggleTag(this)">dark</button>
+        <button class="tag-pill" data-group="mood" data-tag="voyeurism" onclick="toggleTag(this)">voyeurism</button>
+        <button class="tag-pill" data-group="mood" data-tag="BDSM" onclick="toggleTag(this)">BDSM</button>
+        <button class="tag-pill" data-group="mood" data-tag="psychological" onclick="toggleTag(this)">psychological</button>
+        <button class="tag-pill" data-group="mood" data-tag="stranger encounter" onclick="toggleTag(this)">stranger encounter</button>
+    </div>
+    <div class="filter-group"><span class="filter-label">Pairing</span>
+        <button class="tag-pill" data-group="pairing" data-tag="FM" onclick="toggleTag(this)">FM</button>
+        <button class="tag-pill" data-group="pairing" data-tag="FF" onclick="toggleTag(this)">FF</button>
+        <button class="tag-pill" data-group="pairing" data-tag="MFM" onclick="toggleTag(this)">MFM</button>
+        <button class="tag-pill" data-group="pairing" data-tag="FMM" onclick="toggleTag(this)">FMM</button>
+        <button class="tag-pill" data-group="pairing" data-tag="MFF" onclick="toggleTag(this)">MFF</button>
+    </div>
+    <div class="filter-group"><span class="filter-label">Type</span>
+        <button class="tag-pill" data-group="type" data-tag="story" onclick="toggleTag(this)">story</button>
+        <button class="tag-pill" data-group="type" data-tag="novella" onclick="toggleTag(this)">novella</button>
+        <button class="tag-pill" data-group="type" data-tag="series" onclick="toggleTag(this)">series</button>
+        <button class="tag-pill" data-group="type" data-tag="free" onclick="toggleTag(this)">free</button>
+        <button class="tag-pill" data-group="type" data-tag="confession" onclick="toggleTag(this)">confession</button>
+    </div>
+    <div class="filter-status">
+      <span id="libCount"></span>
+      <button id="libReset" onclick="resetFilters()">&times; Reset filters</button>
+    </div>
   </div>
 
-  <!-- ===== BOOKS GRID (published only) ===== -->
-  <div class="books-page-grid" id="booksGrid">
-      <div class="book-card" data-tags="novelle,FM,stranger encounter,public setting,slow burn,voyeurism">
-        <a href="the-bus-ride.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride by Samuel M. Gray — book cover" loading="lazy">
+  <!-- ===== START HERE ===== -->
+  <section class="shelf" id="shelf-start">
+    <div class="shelf-head">
+      <p class="section-label">New to Gray?</p>
+      <h2>Start Here</h2>
+      <div class="shelf-divider"></div>
+    </div>
+    <div class="start-grid">
+      <a class="start-card" href="the-night-shift.html">
+        <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift — book cover" loading="lazy">
+        <div class="start-card-body">
+          <p class="start-kicker">Start free — a full novella</p>
+          <h3>The Night Shift</h3>
+          <p class="start-tag">&ldquo;The most dangerous person in the building isn't wearing a suit — she's wearing scrubs.&rdquo;</p>
+          <span class="start-meta">Free · 45 min read</span>
+        </div>
+      </a>
+      <a class="start-card" href="the-bus-ride.html">
+        <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride — book cover" loading="lazy">
+        <div class="start-card-body">
+          <p class="start-kicker">The one that started it all</p>
+          <h3>The Bus Ride</h3>
+          <p class="start-tag">&ldquo;Some rides take you further than you planned.&rdquo;</p>
+          <span class="start-meta">$0.99 · 20 min read</span>
+        </div>
+      </a>
+      <a class="start-card" href="black-book-1-the-wildcat.html">
+        <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — book cover" loading="lazy">
+        <div class="start-card-body">
+          <p class="start-kicker">The series opener</p>
+          <h3>The Wildcat</h3>
+          <p class="start-tag">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
+          <span class="start-meta">$0.99</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== THE SERIES ===== -->
+  <section class="shelf" id="shelf-series">
+    <div class="shelf-head">
+      <p class="section-label">Reading order matters</p>
+      <h2>The Series</h2>
+      <div class="shelf-divider"></div>
+    </div>
+    <div class="series-shelf-grid">
+      <a class="series-shelf-card lib-filterable" href="the-black-book.html" data-tags="series,FM,masks,psychological,dark,BDSM" data-title="the black book" data-order="0" data-search="the black book a five-book erotic psychological thriller about masks, desire, obsession and trust. read in order — it ends where it began: at the club, with a single name said out loud. series fm masks psychological dark bdsm">
+        <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Black Book — series" loading="lazy">
+        <div class="series-shelf-body">
+          <p class="book-number">5-book series</p>
+          <h3 class="book-title">The Black Book</h3>
+          <p class="series-status">Book One available now · $0.99</p>
+          <p class="lib-desc">A five-book erotic psychological thriller about masks, desire, obsession and trust. Read in order — it ends where it began: at the club, with a single name said out loud.</p>
+          <span class="series-cta">Series &amp; reading order &rarr;</span>
+        </div>
+      </a>
+      <a class="series-shelf-card lib-filterable" href="the-dare.html" data-tags="series,FF,dare,escalation,psychological,voyeurism" data-title="the dare trilogy" data-order="0" data-search="the dare trilogy two best friends, a game of escalating dares, and a secret folder only one of them knows exists. the game has barely begun. series ff dare escalation psychological voyeurism">
+        <img src="assets/images/covers/web/the-dare.jpg" alt="The Dare Trilogy — series" loading="lazy">
+        <div class="series-shelf-body">
+          <p class="book-number">3-book series</p>
+          <h3 class="book-title">The Dare Trilogy</h3>
+          <p class="series-status">Book One available now · $2.99</p>
+          <p class="lib-desc">Two best friends, a game of escalating dares, and a secret folder only one of them knows exists. The game has barely begun.</p>
+          <span class="series-cta">Series &amp; reading order &rarr;</span>
+        </div>
+      </a>
+      <a class="series-shelf-card lib-filterable" href="posed-the-bait.html" data-tags="series,FM,power play,art,seduction" data-title="posed" data-order="0" data-search="posed an art class, a devastating life model, and a game someone else is directing. the trap is set in part one. series fm power play art seduction">
+        <img src="assets/images/covers/web/posed-the-bait.jpg" alt="Posed — series" loading="lazy">
+        <div class="series-shelf-body">
+          <p class="book-number">2-book series</p>
+          <h3 class="book-title">Posed</h3>
+          <p class="series-status">Part One available now · $2.99</p>
+          <p class="lib-desc">An art class, a devastating life model, and a game someone else is directing. The trap is set in part one.</p>
+          <span class="series-cta">Series &amp; reading order &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== STORIES ===== -->
+  <section class="shelf" id="shelf-stories">
+    <div class="shelf-head">
+      <p class="section-label">Newest first</p>
+      <h2>Stories &amp; Novellas</h2>
+      <div class="shelf-divider"></div>
+    </div>
+    <div class="books-page-grid">
+      <div class="lib-card" data-tags="novella,FM,slow burn,psychological,dark,deception,escalation" data-title="shadow play" data-order="15" data-search="shadow play erotic novella · psychological four friends in a car at night. a hand that finds his in the dark, half a meter from her sleeping boyfriend. by morning it should have been a mistake — instead, it becomes a game with escalating rules. the most dangerous games are played in the dark. novella fm slow burn psychological dark deception escalation">
+        <a href="shadow-play.html" class="lib-cover">
+          <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story I</p>
-          <h3 class="book-title"><a href="the-bus-ride.html" style="color:inherit;text-decoration:none;">The Bus Ride</a></h3>
-          <p class="book-genre">Erotic Short Story</p>
-          <p class="book-excerpt">“Some rides take you further than you planned.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">stranger encounter</span><span class="book-tag">public setting</span><span class="book-tag">slow burn</span><span class="book-tag">voyeurism</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Two strangers. One bus. No words spoken — just a slow, deliberate escalation that neither of them has the decency to stop.</p>
-          <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
+        <div class="lib-body">
+          <p class="book-number">Story XV</p>
+          <h3 class="book-title"><a href="shadow-play.html">Shadow Play</a></h3>
+          <p class="book-genre">Erotic Novella · Psychological</p>
+          <p class="book-excerpt">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
+          <p class="lib-desc">Four friends in a car at night. A hand that finds his in the dark, half a meter from her sleeping boyfriend. By morning it should have been a mistake — instead, it becomes a game with escalating rules.</p>
+          <p class="lib-meta">$3.99 · 95 min read</p><div class="book-tags"><span class="book-tag">novella</span><span class="book-tag">FM</span><span class="book-tag">slow burn</span><span class="book-tag">psychological</span><span class="book-tag">dark</span><span class="book-tag">deception</span><span class="book-tag">escalation</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0HB13SHPQ" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $3.99</a><a href="shadow-play.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="series,novelle,FM,power play,art,seduction">
-        <a href="posed-the-bait.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/posed-the-bait.jpg" alt="Posed: The Bait by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="novella,MFM,slow burn,awakening,psychological" data-title="the guest" data-order="14" data-search="the guest erotic novella · mfm a shared bed, a wandering hand in the dark, and four whispered words that shatter every excuse she's ever made. is he asleep — or does he know exactly what he's doing? novella mfm slow burn awakening psychological">
+        <a href="the-guest.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story II</p>
-          <h3 class="book-title"><a href="posed-the-bait.html" style="color:inherit;text-decoration:none;">Posed: The Bait</a></h3>
-          <p class="book-genre">Erotic Short Story</p>
-          <p class="book-excerpt">“She set the trap. He walked in willingly.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">art</span><span class="book-tag">seduction</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">She knows exactly what she’s doing — every angle, every glance, every carefully staged moment of vulnerability.</p>
-          <a href="https://www.amazon.com/dp/B0GR73K6DQ" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
+        <div class="lib-body">
+          <p class="book-number">Story XIV</p>
+          <h3 class="book-title"><a href="the-guest.html">The Guest</a></h3>
+          <p class="book-genre">Erotic Novella · MFM</p>
+          <p class="book-excerpt">&ldquo;Is he asleep — or does he know exactly what he's doing?&rdquo;</p>
+          <p class="lib-desc">A shared bed, a wandering hand in the dark, and four whispered words that shatter every excuse she's ever made.</p>
+          <p class="lib-meta">$3.99 · 46 min read</p><div class="book-tags"><span class="book-tag">novella</span><span class="book-tag">MFM</span><span class="book-tag">slow burn</span><span class="book-tag">awakening</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0HB4WLQKF" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $3.99</a><a href="the-guest.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FM,stranger encounter,dare,escalation,psychological">
-        <a href="flight-sk4481.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/flight-sk4481.jpg" alt="Flight SK4481 by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="story,FM,dare,escalation,voyeurism,dark" data-title="the monkey game" data-order="13" data-search="the monkey game erotic thriller a random video chat, ten escalating levels — and a photo taken from outside her window. right now. monkey see, monkey do. story fm dare escalation voyeurism dark">
+        <a href="the-monkey-game.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story III</p>
-          <h3 class="book-title"><a href="flight-sk4481.html" style="color:inherit;text-decoration:none;">Flight SK4481</a></h3>
-          <p class="book-genre">Erotic Short Story</p>
-          <p class="book-excerpt">“30,000 feet. No rules. No turning back.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">stranger encounter</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A shared armrest. An accidental touch. A game of dares at 30,000 feet — each one bolder than the last.</p>
-          <a href="https://www.amazon.com/dp/B0GRNNMCZG" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
+        <div class="lib-body">
+          <p class="book-number">Story XIII</p>
+          <h3 class="book-title"><a href="the-monkey-game.html">The Monkey Game</a></h3>
+          <p class="book-genre">Erotic Thriller</p>
+          <p class="book-excerpt">&ldquo;Monkey see, monkey do.&rdquo;</p>
+          <p class="lib-desc">A random video chat, ten escalating levels — and a photo taken from outside her window. Right now.</p>
+          <p class="lib-meta">$3.99</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">voyeurism</span><span class="book-tag">dark</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9ZL99KL" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $3.99</a><a href="the-monkey-game.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FM,power play,psychological,dark,medical,BDSM,FREE">
-        <a href="the-night-shift.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="story,MFF,dark,power play,psychological" data-title="mad (mutual assured destruction)" data-order="12" data-search="mad (mutual assured destruction) erotica · psychological thriller a london gentleman's club, a familiar face across the room, and a secret two men can never share. some victories come at a price. some prices buy your silence forever. story mff dark power play psychological">
+        <a href="mad.html" class="lib-cover">
+          <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story IV</p>
-          <h3 class="book-title"><a href="the-night-shift.html" style="color:inherit;text-decoration:none;">The Night Shift</a></h3>
-          <p class="book-genre">Dark Erotic Novella</p>
-          <p class="book-excerpt">“The most dangerous person in the building isn’t wearing a suit — she’s wearing scrubs.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">psychological</span><span class="book-tag">dark</span><span class="book-tag">medical</span><span class="book-tag">BDSM</span><span class="book-tag">FREE</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A hospital bed. Two broken arms. One night nurse who doesn’t flinch. Between sponge baths and sedatives, Henrik Dahl discovers that power means nothing when you can’t even press a button.</p>
-          <a href="the-night-shift.html" class="book-read-link">Read</a><span class="free-story-label">Free Story</span>
+        <div class="lib-body">
+          <p class="book-number">Story XII</p>
+          <h3 class="book-title"><a href="mad.html">MAD (Mutual Assured Destruction)</a></h3>
+          <p class="book-genre">Erotica · Psychological Thriller</p>
+          <p class="book-excerpt">&ldquo;Some victories come at a price. Some prices buy your silence forever.&rdquo;</p>
+          <p class="lib-desc">A London gentleman's club, a familiar face across the room, and a secret two men can never share.</p>
+          <p class="lib-meta">$3.99</p><div class="book-tags"><span class="book-tag">MFF</span><span class="book-tag">dark</span><span class="book-tag">power play</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9ZKH152" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $3.99</a><a href="mad.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FM,psychological,identity,deception,dark">
-        <a href="the-reflection.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-reflection.jpg" alt="The Reflection by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="story,FM,power play,voyeurism,public setting,psychological" data-title="the fitting room" data-order="11" data-search="the fitting room erotica · power exchange six months of glances. one transaction. a fitting room of endless mirrors, and a thin curtain between them and discovery. ten seconds. thousands of kroner. everything changes. story fm power play voyeurism public setting psychological">
+        <a href="the-fitting-room.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story V</p>
-          <h3 class="book-title"><a href="the-reflection.html" style="color:inherit;text-decoration:none;">The Reflection</a></h3>
-          <p class="book-genre">Psychological Erotica</p>
-          <p class="book-excerpt">“Desire is a mirror — and nobody’s face emerges unchanged.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">psychological</span><span class="book-tag">identity</span><span class="book-tag">deception</span><span class="book-tag">dark</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Two identical faces. One reflection becomes the other. What starts as impersonation becomes a calculated seduction.</p>
-          <a href="https://www.amazon.com/dp/B0GRPL3G7W" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
+        <div class="lib-body">
+          <p class="book-number">Story X</p>
+          <h3 class="book-title"><a href="the-fitting-room.html">The Fitting Room</a></h3>
+          <p class="book-genre">Erotica · Power Exchange</p>
+          <p class="book-excerpt">&ldquo;Ten seconds. Thousands of kroner. Everything changes.&rdquo;</p>
+          <p class="lib-desc">Six months of glances. One transaction. A fitting room of endless mirrors, and a thin curtain between them and discovery.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">voyeurism</span><span class="book-tag">public setting</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0HB121DJX" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="the-fitting-room.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FM,slow burn,power play,psychological,medical">
-        <a href="the-forbidden-touch.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-forbidden-touch.jpg" alt="The Forbidden Touch by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="story,FF,first time,awakening,slow burn" data-title="my first brazilian" data-order="10" data-search="my first brazilian erotica · f/f a birthday gift, a luxurious salon, and a technician whose touch erases the line between professional and intimate. some doors, once opened, never close again. story ff first time awakening slow burn">
+        <a href="my-first-brazilian.html" class="lib-cover">
+          <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story VI</p>
-          <h3 class="book-title"><a href="the-forbidden-touch.html" style="color:inherit;text-decoration:none;">The Forbidden Touch</a></h3>
-          <p class="book-genre">Literary Erotica</p>
-          <p class="book-excerpt">“A line was crossed.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">slow burn</span><span class="book-tag">power play</span><span class="book-tag">psychological</span><span class="book-tag">medical</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A late-night emergency room. A young resident stitches her wound. His touch is clinical — until it isn’t.</p>
-          <a href="https://www.amazon.com/dp/B0GRPV79R3" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a>
+        <div class="lib-body">
+          <p class="book-number">Story XI</p>
+          <h3 class="book-title"><a href="my-first-brazilian.html">My First Brazilian</a></h3>
+          <p class="book-genre">Erotica · F/F</p>
+          <p class="book-excerpt">&ldquo;Some doors, once opened, never close again.&rdquo;</p>
+          <p class="lib-desc">A birthday gift, a luxurious salon, and a technician whose touch erases the line between professional and intimate.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">FF</span><span class="book-tag">first time</span><span class="book-tag">awakening</span><span class="book-tag">slow burn</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9YKCMB7" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="my-first-brazilian.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FM,slow burn,stranger encounter,FREE">
-        <a href="the-beach.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach by Samuel M. Gray — book cover" loading="lazy">
+      <div class="lib-card" data-tags="story,series,FM,masks,psychological,dark" data-title="the wildcat" data-order="9" data-search="the wildcat erotic psychological thriller a masked threesome. a hundred conquests. and a secret sven can never unknow. the series opener — priced to pull you in. the nice guy just learned the rules of the game. story series fm masks psychological dark the black book">
+        <a href="black-book-1-the-wildcat.html" class="lib-cover">
+          <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-new">New</span>
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story VII</p>
-          <h3 class="book-title"><a href="the-beach.html" style="color:inherit;text-decoration:none;">The Beach</a></h3>
-          <p class="book-genre">Erotic Short Story</p>
-          <p class="book-excerpt">“Two years of silence unraveled in a single afternoon.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">slow burn</span><span class="book-tag">stranger encounter</span><span class="book-tag">FREE</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">She asked him to rub sunscreen on her back. Two years of silence unraveled in a single afternoon. A slow-burn beach story about the unbearable space between wanting and touching.</p>
-          <a href="the-beach.html" class="book-read-link">Read</a><span class="free-story-label">Free Story</span>
+        <div class="lib-body">
+          <p class="book-number">The Black Book I</p>
+          <h3 class="book-title"><a href="black-book-1-the-wildcat.html">The Wildcat</a></h3>
+          <p class="book-genre">Erotic Psychological Thriller</p>
+          <p class="lib-series">The Black Book · Book One</p><p class="book-excerpt">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
+          <p class="lib-desc">A masked threesome. A hundred conquests. And a secret Sven can never unknow. The series opener — priced to pull you in.</p>
+          <p class="lib-meta">$0.99</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">masks</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9XTX6G3" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $0.99</a><a href="black-book-1-the-wildcat.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="confession,voyeurism,psychological,dark desire,power play,FREE">
-        <a href="the-key.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-key.jpg" alt="The Key by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Confession I</p>
-          <h3 class="book-title"><a href="the-key.html" style="color:inherit;text-decoration:none;">The Key</a></h3>
-          <p class="book-genre">Dark Erotic Fiction</p>
-          <p class="book-excerpt">“A confession. A story. A boundary crossed.”</p>
-          <div class="book-tags"><span class="book-tag">confession</span><span class="book-tag">voyeurism</span><span class="book-tag">psychological</span><span class="book-tag">dark desire</span><span class="book-tag">power play</span><span class="book-tag">FREE</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">He has the key to her house. She has no idea. Or does she? The first story in the Confessions series — real submissions transformed into dark, boundary-crossing fiction.</p>
-          <a href="the-key.html" class="book-read-link">Read</a><span class="free-story-label">Free Story</span>
-        </div>
-      </div>
-      <div class="book-card" data-tags="series,novelle,FF,dare,escalation,psychological,voyeurism">
-        <a href="the-dare.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-dare.jpg" alt="The Dare by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Story VIII</p>
-          <h3 class="book-title"><a href="the-dare.html" style="color:inherit;text-decoration:none;">The Dare</a></h3>
-          <p class="book-genre">Erotica · The Dare Trilogy, Book One</p>
-          <p class="book-excerpt">“Some games were never meant to end.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">novelle</span><span class="book-tag">FF</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">psychological</span><span class="book-tag">voyeurism</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Two best friends. One game of escalating dares. And a secret folder only one of them knows exists.</p>
-          <a href="https://www.amazon.com/dp/B0H9J644BW" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a> <a href="the-dare.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="novelle,FMM,hotwife,voyeurism,power play,BDSM,psychological">
-        <a href="the-night-swim.html" class="book-cover-image" style="display:block;text-decoration:none;">
+      <div class="lib-card" data-tags="story,FMM,hotwife,voyeurism,power play,BDSM,psychological" data-title="the night swim" data-order="8" data-search="the night swim erotica · psychological a summer garden party. a husband who watches. a midnight swim that changes everything beneath the surface. some games are played in silence. story fmm hotwife voyeurism power play bdsm psychological">
+        <a href="the-night-swim.html" class="lib-cover">
           <img src="assets/images/covers/web/the-night-swim.jpg" alt="The Night Swim by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
+        <div class="lib-body">
           <p class="book-number">Story IX</p>
-          <h3 class="book-title"><a href="the-night-swim.html" style="color:inherit;text-decoration:none;">The Night Swim</a></h3>
+          <h3 class="book-title"><a href="the-night-swim.html">The Night Swim</a></h3>
           <p class="book-genre">Erotica · Psychological</p>
-          <p class="book-excerpt">“Some games are played in silence.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FMM</span><span class="book-tag">hotwife</span><span class="book-tag">voyeurism</span><span class="book-tag">power play</span><span class="book-tag">BDSM</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A summer garden party. A husband who watches. A midnight swim that changes everything beneath the surface.</p>
-          <a href="https://www.amazon.com/dp/B0H9JJDZM5" target="_blank" rel="noopener" class="book-amazon-link" onclick="event.stopPropagation()">Read on Amazon</a> <a href="the-night-swim.html" class="book-read-link">Details</a>
+          <p class="book-excerpt">&ldquo;Some games are played in silence.&rdquo;</p>
+          <p class="lib-desc">A summer garden party. A husband who watches. A midnight swim that changes everything beneath the surface.</p>
+          <p class="lib-meta">$2.99 · 30 min read</p><div class="book-tags"><span class="book-tag">FMM</span><span class="book-tag">hotwife</span><span class="book-tag">voyeurism</span><span class="book-tag">power play</span><span class="book-tag">BDSM</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9JJDZM5" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="the-night-swim.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-  </div>
+      <div class="lib-card" data-tags="story,series,FF,dare,escalation,psychological,voyeurism" data-title="the dare" data-order="7" data-search="the dare erotica · the dare trilogy, book one two best friends. one game of escalating dares. and a secret folder only one of them knows exists. some games were never meant to end. story series ff dare escalation psychological voyeurism the dare trilogy">
+        <a href="the-dare.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-dare.jpg" alt="The Dare by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story VIII</p>
+          <h3 class="book-title"><a href="the-dare.html">The Dare</a></h3>
+          <p class="book-genre">Erotica · The Dare Trilogy, Book One</p>
+          <p class="lib-series">The Dare Trilogy · Book One</p><p class="book-excerpt">&ldquo;Some games were never meant to end.&rdquo;</p>
+          <p class="lib-desc">Two best friends. One game of escalating dares. And a secret folder only one of them knows exists.</p>
+          <p class="lib-meta">$2.99 · 37 min read</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FF</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">psychological</span><span class="book-tag">voyeurism</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0H9J644BW" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="the-dare.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,FM,slow burn,power play,psychological,medical" data-title="the forbidden touch" data-order="6" data-search="the forbidden touch literary erotica a late-night emergency room. a young resident stitches her wound. his touch is clinical — until it isn't. a line was crossed. story fm slow burn power play psychological medical">
+        <a href="the-forbidden-touch.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-forbidden-touch.jpg" alt="The Forbidden Touch by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story VI</p>
+          <h3 class="book-title"><a href="the-forbidden-touch.html">The Forbidden Touch</a></h3>
+          <p class="book-genre">Literary Erotica</p>
+          <p class="book-excerpt">&ldquo;A line was crossed.&rdquo;</p>
+          <p class="lib-desc">A late-night emergency room. A young resident stitches her wound. His touch is clinical — until it isn't.</p>
+          <p class="lib-meta">$2.99 · 40 min read</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">slow burn</span><span class="book-tag">power play</span><span class="book-tag">psychological</span><span class="book-tag">medical</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0GRPV79R3" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="the-forbidden-touch.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,FM,psychological,identity,deception,dark" data-title="the reflection" data-order="5" data-search="the reflection psychological erotica two identical faces. one reflection becomes the other. what starts as impersonation becomes a calculated seduction. desire is a mirror — and nobody's face emerges unchanged. story fm psychological identity deception dark">
+        <a href="the-reflection.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-reflection.jpg" alt="The Reflection by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story V</p>
+          <h3 class="book-title"><a href="the-reflection.html">The Reflection</a></h3>
+          <p class="book-genre">Psychological Erotica</p>
+          <p class="book-excerpt">&ldquo;Desire is a mirror — and nobody's face emerges unchanged.&rdquo;</p>
+          <p class="lib-desc">Two identical faces. One reflection becomes the other. What starts as impersonation becomes a calculated seduction.</p>
+          <p class="lib-meta">$2.99 · 35 min read</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">psychological</span><span class="book-tag">identity</span><span class="book-tag">deception</span><span class="book-tag">dark</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0GRPL3G7W" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="the-reflection.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,FM,stranger encounter,dare,escalation,psychological" data-title="flight sk4481" data-order="3" data-search="flight sk4481 erotic short story a shared armrest. an accidental touch. a game of dares at 30,000 feet — each one bolder than the last. 30,000 feet. no rules. no turning back. story fm stranger encounter dare escalation psychological">
+        <a href="flight-sk4481.html" class="lib-cover">
+          <img src="assets/images/covers/web/flight-sk4481.jpg" alt="Flight SK4481 by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story III</p>
+          <h3 class="book-title"><a href="flight-sk4481.html">Flight SK4481</a></h3>
+          <p class="book-genre">Erotic Short Story</p>
+          <p class="book-excerpt">&ldquo;30,000 feet. No rules. No turning back.&rdquo;</p>
+          <p class="lib-desc">A shared armrest. An accidental touch. A game of dares at 30,000 feet — each one bolder than the last.</p>
+          <p class="lib-meta">$0.99 · 25 min read</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">stranger encounter</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0GRNNMCZG" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $0.99</a><a href="flight-sk4481.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,series,FM,power play,art,seduction" data-title="posed: the bait" data-order="2" data-search="posed: the bait erotic short story she knows exactly what she's doing — every angle, every glance, every carefully staged moment of vulnerability. she set the trap. he walked in willingly. story series fm power play art seduction posed">
+        <a href="posed-the-bait.html" class="lib-cover">
+          <img src="assets/images/covers/web/posed-the-bait.jpg" alt="Posed: The Bait by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story II</p>
+          <h3 class="book-title"><a href="posed-the-bait.html">Posed: The Bait</a></h3>
+          <p class="book-genre">Erotic Short Story</p>
+          <p class="lib-series">Posed · Part One</p><p class="book-excerpt">&ldquo;She set the trap. He walked in willingly.&rdquo;</p>
+          <p class="lib-desc">She knows exactly what she's doing — every angle, every glance, every carefully staged moment of vulnerability.</p>
+          <p class="lib-meta">$2.99 · 45 min read</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">art</span><span class="book-tag">seduction</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0GR73K6DQ" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $2.99</a><a href="posed-the-bait.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,FM,stranger encounter,public setting,slow burn,voyeurism" data-title="the bus ride" data-order="1" data-search="the bus ride erotic short story two strangers. one bus. no words spoken — just a slow, deliberate escalation that neither of them has the decency to stop. some rides take you further than you planned. story fm stranger encounter public setting slow burn voyeurism">
+        <a href="the-bus-ride.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride by Samuel M. Gray — book cover" loading="lazy"><span class="ribbon ribbon-badge">#1 Bestseller</span>
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story I</p>
+          <h3 class="book-title"><a href="the-bus-ride.html">The Bus Ride</a></h3>
+          <p class="book-genre">Erotic Short Story</p>
+          <p class="book-excerpt">&ldquo;Some rides take you further than you planned.&rdquo;</p>
+          <p class="lib-desc">Two strangers. One bus. No words spoken — just a slow, deliberate escalation that neither of them has the decency to stop.</p>
+          <p class="lib-meta">$0.99 · 20 min read</p><div class="book-tags"><span class="book-tag">FM</span><span class="book-tag">stranger encounter</span><span class="book-tag">public setting</span><span class="book-tag">slow burn</span><span class="book-tag">voyeurism</span></div>
+          <div class="lib-cta-row"><a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="book-amazon-link">Read on Amazon — $0.99</a><a href="the-bus-ride.html" class="book-read-link ghost">Details</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREE ===== -->
+  <section class="shelf" id="shelf-free">
+    <div class="shelf-head">
+      <p class="section-label">No signup. No price.</p>
+      <h2>Free Stories</h2>
+      <div class="shelf-divider"></div>
+    </div>
+    <div class="books-page-grid">
+      <div class="lib-card" data-tags="novella,free,FM,power play,psychological,dark,medical,BDSM" data-title="the night shift" data-order="4" data-search="the night shift dark erotic novella a hospital bed. two broken arms. one night nurse who doesn't flinch. read the full novella free, right here. the most dangerous person in the building isn't wearing a suit — she's wearing scrubs. novella free fm power play psychological dark medical bdsm">
+        <a href="the-night-shift.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story IV</p>
+          <h3 class="book-title"><a href="the-night-shift.html">The Night Shift</a></h3>
+          <p class="book-genre">Dark Erotic Novella</p>
+          <p class="book-excerpt">&ldquo;The most dangerous person in the building isn't wearing a suit — she's wearing scrubs.&rdquo;</p>
+          <p class="lib-desc">A hospital bed. Two broken arms. One night nurse who doesn't flinch. Read the full novella free, right here.</p>
+          <p class="lib-meta">Free · 45 min read</p><div class="book-tags"><span class="book-tag">novella</span><span class="book-tag">free</span><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">psychological</span><span class="book-tag">dark</span><span class="book-tag">medical</span><span class="book-tag">BDSM</span></div>
+          <div class="lib-cta-row"><a href="the-night-shift.html" class="book-read-link">Read Free</a><span class="free-story-label">Free · full story on this site</span></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,free,FM,slow burn,stranger encounter" data-title="the beach" data-order="4" data-search="the beach erotic short story she asked him to rub sunscreen on her back. a slow-burn story about the unbearable space between wanting and touching. two years of silence unraveled in a single afternoon. story free fm slow burn stranger encounter">
+        <a href="the-beach.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Story VII</p>
+          <h3 class="book-title"><a href="the-beach.html">The Beach</a></h3>
+          <p class="book-genre">Erotic Short Story</p>
+          <p class="book-excerpt">&ldquo;Two years of silence unraveled in a single afternoon.&rdquo;</p>
+          <p class="lib-desc">She asked him to rub sunscreen on her back. A slow-burn story about the unbearable space between wanting and touching.</p>
+          <p class="lib-meta">Free</p><div class="book-tags"><span class="book-tag">free</span><span class="book-tag">FM</span><span class="book-tag">slow burn</span><span class="book-tag">stranger encounter</span></div>
+          <div class="lib-cta-row"><a href="the-beach.html" class="book-read-link">Read Free</a><span class="free-story-label">Free · full story on this site</span></div>
+        </div>
+      </div>
+      <div class="lib-card" data-tags="story,free,confession,voyeurism,psychological,dark desire,power play" data-title="the key" data-order="4" data-search="the key dark erotic fiction he has the key to her house. she has no idea. or does she? real submissions transformed into dark fiction. a confession. a story. a boundary crossed. story free confession voyeurism psychological dark desire power play">
+        <a href="the-key.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-key.jpg" alt="The Key by Samuel M. Gray — book cover" loading="lazy">
+        </a>
+        <div class="lib-body">
+          <p class="book-number">Confession I</p>
+          <h3 class="book-title"><a href="the-key.html">The Key</a></h3>
+          <p class="book-genre">Dark Erotic Fiction</p>
+          <p class="book-excerpt">&ldquo;A confession. A story. A boundary crossed.&rdquo;</p>
+          <p class="lib-desc">He has the key to her house. She has no idea. Or does she? Real submissions transformed into dark fiction.</p>
+          <p class="lib-meta">Free</p><div class="book-tags"><span class="book-tag">free</span><span class="book-tag">confession</span><span class="book-tag">voyeurism</span><span class="book-tag">psychological</span><span class="book-tag">dark desire</span><span class="book-tag">power play</span></div>
+          <div class="lib-cta-row"><a href="the-key.html" class="book-read-link">Read Free</a><span class="free-story-label">Free · full story on this site</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== COMING SOON ===== -->
-  <div id="comingSoonSection">
-    <div class="page-header" style="padding-top:2rem;">
-      <p class="section-label">On the Horizon</p>
-      <h2 style="font-size:1.6rem;font-family:var(--display);letter-spacing:0.1em;text-transform:uppercase;color:var(--off-white);font-weight:500;">Coming Soon</h2>
-      <div class="section-divider"></div>
+  <section class="shelf" id="shelf-coming">
+    <div class="shelf-head">
+      <p class="section-label">On the horizon</p>
+      <h2>Coming Soon</h2>
+      <div class="shelf-divider"></div>
     </div>
-    <div class="books-page-grid" id="comingSoonGrid" style="padding-top:0;">
-      <div class="book-card" data-tags="novelle,FM,power play,voyeurism,public setting,psychological">
-        <a href="the-fitting-room.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room by Samuel M. Gray — book cover" loading="lazy">
+    <div class="books-page-grid">
+      <div class="lib-card" data-tags="novella,FM,dark,psychological,deception,slow burn" data-title="the river" data-order="16" data-search="the river erotic tragedy · four voices a fjord with no ferry. a boyfriend on the other side. and one man with a boat — who names his price with a smile. the crossing takes eight minutes. the consequences take everything. novella fm dark psychological deception slow burn">
+        <a href="the-river.html" class="lib-cover">
+          <img src="assets/images/covers/web/the-river.jpg" alt="The River by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
-          <p class="book-number">Story X</p>
-          <h3 class="book-title"><a href="the-fitting-room.html" style="color:inherit;text-decoration:none;">The Fitting Room</a></h3>
-          <p class="book-genre">Erotica · Power Exchange</p>
-          <p class="book-excerpt">“Ten seconds. Thousands of kroner. Everything changes.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">power play</span><span class="book-tag">voyeurism</span><span class="book-tag">public setting</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Six months of glances. One transaction. A fitting room of endless mirrors, and a thin curtain between them and discovery.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="the-fitting-room.html" class="book-read-link">Details</a>
+        <div class="lib-body">
+          <p class="book-number">Story XVI</p>
+          <h3 class="book-title"><a href="the-river.html">The River</a></h3>
+          <p class="book-genre">Erotic Tragedy · Four Voices</p>
+          <p class="book-excerpt">&ldquo;The crossing takes eight minutes. The consequences take everything.&rdquo;</p>
+          <p class="lib-desc">A fjord with no ferry. A boyfriend on the other side. And one man with a boat — who names his price with a smile.</p>
+          <p class="lib-meta">$3.99</p><div class="book-tags"><span class="book-tag">novella</span><span class="book-tag">FM</span><span class="book-tag">dark</span><span class="book-tag">psychological</span><span class="book-tag">deception</span><span class="book-tag">slow burn</span></div>
+          <div class="lib-cta-row"><span class="coming-soon-badge">Coming Soon</span><a href="the-river.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="novelle,FF,first time,awakening,slow burn">
-        <a href="my-first-brazilian.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Story XI</p>
-          <h3 class="book-title"><a href="my-first-brazilian.html" style="color:inherit;text-decoration:none;">My First Brazilian</a></h3>
-          <p class="book-genre">Erotica · F/F</p>
-          <p class="book-excerpt">“Some doors, once opened, never close again.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FF</span><span class="book-tag">first time</span><span class="book-tag">awakening</span><span class="book-tag">slow burn</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A birthday gift, a luxurious salon, and a technician whose touch erases the line between professional and intimate.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="my-first-brazilian.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="novelle,MFF,dark,power play,psychological">
-        <a href="mad.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Story XII</p>
-          <h3 class="book-title"><a href="mad.html" style="color:inherit;text-decoration:none;">MAD (Mutual Assured Destruction)</a></h3>
-          <p class="book-genre">Erotica · Psychological Thriller</p>
-          <p class="book-excerpt">“Some victories come at a price. Some prices buy your silence forever.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">MFF</span><span class="book-tag">dark</span><span class="book-tag">power play</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A London gentleman’s club, a familiar face across the room, and a secret two men can never share.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="mad.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="novelle,FM,dare,escalation,voyeurism,dark">
-        <a href="the-monkey-game.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Story XIII</p>
-          <h3 class="book-title"><a href="the-monkey-game.html" style="color:inherit;text-decoration:none;">The Monkey Game</a></h3>
-          <p class="book-genre">Erotic Thriller</p>
-          <p class="book-excerpt">“Monkey see, monkey do.”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">FM</span><span class="book-tag">dare</span><span class="book-tag">escalation</span><span class="book-tag">voyeurism</span><span class="book-tag">dark</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A random video chat, ten escalating levels — and a photo taken from outside her window. Right now.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="the-monkey-game.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="novelle,MFM,slow burn,awakening,psychological">
-        <a href="the-guest.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">Story XIV</p>
-          <h3 class="book-title"><a href="the-guest.html" style="color:inherit;text-decoration:none;">The Guest</a></h3>
-          <p class="book-genre">Erotic Novella · MFM</p>
-          <p class="book-excerpt">“Is he asleep — or does he know exactly what he’s doing?”</p>
-          <div class="book-tags"><span class="book-tag">novelle</span><span class="book-tag">MFM</span><span class="book-tag">slow burn</span><span class="book-tag">awakening</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A shared bed, a wandering hand in the dark, and four whispered words that shatter every excuse she’s ever made.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="the-guest.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="series,FM,masks,psychological,dark">
-        <a href="black-book-1-the-wildcat.html" class="book-cover-image" style="display:block;text-decoration:none;">
-          <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat by Samuel M. Gray — book cover" loading="lazy">
-        </a>
-        <div class="book-card-body">
-          <p class="book-number">The Black Book I</p>
-          <h3 class="book-title"><a href="black-book-1-the-wildcat.html" style="color:inherit;text-decoration:none;">The Wildcat</a></h3>
-          <p class="book-genre">Erotic Psychological Thriller</p>
-          <p class="book-excerpt">“The nice guy just learned the rules of the game.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">masks</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A masked threesome. A hundred conquests. And a secret Sven can never unknow. The series opener.</p>
-          <span class="coming-soon-badge">Out This Week</span> <a href="black-book-1-the-wildcat.html" class="book-read-link">Details</a>
-        </div>
-      </div>
-      <div class="book-card" data-tags="series,FM,obsession,psychological,dark">
-        <a href="black-book-2-the-game.html" class="book-cover-image" style="display:block;text-decoration:none;">
+      <div class="lib-card" data-tags="story,series,FM,obsession,psychological,dark" data-title="the game" data-order="17" data-search="the game erotic psychological thriller sven knows both versions of kristina — and starts a dangerous game with her deepest secret. secrets built on stolen knowledge always come due. story series fm obsession psychological dark the black book">
+        <a href="black-book-2-the-game.html" class="lib-cover">
           <img src="assets/images/covers/web/black-book-2-the-game.jpg" alt="The Game by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
+        <div class="lib-body">
           <p class="book-number">The Black Book II</p>
-          <h3 class="book-title"><a href="black-book-2-the-game.html" style="color:inherit;text-decoration:none;">The Game</a></h3>
+          <h3 class="book-title"><a href="black-book-2-the-game.html">The Game</a></h3>
           <p class="book-genre">Erotic Psychological Thriller</p>
-          <p class="book-excerpt">“Secrets built on stolen knowledge always come due.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">obsession</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Sven knows both versions of Kristina — and starts a dangerous game with her deepest secret.</p>
-          <span class="coming-soon-badge">Coming Soon</span> <a href="black-book-2-the-game.html" class="book-read-link">Details</a>
+          <p class="lib-series">The Black Book · Book Two</p><p class="book-excerpt">&ldquo;Secrets built on stolen knowledge always come due.&rdquo;</p>
+          <p class="lib-desc">Sven knows both versions of Kristina — and starts a dangerous game with her deepest secret.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">obsession</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
+          <div class="lib-cta-row"><span class="coming-soon-badge">Coming Soon</span><a href="black-book-2-the-game.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="series,FM,FF,voyeurism,exploration">
-        <a href="black-book-3-the-exploration.html" class="book-cover-image" style="display:block;text-decoration:none;">
+      <div class="lib-card" data-tags="story,series,FM,FF,voyeurism,exploration" data-title="the exploration" data-order="18" data-search="the exploration erotic psychological thriller partners now, with their own black book to fill: a season of firsts, filmed confessions, and one riding crop on the table. pleasure was the easy part. story series fm ff voyeurism exploration the black book">
+        <a href="black-book-3-the-exploration.html" class="lib-cover">
           <img src="assets/images/covers/web/black-book-3-the-exploration.jpg" alt="The Exploration by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
+        <div class="lib-body">
           <p class="book-number">The Black Book III</p>
-          <h3 class="book-title"><a href="black-book-3-the-exploration.html" style="color:inherit;text-decoration:none;">The Exploration</a></h3>
+          <h3 class="book-title"><a href="black-book-3-the-exploration.html">The Exploration</a></h3>
           <p class="book-genre">Erotic Psychological Thriller</p>
-          <p class="book-excerpt">“Pleasure was the easy part.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">FF</span><span class="book-tag">voyeurism</span><span class="book-tag">exploration</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">Partners now, with their own black book to fill: a season of firsts, filmed confessions, and one riding crop on the table.</p>
-          <span class="coming-soon-badge">Coming Soon</span> <a href="black-book-3-the-exploration.html" class="book-read-link">Details</a>
+          <p class="lib-series">The Black Book · Book Three</p><p class="book-excerpt">&ldquo;Pleasure was the easy part.&rdquo;</p>
+          <p class="lib-desc">Partners now, with their own black book to fill: a season of firsts, filmed confessions, and one riding crop on the table.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">FM</span><span class="book-tag">FF</span><span class="book-tag">voyeurism</span><span class="book-tag">exploration</span></div>
+          <div class="lib-cta-row"><span class="coming-soon-badge">Coming Soon</span><a href="black-book-3-the-exploration.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="series,BDSM,contract,trust,psychological">
-        <a href="black-book-4-the-contract.html" class="book-cover-image" style="display:block;text-decoration:none;">
+      <div class="lib-card" data-tags="story,series,BDSM,contract,trust,psychological" data-title="the contract" data-order="19" data-search="the contract erotic psychological thriller a professional domme, a contract, safewords and aftercare — until the sacred word is ignored. trust is built, broken, and reforged in the ruins. story series bdsm contract trust psychological the black book">
+        <a href="black-book-4-the-contract.html" class="lib-cover">
           <img src="assets/images/covers/web/black-book-4-the-contract.jpg" alt="The Contract by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
+        <div class="lib-body">
           <p class="book-number">The Black Book IV</p>
-          <h3 class="book-title"><a href="black-book-4-the-contract.html" style="color:inherit;text-decoration:none;">The Contract</a></h3>
+          <h3 class="book-title"><a href="black-book-4-the-contract.html">The Contract</a></h3>
           <p class="book-genre">Erotic Psychological Thriller</p>
-          <p class="book-excerpt">“Trust is built, broken, and reforged in the ruins.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">BDSM</span><span class="book-tag">contract</span><span class="book-tag">trust</span><span class="book-tag">psychological</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">A professional Domme, a contract, safewords and aftercare — until the sacred word is ignored.</p>
-          <span class="coming-soon-badge">Coming Soon</span> <a href="black-book-4-the-contract.html" class="book-read-link">Details</a>
+          <p class="lib-series">The Black Book · Book Four</p><p class="book-excerpt">&ldquo;Trust is built, broken, and reforged in the ruins.&rdquo;</p>
+          <p class="lib-desc">A professional Domme, a contract, safewords and aftercare — until the sacred word is ignored.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">BDSM</span><span class="book-tag">contract</span><span class="book-tag">trust</span><span class="book-tag">psychological</span></div>
+          <div class="lib-cta-row"><span class="coming-soon-badge">Coming Soon</span><a href="black-book-4-the-contract.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
-      <div class="book-card" data-tags="series,masks,club,psychological,dark">
-        <a href="black-book-5-queens-gambit.html" class="book-cover-image" style="display:block;text-decoration:none;">
+      <div class="lib-card" data-tags="story,series,masks,club,psychological,dark" data-title="queen's gambit" data-order="20" data-search="queen's gambit erotic psychological thriller the chamber. one scene. one condition. and a single name, said out loud, that decides a game two years in the making. the queen has been playing longer than either of them knows. story series masks club psychological dark the black book">
+        <a href="black-book-5-queens-gambit.html" class="lib-cover">
           <img src="assets/images/covers/web/black-book-5-queens-gambit.jpg" alt="Queen's Gambit by Samuel M. Gray — book cover" loading="lazy">
         </a>
-        <div class="book-card-body">
+        <div class="lib-body">
           <p class="book-number">The Black Book V</p>
-          <h3 class="book-title"><a href="black-book-5-queens-gambit.html" style="color:inherit;text-decoration:none;">Queen's Gambit</a></h3>
+          <h3 class="book-title"><a href="black-book-5-queens-gambit.html">Queen's Gambit</a></h3>
           <p class="book-genre">Erotic Psychological Thriller</p>
-          <p class="book-excerpt">“The queen has been playing longer than either of them knows.”</p>
-          <div class="book-tags"><span class="book-tag">series</span><span class="book-tag">masks</span><span class="book-tag">club</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
-          <p style="font-size:0.8rem;color:var(--mid-gray);line-height:1.6;margin-bottom:1rem;">The Chamber. One scene. One condition. And a single name, said out loud, that decides a game two years in the making.</p>
-          <span class="coming-soon-badge">Coming Soon</span> <a href="black-book-5-queens-gambit.html" class="book-read-link">Details</a>
+          <p class="lib-series">The Black Book · Book Five</p><p class="book-excerpt">&ldquo;The queen has been playing longer than either of them knows.&rdquo;</p>
+          <p class="lib-desc">The Chamber. One scene. One condition. And a single name, said out loud, that decides a game two years in the making.</p>
+          <p class="lib-meta">$2.99</p><div class="book-tags"><span class="book-tag">series</span><span class="book-tag">masks</span><span class="book-tag">club</span><span class="book-tag">psychological</span><span class="book-tag">dark</span></div>
+          <div class="lib-cta-row"><span class="coming-soon-badge">Coming Soon</span><a href="black-book-5-queens-gambit.html" class="book-read-link ghost">Details</a></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <p class="no-results" id="noResults">Nothing matches that mood &mdash; yet. Try fewer filters, or <a href="index.html#confessions">confess what you're looking for</a>.</p>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -779,74 +779,98 @@
   </footer>
 
   <script>
-    // --- Mobile menu ---
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('open');
     }
-    function closeMenu() {
-      document.getElementById('navLinks').classList.remove('open');
-    }
 
-    // --- Book data with tags ---
-    // --- Multi-select filter logic ---
-    var activeTags = [];
+    // --- Filter state: within a group = OR, between groups = AND ---
+    var active = { mood: [], pairing: [], type: [] };
 
-    function toggleTag(tag, btn) {
-      var allBtn = document.querySelector('.tag-pill[data-tag="all"]');
-
-      if (tag === 'all') {
-        // Clear all selections
-        activeTags = [];
-        document.querySelectorAll('.tag-pill').forEach(function(p) {
-          p.classList.remove('active');
-        });
-        allBtn.classList.add('active');
-      } else {
-        // Toggle this tag
-        var idx = activeTags.indexOf(tag);
-        if (idx === -1) {
-          activeTags.push(tag);
-          btn.classList.add('active');
-        } else {
-          activeTags.splice(idx, 1);
-          btn.classList.remove('active');
-        }
-        // If no tags selected, reactivate "All"
-        if (activeTags.length === 0) {
-          allBtn.classList.add('active');
-        } else {
-          allBtn.classList.remove('active');
-        }
-      }
-
+    function toggleTag(btn) {
+      var group = btn.getAttribute('data-group');
+      var tag = btn.getAttribute('data-tag');
+      var idx = active[group].indexOf(tag);
+      if (idx === -1) { active[group].push(tag); btn.classList.add('active'); }
+      else { active[group].splice(idx, 1); btn.classList.remove('active'); }
       applyFilter();
     }
 
-    // Keep for "All" button onclick compatibility
-    function filterBooks(tag, btn) {
-      toggleTag(tag, btn);
+    function resetFilters() {
+      active = { mood: [], pairing: [], type: [] };
+      document.querySelectorAll('.tag-pill').forEach(function(p) { p.classList.remove('active'); });
+      document.getElementById('libSearch').value = '';
+      applyFilter();
+    }
+
+    function anyActive() {
+      return active.mood.length || active.pairing.length || active.type.length ||
+             document.getElementById('libSearch').value.trim().length;
+    }
+
+    function cardMatches(el) {
+      var tags = (el.getAttribute('data-tags') || '').split(',');
+      var groups = ['mood', 'pairing', 'type'];
+      for (var i = 0; i < groups.length; i++) {
+        var sel = active[groups[i]];
+        if (sel.length && !sel.some(function(t) { return tags.indexOf(t) !== -1; })) return false;
+      }
+      var q = document.getElementById('libSearch').value.trim().toLowerCase();
+      if (q && (el.getAttribute('data-search') || '').indexOf(q) === -1) return false;
+      return true;
     }
 
     function applyFilter() {
-      var cards = document.querySelectorAll('.book-card');
-      cards.forEach(function(card) {
-        var cardTags = card.getAttribute('data-tags');
-        if (activeTags.length === 0) {
-          card.classList.remove('faded');
-        } else {
-          // Card must match ANY of the selected tags
-          var matches = activeTags.some(function(t) {
-            return cardTags.indexOf(t) !== -1;
-          });
-          if (matches) {
-            card.classList.remove('faded');
-          } else {
-            card.classList.add('faded');
-          }
+      var filtering = anyActive();
+      var visible = 0;
+      var cards = document.querySelectorAll('.lib-card, .series-shelf-card');
+      var total = document.querySelectorAll('.lib-card').length;
+
+      cards.forEach(function(el) {
+        var show = !filtering || cardMatches(el);
+        el.style.display = show ? '' : 'none';
+        if (show && el.classList.contains('lib-card')) visible++;
+      });
+
+      // Start Here is curated (duplicates) — hide while filtering
+      var startShelf = document.getElementById('shelf-start');
+      startShelf.style.display = filtering ? 'none' : '';
+
+      // Hide shelves with no visible cards
+      ['shelf-series', 'shelf-stories', 'shelf-free', 'shelf-coming'].forEach(function(id) {
+        var shelf = document.getElementById(id);
+        var any = Array.prototype.some.call(
+          shelf.querySelectorAll('.lib-card, .series-shelf-card'),
+          function(el) { return el.style.display !== 'none'; }
+        );
+        shelf.style.display = any ? '' : 'none';
+      });
+
+      document.getElementById('libCount').textContent =
+        filtering ? 'Showing ' + visible + ' of ' + total + ' titles' : total + ' titles in the library';
+      document.getElementById('libReset').classList.toggle('show', !!filtering);
+      document.getElementById('noResults').classList.toggle('show', filtering && visible === 0);
+    }
+
+    // --- Sort (within each shelf grid, via flex/grid order) ---
+    function applySort() {
+      var mode = document.getElementById('libSort').value;
+      document.querySelectorAll('.books-page-grid').forEach(function(grid) {
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.lib-card'));
+        if (mode === 'default') {
+          cards.forEach(function(c) { c.style.order = ''; });
+          return;
         }
+        var sorted = cards.slice().sort(function(a, b) {
+          if (mode === 'az') {
+            return a.getAttribute('data-title') < b.getAttribute('data-title') ? -1 : 1;
+          }
+          return parseInt(b.getAttribute('data-order'), 10) - parseInt(a.getAttribute('data-order'), 10);
+        });
+        sorted.forEach(function(c, i) { c.style.order = i; });
       });
     }
 
+    applyFilter();
   </script>
 </body>
 </html>
