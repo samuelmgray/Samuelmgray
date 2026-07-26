@@ -321,12 +321,16 @@
     <div class="filter-group"><span class="filter-label">Mood</span>
         <button class="tag-pill" data-group="mood" data-tag="power play" onclick="toggleTag(this)">power play</button>
         <button class="tag-pill" data-group="mood" data-tag="dare" onclick="toggleTag(this)">dare</button>
+        <button class="tag-pill" data-group="mood" data-tag="escalation" onclick="toggleTag(this)">escalation</button>
         <button class="tag-pill" data-group="mood" data-tag="slow burn" onclick="toggleTag(this)">slow burn</button>
         <button class="tag-pill" data-group="mood" data-tag="dark" onclick="toggleTag(this)">dark</button>
         <button class="tag-pill" data-group="mood" data-tag="voyeurism" onclick="toggleTag(this)">voyeurism</button>
         <button class="tag-pill" data-group="mood" data-tag="BDSM" onclick="toggleTag(this)">BDSM</button>
         <button class="tag-pill" data-group="mood" data-tag="psychological" onclick="toggleTag(this)">psychological</button>
         <button class="tag-pill" data-group="mood" data-tag="stranger encounter" onclick="toggleTag(this)">stranger encounter</button>
+        <button class="tag-pill" data-group="mood" data-tag="public setting" onclick="toggleTag(this)">public setting</button>
+        <button class="tag-pill" data-group="mood" data-tag="masks" onclick="toggleTag(this)">masks</button>
+        <button class="tag-pill" data-group="mood" data-tag="deception" onclick="toggleTag(this)">deception</button>
     </div>
     <div class="filter-group"><span class="filter-label">Pairing</span>
         <button class="tag-pill" data-group="pairing" data-tag="FM" onclick="toggleTag(this)">FM</button>
@@ -869,6 +873,26 @@
         sorted.forEach(function(c, i) { c.style.order = i; });
       });
     }
+
+    // --- Dyplenking fra mood-dørene på forsiden: books.html?mood=dare,escalation ---
+    // Innen mood-gruppen er logikken OR, så flere tagger gir nøyaktig samme
+    // utvalg som antallet døren lovet.
+    (function initFromUrl() {
+      var q = new URLSearchParams(location.search).get('mood');
+      if (!q) return;
+      q.split(',').forEach(function (raw) {
+        var tag = raw.replace(/\+/g, ' ').trim();
+        if (!tag || active.mood.indexOf(tag) !== -1) return;
+        active.mood.push(tag);
+        var pill = document.querySelector('.tag-pill[data-group="mood"][data-tag="' + tag + '"]');
+        if (pill) pill.classList.add('active');
+      });
+      if (active.mood.length) {
+        applyFilter();
+        var anchor = document.getElementById('libCount');
+        if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    })();
 
     applyFilter();
   </script>

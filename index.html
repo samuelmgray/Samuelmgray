@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel M. Gray — Dark Erotic Fiction | Free Stories & Books</title>
+  <title>Samuel M. Gray — Dark Erotic Fiction | Free Stories &amp; Books</title>
   <meta name="description" content="Read free erotic short stories by Samuel M. Gray. Dark, psychological fiction about desire, power, and the lines we cross. Start reading now — no signup required.">
   <meta name="author" content="Samuel M. Gray">
   <meta property="og:title" content="Samuel M. Gray — Dark Erotic Short Stories">
@@ -24,6 +24,9 @@
   <link rel="canonical" href="https://samuelmgray.com">
   <link rel="icon" type="image/x-icon" href="assets/images/Logo/SMG_favicon.ico">
   <link rel="apple-touch-icon" href="assets/images/Logo/SMG_logo_transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -554,1476 +557,527 @@
 ]
   </script>
 <!-- /BUILD:BOOKS-JSONLD -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
   <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --black: #0a0a0a;
-      --anthracite: #1a1a1a;
-      --anthracite-light: #222222;
-      --dark-gray: #2a2a2a;
-      --mid-gray: #888888;
-      --light-gray: #cccccc;
-      --off-white: #e8e4de;
-      --gold: #c9a961;
-      --gold-dark: #a08860;
-      --gold-glow: rgba(201, 169, 97, 0.15);
-      --crimson: #c9a961;
-      --crimson-light: #c9a961;
-      --crimson-glow: rgba(201, 169, 97, 0.15);
-      --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
-      --display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-    }
-
-    html { scroll-behavior: smooth; font-size: 18px; }
-
-    body {
-      font-family: var(--serif);
-      background: var(--black);
-      color: var(--off-white);
-      line-height: 1.7;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Film grain overlay — subtle texture across the whole site */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
-    a:hover { color: var(--off-white); }
-
-    ::selection { background: var(--gold-dark); color: var(--off-white); }
-
-    /* ===== AGE GATE OVERLAY ===== */
-    .age-gate {
-      position: fixed;
-      inset: 0;
-      z-index: 10000;
-      background: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
-    }
-
-    .age-gate.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .age-gate-box {
-      text-align: center;
-      max-width: 480px;
-      padding: 3rem 2rem;
-    }
-
-    .age-gate-box h2 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .age-gate-box .divider-sm {
-      width: 60px;
-      height: 1px;
-      background: var(--gold-dark);
-      margin: 1rem auto 1.5rem;
-    }
-
-    .age-gate-box p {
-      color: var(--mid-gray);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    .age-gate-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .age-gate-buttons button {
-      font-family: var(--serif);
-      font-size: 0.9rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 0.8rem 2.5rem;
-      border: 1px solid var(--gold-dark);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-enter {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .btn-enter:hover {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .btn-leave {
-      background: transparent;
-      color: var(--mid-gray);
-      border-color: var(--dark-gray);
-    }
-
-    .btn-leave:hover {
-      border-color: var(--mid-gray);
-      color: var(--off-white);
-    }
-
-    /* ===== NAVIGATION ===== */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(to bottom, rgba(10,10,10,0.95), rgba(10,10,10,0));
-      transition: background 0.3s ease;
-    }
-
-    .nav.scrolled {
-      background: rgba(10, 10, 10, 0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(139, 115, 85, 0.15);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .nav-logo-img {
-      height: 32px;
-      width: auto;
-      transition: opacity 0.3s ease;
-    }
-
-    .nav-logo-img:hover {
-      opacity: 0.8;
-    }
-
-    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
-
-    .nav-links a {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--mid-gray);
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover { color: var(--gold); }
-    .nav-links a:hover::after { width: 100%; }
-
-    /* Mobile menu */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .hamburger span {
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.55) 40%, rgba(10,10,10,0.85) 80%, var(--black) 100%),
-        url('assets/images/atmosphere/hero_silk.jpg') center center / cover no-repeat;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 45%, rgba(201, 169, 97, 0.06) 0%, transparent 55%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .hero-content { position: relative; z-index: 1; }
-
-    .hero-author-pre {
-      font-size: 0.7rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 1s ease 0.3s forwards;
-    }
-
-    .hero h1 {
-      font-family: var(--display);
-      font-size: clamp(2.8rem, 7vw, 5rem);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--off-white);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 1s ease 0.6s forwards;
-      text-shadow: 0 0 50px rgba(201, 169, 97, 0.18), 0 2px 30px rgba(0,0,0,0.7);
-    }
-
-    .hero-divider {
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
-      margin: 0 auto 1.5rem;
-      opacity: 0;
-      animation: fadeUp 1s ease 0.9s forwards;
-    }
-
-    .hero-tagline {
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--gold-dark);
-      max-width: 500px;
-      margin: 0 auto 3rem;
-      line-height: 1.8;
-      opacity: 0;
-      animation: fadeUp 1s ease 1.2s forwards;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold-dark);
-      padding: 0.9rem 2.8rem;
-      transition: all 0.4s ease;
-      opacity: 0;
-      animation: fadeUp 1s ease 1.5s forwards;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 1s ease 1.5s forwards;
-    }
-    .hero-cta {
-      animation: none;
-      opacity: 1;
-    }
-    .hero-cta-secondary {
-      border-color: var(--dark-gray);
-      color: var(--mid-gray);
-    }
-    .hero-cta-secondary:hover {
-      background: var(--gold-dark);
-      color: var(--black);
-      border-color: var(--gold-dark);
-    }
-    .hero-cta:hover {
-      background: var(--gold);
-      color: var(--black);
-      border-color: var(--gold);
-    }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      opacity: 0;
-      animation: fadeUp 1s ease 2s forwards;
-    }
-
-    .scroll-indicator span {
-      font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--gold-dark), transparent);
-      animation: scrollPulse 2s ease infinite;
-    }
-
-    /* ===== SECTIONS ===== */
-    section { padding: 6rem 2rem; }
-
-    .section-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-family: var(--display);
-      font-size: 2.6rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--off-white);
-      margin-bottom: 0.8rem;
-      text-shadow: 0 0 30px rgba(201, 169, 97, 0.08);
-    }
-
-    .section-divider {
-      width: 60px;
-      height: 1px;
-      background: var(--gold-dark);
-      margin-bottom: 2.5rem;
-    }
-
-    /* ===== ABOUT ===== */
-    #about { background: var(--anthracite); }
-
-    .about-text {
-      max-width: 680px;
-    }
-
-    .about-text p {
-      margin-bottom: 1.2rem;
-      color: var(--light-gray);
-      font-size: 1rem;
-    }
-
-    .about-text p:first-of-type::first-letter {
-      font-size: 3rem;
-      float: left;
-      line-height: 1;
-      margin-right: 0.5rem;
-      margin-top: 0.1rem;
-      color: var(--gold);
-      font-weight: 500;
-    }
-
-    .about-signature {
-      margin-top: 2rem;
-      font-style: italic;
-      color: var(--gold-dark);
-      font-size: 1.1rem;
-    }
-
-    /* ===== READ A STORY ===== */
-    #read {
-      background: var(--black);
-      position: relative;
-    }
-
-    #read::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--crimson), transparent);
-    }
-
-    .story-preview {
-      max-width: 680px;
-    }
-
-    .story-meta {
-      margin-bottom: 2rem;
-    }
-
-    .story-meta-title {
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: var(--off-white);
-      margin-bottom: 0.3rem;
-    }
-
-    .story-meta-subtitle {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--crimson-light);
-    }
-
-    .story-content {
-      position: relative;
-    }
-
-    .story-content p {
-      color: var(--light-gray);
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.85;
-    }
-
-    .story-content p:first-of-type::first-letter {
-      font-size: 3.5rem;
-      float: left;
-      line-height: 1;
-      margin-right: 0.5rem;
-      margin-top: 0.1rem;
-      color: var(--crimson-light);
-      font-weight: 500;
-    }
-
-    .story-fade {
-      position: relative;
-      margin-top: -4rem;
-      padding-top: 6rem;
-      background: linear-gradient(to bottom, transparent, var(--black) 70%);
-      text-align: center;
-    }
-
-    .story-fade p {
-      font-style: italic;
-      color: var(--mid-gray);
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .story-toggle {
-      display: inline-block;
-      background: none;
-      border: none;
-      font-family: var(--serif);
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      cursor: pointer;
-      padding: 0.5rem 0;
-      margin-bottom: 1rem;
-      transition: color 0.3s ease;
-    }
-    .story-toggle:hover {
-      color: var(--gold-dark);
-    }
-
-    .story-cta {
-      display: inline-block;
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold-dark);
-      padding: 0.8rem 2.5rem;
-      transition: all 0.4s ease;
-    }
-
-    .story-cta:hover {
-      background: var(--gold);
-      color: var(--black);
-      border-color: var(--gold);
-    }
-
-    /* ===== BOOKS ===== */
-    #books { background: var(--anthracite); }
-
-    .books-carousel-wrapper {
-      position: relative;
-      margin-top: 1rem;
-    }
-
-    .books-grid {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 1.5rem;
-      padding: 2rem 3rem 4rem;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .books-grid::-webkit-scrollbar { display: none; }
-
-    .carousel-arrow {
-      position: absolute;
-      top: 45%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      background: rgba(10, 10, 10, 0.8);
-      border: 1px solid rgba(160, 136, 96, 0.3);
-      color: var(--gold);
-      font-size: 1.2rem;
-      cursor: pointer;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      font-family: var(--serif);
-    }
-    .carousel-arrow:hover {
-      background: rgba(160, 136, 96, 0.15);
-      border-color: var(--gold);
-    }
-    .carousel-arrow.left { left: 0; }
-    .carousel-arrow.right { right: 0; }
-
-    .books-view-all {
-      display: block;
-      text-align: center;
-      margin-top: 0.5rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold-dark);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .books-view-all:hover { color: var(--gold); }
-
-    .book-card {
-      background: var(--black);
-      border: 1px solid rgba(160, 136, 96, 0.1);
-      padding: 0;
-      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      position: relative;
-      overflow: visible;
-      cursor: pointer;
-      flex: 0 0 260px;
-      scroll-snap-align: center;
-    }
-
-    .book-card.carousel-edge {
-      transform: scale(0.88);
-      opacity: 0.5;
-      filter: brightness(0.7);
-    }
-
-    .book-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--crimson), transparent);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    /* Book reflection */
-    .book-card::after {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: 5%;
-      right: 5%;
-      height: 40px;
-      background: linear-gradient(to bottom, rgba(10, 10, 10, 0.3), transparent);
-      filter: blur(2px);
-      opacity: 0.4;
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-    }
-    .book-card.carousel-edge::after {
-      opacity: 0.15;
-    }
-
-    .book-card:hover {
-      border-color: rgba(160, 136, 96, 0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    }
-    .book-card.carousel-edge:hover {
-      transform: scale(0.88) translateY(-4px);
-    }
-
-    .book-card:hover::before { opacity: 1; }
-
-    .book-cover-image {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .book-cover-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .book-card:hover .book-cover-image img {
-      transform: scale(1.03);
-    }
-
-    .book-cover-image::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      background: linear-gradient(to bottom, transparent, var(--black));
-    }
-
-    .book-cover-placeholder {
-      width: 100%;
-      height: 280px;
-      background: linear-gradient(135deg, var(--anthracite) 0%, var(--dark-gray) 50%, var(--anthracite) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .book-cover-placeholder::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 60%, var(--black));
-    }
-
-    .book-cover-placeholder .cover-numeral {
-      font-size: 4rem;
-      font-weight: 400;
-      color: rgba(139, 115, 85, 0.12);
-      font-style: italic;
-    }
-
-    .book-card-body {
-      padding: 1.5rem;
-    }
-
-    .book-number {
-      font-size: 0.65rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 0.6rem;
-    }
-
-    .book-title {
-      font-family: var(--display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--off-white);
-      margin-bottom: 0.4rem;
-      line-height: 1.25;
-    }
-
-    .book-genre {
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--crimson-light);
-      margin-bottom: 0.8rem;
-    }
-
-    .book-excerpt {
-      font-size: 0.85rem;
-      color: var(--mid-gray);
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .book-expand-hint {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .book-card:hover .book-expand-hint { opacity: 1; }
-
-    .book-amazon-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: 'EB Garamond', serif;
-      color: var(--black);
-      background: var(--gold);
-      border: none;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
-    }
-    .book-amazon-link:hover {
-      background: var(--gold-dark);
-      transform: translateY(-1px);
-    }
-    .book-details-link {
-      display: block;
-      width: max-content;
-      margin-top: 0.5rem;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: 'EB Garamond', serif;
-      color: var(--gold);
-      background: transparent;
-      border: 1px solid var(--gold);
-      text-decoration: none;
-      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
-    }
-    .book-details-link:hover {
-      background: var(--gold);
-      color: var(--black);
-      transform: translateY(-1px);
-    }
-
-    .coming-soon-badge {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--mid-gray);
-      border: 1px solid var(--dark-gray);
-      background: transparent;
-    }
-
-    .book-read-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: 'EB Garamond', serif;
-      color: var(--black);
-      background: var(--gold);
-      border: none;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
-    }
-    .book-read-link:hover {
-      background: var(--gold-dark);
-      transform: translateY(-1px);
-    }
-
-    .free-story-label {
-      display: block;
-      margin-top: 0.4rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold);
-    }
-
-    .book-notify-link {
-      display: inline-block;
-      margin-top: 0.4rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-family: var(--serif);
-      color: var(--gold-dark);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .book-notify-link:hover {
-      color: var(--gold);
-    }
-
-    /* ===== FEATURED ===== */
-    #books .section-inner { max-width: 1100px; }
-    .featured-grid {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 1.5rem;
-      margin: 1rem 0 2.5rem;
-    }
-    .featured-main {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 2rem;
-      background: var(--black);
-      border: 1px solid rgba(160, 136, 96, 0.2);
-      padding: 2rem;
-      align-items: center;
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .featured-main::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-    }
-    .featured-main:hover {
-      border-color: rgba(201, 169, 97, 0.45);
-      transform: translateY(-3px);
-      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
-      color: inherit;
-    }
-    .featured-main-cover img {
-      width: 100%; height: auto; display: block;
-      border: 1px solid var(--dark-gray);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-    }
-    .featured-kicker {
-      font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.6rem;
-    }
-    .featured-main-body h3 {
-      font-family: var(--display); font-size: 2.1rem; font-weight: 600;
-      color: var(--off-white); line-height: 1.15; margin-bottom: 0.4rem;
-    }
-    .featured-genre {
-      font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--gold-dark); margin-bottom: 0.9rem;
-    }
-    .featured-desc { font-size: 0.9rem; color: var(--light-gray); line-height: 1.7; margin-bottom: 0.9rem; }
-    .featured-tagline { font-size: 0.9rem; font-style: italic; color: var(--mid-gray); margin-bottom: 1.2rem; }
-    .featured-cta {
-      display: inline-block; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--gold); border: 1px solid var(--gold-dark); padding: 0.7rem 1.8rem;
-      transition: all 0.3s ease;
-    }
-    .featured-main:hover .featured-cta { background: var(--gold); color: var(--black); border-color: var(--gold); }
-    .featured-side { display: flex; flex-direction: column; gap: 1.5rem; }
-    .featured-side-card {
-      display: flex; gap: 1.1rem; align-items: center; flex: 1;
-      background: var(--black); border: 1px solid rgba(160, 136, 96, 0.15);
-      padding: 1.1rem 1.3rem; transition: all 0.4s ease;
-    }
-    .featured-side-card:hover { border-color: rgba(201, 169, 97, 0.4); transform: translateY(-3px); color: inherit; }
-    .featured-side-card img { width: 82px; height: auto; display: block; border: 1px solid var(--dark-gray); flex-shrink: 0; }
-    .featured-side-body h4 {
-      font-family: var(--display); font-size: 1.25rem; font-weight: 600;
-      color: var(--off-white); line-height: 1.2; margin-bottom: 0.25rem;
-    }
-    .featured-side-tag { font-size: 0.78rem; font-style: italic; color: var(--mid-gray); line-height: 1.45; }
-    .featured-side-card .featured-kicker { margin-bottom: 0.35rem; }
-
-    /* ===== PATHS ===== */
-    .paths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
-    .path-card {
-      position: relative; min-height: 190px; display: flex; align-items: flex-end;
-      background-size: cover; background-position: center;
-      border: 1px solid rgba(160, 136, 96, 0.15); overflow: hidden;
-      transition: all 0.4s ease;
-    }
-    .path-card::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(10, 10, 10, 0.35), rgba(10, 10, 10, 0.9) 85%);
-    }
-    .path-card:hover { border-color: rgba(201, 169, 97, 0.5); transform: translateY(-3px); }
-    .path-body { position: relative; padding: 1.4rem 1.5rem; }
-    .path-kicker { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.3rem; }
-    .path-body h3 { font-family: var(--display); font-size: 1.6rem; font-weight: 600; color: var(--off-white); margin-bottom: 0.3rem; }
-    .path-cta { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
-
-    /* ===== NEW RELEASES ROW ===== */
-    .shelf-heading { margin-top: 1rem; }
-    .shelf-heading h3 {
-      font-family: var(--display); font-size: 1.5rem; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase; color: var(--off-white);
-    }
-    a.book-card { display: block; color: inherit; }
-    a.book-card:hover { color: inherit; }
-    .book-card-cta {
-      display: inline-block; margin-top: 0.2rem; font-size: 0.65rem;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark);
-      transition: color 0.3s ease;
-    }
-    .book-card:hover .book-card-cta { color: var(--gold); }
-    .library-endcap {
-      display: flex; align-items: center; justify-content: center; text-align: center;
-      background: linear-gradient(160deg, var(--black), var(--anthracite-light));
-      border: 1px solid rgba(201, 169, 97, 0.25);
-    }
-    .endcap-inner { padding: 2rem 1.5rem; }
-    .endcap-mark { display: block; font-size: 1.6rem; color: var(--gold); opacity: 0.7; margin-bottom: 1rem; }
-    .endcap-count { font-size: 0.9rem; color: var(--mid-gray); font-style: italic; margin-bottom: 1.2rem; line-height: 1.6; }
-    .endcap-cta {
-      font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--gold); border: 1px solid var(--gold-dark); padding: 0.7rem 1.5rem;
-      display: inline-block; transition: all 0.3s ease;
-    }
-    .library-endcap:hover .endcap-cta { background: var(--gold); color: var(--black); }
-
-    /* ===== CONFESSIONS ===== */
-    #confessions {
-      background: var(--black);
-      position: relative;
-    }
-
-    #confessions::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--crimson), transparent);
-    }
-
-    .confessions-intro {
-      max-width: 620px;
-      color: var(--light-gray);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-
-    .confessions-form {
-      max-width: 620px;
-    }
-
-    .confessions-form textarea {
-      width: 100%;
-      min-height: 160px;
-      font-family: var(--serif);
-      font-size: 0.95rem;
-      padding: 1.2rem;
-      background: var(--anthracite);
-      border: 1px solid rgba(201, 169, 97, 0.2);
-      color: var(--off-white);
-      resize: vertical;
-      outline: none;
-      transition: border-color 0.3s ease;
-      line-height: 1.7;
-    }
-
-    .confessions-form textarea::placeholder {
-      color: var(--mid-gray);
-      font-style: italic;
-    }
-
-    .confessions-form textarea:focus {
-      border-color: var(--crimson);
-    }
-
-    .confessions-optional {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .confessions-optional input {
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      padding: 0.8rem 1rem;
-      background: var(--anthracite);
-      border: 1px solid rgba(139, 115, 85, 0.15);
-      color: var(--off-white);
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    .confessions-optional input::placeholder {
-      color: var(--mid-gray);
-      font-style: italic;
-    }
-
-    .confessions-optional input:focus {
-      border-color: var(--gold-dark);
-    }
-
-    .confessions-submit-row {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .confessions-submit {
-      font-family: var(--serif);
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      padding: 0.85rem 2.5rem;
-      background: transparent;
-      border: 1px solid var(--crimson);
-      color: var(--crimson-light);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .confessions-submit:hover {
-      background: var(--crimson);
-      color: var(--off-white);
-    }
-
-    .confessions-privacy {
-      font-size: 0.72rem;
-      color: var(--mid-gray);
-      font-style: italic;
-    }
-
-    .confessions-success {
-      display: none;
-      padding: 1.5rem;
-      border: 1px solid rgba(201, 169, 97, 0.3);
-      text-align: center;
-    }
-
-    .confessions-success.show { display: block; }
-
-    .confessions-success p {
-      color: var(--crimson-light);
-      font-style: italic;
-      font-size: 1rem;
-    }
-
-    /* ===== NEWSLETTER ===== */
-    #newsletter {
-      background: var(--anthracite);
-      text-align: center;
-    }
-
-    .newsletter-inner {
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .newsletter-icon {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      opacity: 0.6;
-    }
-
-    .newsletter-text {
-      color: var(--light-gray);
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .newsletter-exclusive {
-      color: var(--gold);
-      font-style: italic;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-
-    .newsletter-note {
-      font-size: 0.72rem;
-      color: var(--mid-gray);
-      margin-top: 1rem;
-      font-style: italic;
-    }
-
-    .newsletter-delivery-note {
-      font-size: 0.78rem;
-      color: var(--gold);
-      margin-top: 0.6rem;
-      font-style: italic;
-      opacity: 0.85;
-    }
-
-    /* ===== MAILERLITE OVERRIDES ===== */
-    .ml-embedded {
-      max-width: 460px;
-      margin: 0 auto;
-    }
-
-    .ml-embedded .ml-form-embedWrapper {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-
-    .ml-embedded .ml-form-embedBody {
-      background: transparent !important;
-      padding: 0 !important;
-    }
-
-    .ml-embedded .ml-form-embedBody .ml-form-embedContent {
-      display: none !important;
-    }
-
-    .ml-embedded .ml-form-formContent {
-      padding: 0 !important;
-    }
-
-    .ml-embedded .ml-form-fieldRow input[type="email"] {
-      font-family: var(--serif) !important;
-      font-size: 0.85rem !important;
-      padding: 0.85rem 1.2rem !important;
-      background: var(--dark-gray) !important;
-      border: 1px solid rgba(160, 136, 96, 0.25) !important;
-      color: var(--off-white) !important;
-      border-radius: 0 !important;
-      outline: none !important;
-      box-shadow: none !important;
-    }
-
-    .ml-embedded .ml-form-fieldRow input[type="email"]::placeholder {
-      color: var(--mid-gray) !important;
-      font-style: italic !important;
-    }
-
-    .ml-embedded .ml-form-fieldRow input[type="email"]:focus {
-      border-color: var(--gold-dark) !important;
-    }
-
-    .ml-embedded .ml-form-embedSubmit button {
-      font-family: var(--serif) !important;
-      font-size: 0.7rem !important;
-      letter-spacing: 0.2em !important;
-      text-transform: uppercase !important;
-      padding: 0.85rem 1.8rem !important;
-      background: transparent !important;
-      border: 1px solid rgba(160, 136, 96, 0.25) !important;
-      color: var(--gold) !important;
-      border-radius: 0 !important;
-      cursor: pointer !important;
-      transition: all 0.3s ease !important;
-      box-shadow: none !important;
-    }
-
-    .ml-embedded .ml-form-embedSubmit button:hover {
-      background: var(--gold) !important;
-      color: var(--black) !important;
-      border-color: var(--gold) !important;
-    }
-
-    .ml-embedded .ml-form-successBody {
-      background: transparent !important;
-      color: var(--gold) !important;
-    }
-
-    .ml-embedded .ml-form-successBody .ml-form-successContent h4,
-    .ml-embedded .ml-form-successBody .ml-form-successContent p {
-      color: var(--gold) !important;
-      font-family: var(--serif) !important;
-    }
-
-    /* ===== CONTACT ===== */
-    #contact { background: var(--anthracite); }
-
-    .contact-content p {
-      color: var(--light-gray);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      max-width: 560px;
-    }
-
-    .contact-email {
-      font-size: 1.1rem;
-      color: var(--gold);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      border-bottom: 1px solid rgba(201, 169, 97, 0.3);
-      padding-bottom: 0.2rem;
-      transition: border-color 0.3s ease;
-    }
-
-    .contact-email:hover {
-      border-color: var(--gold);
-      color: var(--off-white);
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      padding: 3rem 2rem;
-      border-top: 1px solid rgba(139, 115, 85, 0.1);
-      text-align: center;
-      background: var(--black);
-    }
-
-    .footer-logo {
-      width: 80px;
-      height: auto;
-      margin-bottom: 1.5rem;
-      opacity: 0.85;
-      transition: opacity 0.3s ease;
-    }
-    .footer-logo:hover {
-      opacity: 1;
-    }
-
-    .footer-name {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--mid-gray);
-    }
-
-    .footer-mature {
-      font-size: 0.65rem;
-      color: var(--mid-gray);
-      margin-top: 0.8rem;
-      font-style: italic;
-      opacity: 0.6;
-    }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.8; }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ===== READ FREE SECTION ===== */
-    .read-free-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
-      max-width: 920px;
-      margin: 2rem auto 0;
-    }
-    .read-free-card {
-      background: var(--anthracite);
-      border: 1px solid rgba(160, 136, 96, 0.15);
-      overflow: hidden;
-      transition: all 0.4s ease;
-      text-decoration: none;
-      display: block;
-    }
-    .read-free-card:hover {
-      border-color: rgba(160, 136, 96, 0.4);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-      color: var(--off-white);
-    }
-    .read-free-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-    .read-free-card:hover img {
-      transform: scale(1.03);
-    }
-    .read-free-card-body {
-      padding: 1.2rem 1.5rem;
-    }
-    .read-free-card-body .free-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
-    }
-    .read-free-card-body h3 {
-      font-family: var(--display);
-      font-size: 1.55rem;
-      font-weight: 600;
-      color: var(--off-white);
-      margin-bottom: 0.4rem;
-    }
-    .read-free-card-body p {
-      font-size: 0.85rem;
-      color: var(--mid-gray);
-      font-style: italic;
-      line-height: 1.5;
-    }
-    .read-free-card-body .read-now-link {
-      display: inline-block;
-      margin-top: 0.8rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    /* ===== REVIEWS / READERS SAY ===== */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      max-width: 800px;
-      margin: 2rem auto 0;
-    }
-    .review-card {
-      background: var(--anthracite);
-      border: 1px solid rgba(160, 136, 96, 0.1);
-      padding: 1.5rem;
-    }
-    .review-stars {
-      color: var(--gold);
-      font-size: 0.9rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.8rem;
-    }
-    .review-text {
-      font-size: 0.9rem;
-      color: var(--light-gray);
-      font-style: italic;
-      line-height: 1.7;
-      margin-bottom: 0.8rem;
-    }
-    .review-source {
-      font-size: 0.7rem;
-      color: var(--gold-dark);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
-
-      .nav { padding: 1rem 1.5rem; }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        max-width: 300px;
-        height: 100vh;
-        background: var(--anthracite);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        gap: 2rem;
-        transition: right 0.4s ease;
-        border-left: 1px solid rgba(139, 115, 85, 0.1);
+    /* ==========================================================
+       SAMUEL M. GRAY — forside
+       Bevisst enkeltbundet mørkt tema: merkevaren ER svart og gull.
+       Oksblod (--ember) er varmeaksenten og brukes sparsomt.
+       ========================================================== */
+    :root{
+      --ink:#0A0A0B;
+      --ink-2:#131316;
+      --ink-3:#1B1B1F;
+      --gold:#C9A84C;
+      --gold-pale:#E6D49A;
+      --ember:#7E3128;
+      --smoke:#7A756C;
+      --paper:#E8E4DA;
+      --serif:'EB Garamond', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+      --maxw:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--ink); color:var(--paper);
+      font-family:var(--serif); font-size:18px; line-height:1.65;
+      -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    :focus-visible{outline:1px solid var(--gold); outline-offset:3px}
+
+    /* ================= ALDERSPORT ================= */
+    .age-gate{
+      position:fixed; inset:0; z-index:10000;
+      background:var(--ink); display:flex; align-items:center; justify-content:center;
+      padding:1.5rem; transition:opacity .6s ease, visibility .6s ease;
+    }
+    .age-gate.hidden{opacity:0; visibility:hidden; pointer-events:none}
+    .age-gate-box{max-width:430px; text-align:center}
+    .age-gate-box h2{
+      font-size:clamp(1.5rem,4vw,2rem); font-weight:400; color:var(--gold);
+      letter-spacing:.16em; text-transform:uppercase; margin:0;
+    }
+    .age-gate-box .divider-sm{
+      width:60px; height:1px; background:var(--gold); opacity:.5; margin:1.2rem auto;
+    }
+    .age-gate-box p{color:var(--smoke); font-size:.95rem; margin:0 0 2rem}
+    .age-gate-buttons{display:flex; gap:1rem; justify-content:center}
+    .age-gate-buttons button{
+      font-family:var(--serif); font-size:.76rem; letter-spacing:.2em; text-transform:uppercase;
+      padding:.9rem 1.7rem; background:transparent; cursor:pointer;
+      border:1px solid var(--gold); color:var(--gold);
+      transition:background .35s ease, color .35s ease;
+    }
+    .age-gate-buttons button:hover{background:var(--gold); color:var(--ink)}
+    .age-gate-buttons .btn-leave{border-color:rgba(232,228,218,.22); color:var(--smoke)}
+    .age-gate-buttons .btn-leave:hover{background:transparent; color:var(--paper); border-color:var(--paper)}
+
+    /* ================= ATMOSFÆRE ================= */
+    .grain{
+      position:fixed; inset:-50%; z-index:2; pointer-events:none; opacity:.05;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
+      animation:grainShift 1.1s steps(4) infinite;
+    }
+    @keyframes grainShift{
+      0%{transform:translate(0,0)} 25%{transform:translate(-3%,2%)}
+      50%{transform:translate(2%,-3%)} 75%{transform:translate(-2%,-2%)} 100%{transform:translate(0,0)}
+    }
+    .smoke{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+    .smoke i{position:absolute; display:block; border-radius:50%; filter:blur(90px); opacity:.5}
+    .smoke i:nth-child(1){
+      width:70vw; height:70vw; left:-20vw; top:-25vw;
+      background:radial-gradient(circle, rgba(201,168,76,.13), transparent 65%);
+      animation:drift1 46s ease-in-out infinite alternate;
+    }
+    .smoke i:nth-child(2){
+      width:60vw; height:60vw; right:-18vw; top:18vh;
+      background:radial-gradient(circle, rgba(126,49,40,.16), transparent 65%);
+      animation:drift2 62s ease-in-out infinite alternate;
+    }
+    @keyframes drift1{to{transform:translate(14vw,10vh) scale(1.2)}}
+    @keyframes drift2{to{transform:translate(-12vw,-8vh) scale(1.15)}}
+    .candle{
+      position:fixed; z-index:1; pointer-events:none;
+      width:640px; height:640px; margin:-320px 0 0 -320px;
+      background:radial-gradient(circle, rgba(201,168,76,.10), rgba(201,168,76,.03) 42%, transparent 68%);
+      opacity:0; transition:opacity 1.2s ease; will-change:transform;
+    }
+    .candle.lit{opacity:1}
+
+    main, nav, footer{position:relative; z-index:3}
+
+    /* ================= NAV ================= */
+    .nav{
+      position:fixed; top:0; left:0; right:0; z-index:50;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1rem clamp(1.2rem,4vw,3rem);
+      border-bottom:1px solid transparent;
+      transition:background .4s ease, border-color .4s ease;
+    }
+    .nav.scrolled{
+      background:rgba(10,10,11,.92); backdrop-filter:blur(10px);
+      border-bottom-color:rgba(201,168,76,.16);
+    }
+    .nav-logo-img{height:30px; width:auto; opacity:.9}
+    .nav-links{display:flex; gap:clamp(.9rem,1.9vw,1.7rem); align-items:center}
+    .nav-links a{
+      font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--smoke);
+      transition:color .3s ease; white-space:nowrap;
+    }
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{
+      display:none; flex-direction:column; gap:5px; background:none; border:0;
+      cursor:pointer; padding:.4rem;
+    }
+    .hamburger span{display:block; width:24px; height:1px; background:var(--gold); transition:transform .3s ease, opacity .3s ease}
+    .hamburger.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    @media(max-width:960px){
+      .hamburger{display:flex}
+      .nav-links{
+        position:absolute; top:100%; left:0; right:0;
+        flex-direction:column; gap:0;
+        background:rgba(10,10,11,.98); backdrop-filter:blur(10px);
+        border-bottom:1px solid rgba(201,168,76,.16);
+        max-height:0; overflow:hidden; transition:max-height .45s ease;
       }
-
-      .nav-links.open { right: 0; }
-
-      .nav-links a { font-size: 0.85rem; }
-
-      .hamburger { display: flex; }
-
-      section { padding: 4rem 1.5rem; }
-
-      .books-grid {
-        padding: 1.5rem 1rem 3.5rem;
-        gap: 1rem;
-      }
-      .book-card {
-        flex: 0 0 220px;
-      }
-      .carousel-arrow { display: none; }
-
-      .hero h1 { font-size: 2.2rem; }
-
-      .scroll-indicator { display: none; }
-
-      .read-free-cards {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .confessions-optional {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-grid { grid-template-columns: 1fr; }
-      .featured-main { grid-template-columns: 1fr; padding: 1.5rem; }
-      .featured-main-cover { max-width: 240px; margin: 0 auto; }
-      .paths-grid { grid-template-columns: 1fr; }
+      .nav-links.open{max-height:26rem}
+      .nav-links a{padding:1rem 1.5rem; width:100%; border-bottom:1px solid rgba(201,168,76,.08)}
     }
 
-    @media (max-width: 480px) {
-      .age-gate-buttons { flex-direction: column; }
-      .age-gate-buttons button { width: 100%; }
-      .confessions-submit-row { flex-direction: column; align-items: flex-start; }
+    /* ================= FELLES ================= */
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(1.2rem,4vw,2rem)}
+    .eyebrow{
+      font-size:.7rem; letter-spacing:.34em; text-transform:uppercase;
+      color:var(--gold); margin:0 0 .9rem;
+    }
+    .section-title{
+      font-size:clamp(2rem,4.4vw,3.1rem); font-weight:400; margin:0 0 .4rem;
+      letter-spacing:.01em; text-wrap:balance;
+    }
+    .section-lede{color:var(--smoke); max-width:52ch; margin:0 0 3rem; font-style:italic}
+    section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+    .rule{width:100%; height:1px; border:0; margin:0;
+      background:linear-gradient(90deg, transparent, rgba(201,168,76,.28), transparent)}
+
+    .btn{
+      display:inline-block; padding:.95rem 1.9rem;
+      border:1px solid var(--gold); color:var(--gold);
+      font-family:var(--serif); font-size:.76rem; letter-spacing:.2em; text-transform:uppercase;
+      background:transparent; cursor:pointer;
+      transition:background .35s ease, color .35s ease;
+    }
+    .btn:hover{background:var(--gold); color:var(--ink)}
+    .btn-quiet{border-color:rgba(232,228,218,.22); color:var(--smoke)}
+    .btn-quiet:hover{background:transparent; color:var(--paper); border-color:var(--paper)}
+
+    .rise{opacity:0; transform:translateY(26px); transition:opacity .9s ease, transform .9s ease}
+    .rise.seen{opacity:1; transform:none}
+
+    /* ================= HERO ================= */
+    .hero{min-height:92vh; display:grid; align-items:center; padding-top:5.5rem; padding-bottom:2rem}
+    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:clamp(2rem,6vw,4.5rem); align-items:center}
+    .hero h1{
+      font-size:clamp(2.9rem,7vw,5.4rem); font-weight:400; line-height:1.02;
+      margin:0 0 1.4rem; letter-spacing:.06em;
+      animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes settle{
+      from{letter-spacing:.26em; opacity:0; filter:blur(6px)}
+      to{letter-spacing:.06em; opacity:1; filter:none}
+    }
+    .hero-eyebrow{animation:fadeUp 1s .5s both}
+    .hero-tagline{
+      color:var(--smoke); font-style:italic; font-size:1.1rem; margin:0 0 2.2rem; max-width:34ch;
+      animation:fadeUp 1s .9s both;
+    }
+    .hero-ctas{display:flex; flex-wrap:wrap; gap:1rem; align-items:center; animation:fadeUp 1s 1.25s both}
+    @keyframes fadeUp{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+
+    /* Coveret er høydebegrenset slik at tittel, hook og pris får plass over folden */
+    .hero-book{position:relative; width:100%; max-width:296px; justify-self:end}
+    .hero-book-frame{
+      position:relative; overflow:hidden; aspect-ratio:1600/2560; max-height:52vh;
+      box-shadow:0 34px 70px rgba(0,0,0,.72); border:1px solid rgba(201,168,76,.2);
+      animation:fadeUp 1.4s 1.1s both;
+    }
+    .hero-book-frame img{
+      width:100%; height:100%; object-fit:cover; transform:scale(1.02);
+      animation:kenburns 20s ease-in-out infinite alternate;
+    }
+    @keyframes kenburns{from{transform:scale(1.02)} to{transform:scale(1.11)}}
+    .hero-book-meta{margin-top:1.3rem; animation:fadeUp 1s 1.5s both}
+    .hero-book-label{
+      font-size:.66rem; letter-spacing:.26em; text-transform:uppercase; color:var(--gold);
+      display:block; margin-bottom:.5rem;
+    }
+    .hero-book-title{font-size:1.55rem; font-weight:400; margin:0 0 .35rem}
+    .hero-book-hook{color:var(--smoke); font-style:italic; margin:0 0 .7rem; font-size:.98rem}
+    .hero-book-line{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--smoke); margin:0}
+    .hero-book-line b{color:var(--paper); font-weight:400}
+
+    .scroll-hint{text-align:center; margin-top:2.5rem;
+      font-size:.64rem; letter-spacing:.3em; text-transform:uppercase; color:var(--smoke)}
+    .scroll-hint span{display:block; width:1px; height:42px; margin:.8rem auto 0;
+      background:linear-gradient(var(--gold), transparent); animation:pulse 2.6s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.25} 50%{opacity:.9}}
+
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr; gap:2.8rem}
+      .hero-book{max-width:300px; justify-self:start}
+      .hero-book-frame{max-height:none}
+    }
+
+    /* ================= MOOD-DØRER ================= */
+    .doors{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+      background:rgba(201,168,76,.16); border:1px solid rgba(201,168,76,.16);
+    }
+    .door{
+      position:relative; background:var(--ink-2); padding:2.4rem 1.8rem 2.1rem;
+      min-height:210px; display:flex; flex-direction:column; justify-content:flex-end;
+      overflow:hidden; transition:background .5s ease;
+    }
+    .door::before{
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(120% 90% at 50% 120%, rgba(126,49,40,.5), transparent 70%);
+      opacity:0; transition:opacity .55s ease;
+    }
+    .door:hover, .door:focus-visible{background:var(--ink-3)}
+    .door:hover::before, .door:focus-visible::before{opacity:1}
+    .door-count{position:relative; font-size:.66rem; letter-spacing:.24em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:.6rem}
+    .door-name{position:relative; font-size:1.5rem; font-weight:400; margin:0 0 .5rem; line-height:1.2}
+    .door-whisper{
+      position:relative; margin:0; color:var(--smoke); font-style:italic; font-size:.94rem;
+      max-height:0; opacity:0; overflow:hidden;
+      transition:max-height .55s ease, opacity .5s ease;
+    }
+    .door:hover .door-whisper, .door:focus-visible .door-whisper{max-height:5rem; opacity:1}
+    .door-arrow{
+      position:relative; margin-top:.9rem; font-size:.7rem; letter-spacing:.2em;
+      text-transform:uppercase; color:var(--gold); opacity:0; transform:translateX(-6px);
+      transition:opacity .5s ease .1s, transform .5s ease .1s;
+    }
+    .door:hover .door-arrow, .door:focus-visible .door-arrow{opacity:1; transform:none}
+    @media(max-width:900px){
+      .doors{grid-template-columns:repeat(2,1fr)}
+      .door-whisper{max-height:5rem; opacity:1}
+      .door-arrow{opacity:1; transform:none}
+    }
+    @media(max-width:520px){.doors{grid-template-columns:1fr}}
+
+    /* ================= HYLLEN ================= */
+    .shelf{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(1rem,2.2vw,1.7rem)}
+    .card{position:relative; display:block}
+    .card-frame{
+      position:relative; overflow:hidden; aspect-ratio:1600/2560;
+      border:1px solid rgba(201,168,76,.14); box-shadow:0 16px 34px rgba(0,0,0,.5);
+      transition:box-shadow .5s ease, border-color .5s ease;
+    }
+    .card:hover .card-frame{box-shadow:0 26px 54px rgba(0,0,0,.75); border-color:rgba(201,168,76,.42)}
+    .card-frame img{width:100%; height:100%; object-fit:cover; transition:transform 1.1s ease, filter .5s ease}
+    .card:hover .card-frame img{transform:scale(1.06); filter:brightness(.42) saturate(.85)}
+    .card-veil{
+      position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end;
+      padding:1.3rem 1.2rem;
+      background:linear-gradient(to top, rgba(10,10,11,.96) 12%, rgba(10,10,11,.72) 48%, transparent);
+      opacity:0; transition:opacity .5s ease;
+    }
+    .card:hover .card-veil, .card:focus-visible .card-veil{opacity:1}
+    .card-hook{font-style:italic; font-size:.95rem; margin:0 0 .8rem; color:var(--paper); line-height:1.4}
+    .card-tags{display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:.9rem}
+    .card-tags i{
+      font-style:normal; font-size:.6rem; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--gold-pale); border:1px solid rgba(201,168,76,.32); padding:.2rem .45rem;
+    }
+    .card-go{font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold)}
+    .card-base{margin-top:.85rem}
+    .card-title{font-size:1.08rem; font-weight:400; margin:0 0 .18rem; line-height:1.25}
+    .card-price{font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--smoke); margin:0}
+    .card-price b{color:var(--gold-pale); font-weight:400}
+    .card-badge{
+      position:absolute; top:0; left:0; z-index:2; background:var(--gold); color:var(--ink);
+      font-size:.58rem; letter-spacing:.16em; text-transform:uppercase; padding:.3rem .6rem;
+    }
+    /* Endekort inn til biblioteket */
+    .card-endcap .card-frame{
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      background:var(--ink-2); padding:1.5rem;
+    }
+    .card-endcap .endcap-mark{display:block; color:var(--gold); font-size:1.5rem; margin-bottom:1rem}
+    .card-endcap .endcap-count{color:var(--smoke); font-style:italic; font-size:.92rem; margin:0 0 1.2rem}
+    .card-endcap .endcap-cta{font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold)}
+    @media(max-width:900px){.shelf{grid-template-columns:repeat(3,1fr)} .card-veil{display:none}}
+    @media(max-width:600px){.shelf{grid-template-columns:repeat(2,1fr)}}
+
+    /* ================= SERIESTIGEN ================= */
+    .ladder-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(2rem,5vw,4.5rem); align-items:center}
+    .ladder{list-style:none; margin:0; padding:0; border-top:1px solid rgba(201,168,76,.16)}
+    .ladder li{
+      display:grid; grid-template-columns:2.6rem 1fr auto; align-items:baseline; gap:1rem;
+      padding:1.05rem .4rem; border-bottom:1px solid rgba(201,168,76,.16);
+      transition:background .4s ease, padding-left .4s ease;
+    }
+    .ladder li:hover{background:rgba(201,168,76,.05); padding-left:1rem}
+    .ladder .num{font-size:.78rem; letter-spacing:.14em; color:var(--gold); font-variant-numeric:tabular-nums}
+    .ladder .name{font-size:1.12rem}
+    .ladder .name em{display:block; font-size:.86rem; color:var(--smoke); font-style:italic; margin-top:.15rem}
+    .ladder .state{font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--smoke); white-space:nowrap}
+    .ladder .state.now{color:var(--gold-pale)}
+    .ladder-cta{margin-top:2rem}
+    .ladder-art img{box-shadow:0 30px 60px rgba(0,0,0,.7); border:1px solid rgba(201,168,76,.2)}
+    .ladder-more{margin-top:2.6rem; display:flex; flex-wrap:wrap; gap:1.6rem}
+    .ladder-more a{font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--smoke);
+      border-bottom:1px solid rgba(201,168,76,.28); padding-bottom:.25rem; transition:color .3s ease}
+    .ladder-more a:hover{color:var(--gold)}
+    @media(max-width:900px){.ladder-grid{grid-template-columns:1fr} .ladder-art{display:none}}
+
+    /* ================= GRATIS + SLØRET ================= */
+    .free-sec{background:var(--ink-2); border-top:1px solid rgba(201,168,76,.12); border-bottom:1px solid rgba(201,168,76,.12)}
+    .free-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2.4vw,1.8rem); margin-bottom:clamp(3.5rem,7vw,5.5rem)}
+    .free-card{display:block; background:var(--ink); border:1px solid rgba(201,168,76,.14); transition:border-color .4s ease, transform .5s ease}
+    .free-card:hover{border-color:rgba(201,168,76,.4); transform:translateY(-4px)}
+    .free-card-cover{overflow:hidden; aspect-ratio:1600/2560}
+    .free-card-cover img{width:100%; height:100%; object-fit:cover; transition:transform 1s ease}
+    .free-card:hover .free-card-cover img{transform:scale(1.05)}
+    .free-card-body{padding:1.2rem}
+    .free-label{font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin:0 0 .5rem}
+    .free-card-body h3{font-size:1.2rem; font-weight:400; margin:0 0 .45rem}
+    .free-card-body p{color:var(--smoke); font-size:.92rem; margin:0 0 .9rem; font-style:italic}
+    .free-card-body .card-go{font-size:.66rem}
+
+    .veil-box{max-width:62ch; margin:0 auto; text-align:center}
+    .veil-box .section-lede{margin:0 auto 2.4rem; text-align:center}
+    .veil-text{position:relative; text-align:left; font-size:1.14rem; line-height:1.85; max-height:270px; overflow:hidden}
+    .veil-text::after{content:''; position:absolute; inset:auto 0 0 0; height:150px;
+      background:linear-gradient(transparent, var(--ink-2))}
+    .veil-text p{margin:0 0 1.2rem}
+    .veil-cta{margin-top:1.6rem}
+    @media(max-width:700px){.free-cards{grid-template-columns:1fr}}
+
+    /* ================= ANMELDELSER ================= */
+    .reviews-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1.2rem,2.6vw,2rem)}
+    .review-card{border-left:1px solid rgba(201,168,76,.3); padding:.4rem 0 .4rem 1.6rem}
+    .review-stars{color:var(--gold); font-size:.8rem; letter-spacing:.24em; margin-bottom:.7rem}
+    .review-text{font-size:1.08rem; font-style:italic; margin:0 0 .7rem; line-height:1.6}
+    .review-source{font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--smoke); margin:0}
+    @media(max-width:700px){.reviews-grid{grid-template-columns:1fr}}
+
+    /* ================= OM FORFATTEREN ================= */
+    .about-text{max-width:62ch}
+    .about-text p{margin:0 0 1.4rem}
+    .about-signature{color:var(--gold); font-style:italic; letter-spacing:.08em}
+
+    /* ================= NYHETSBREV ================= */
+    .inner-circle{text-align:center}
+    .magnet{
+      max-width:640px; margin:0 auto;
+      border:1px solid rgba(201,168,76,.22); padding:clamp(2rem,5vw,3.4rem);
+      background:linear-gradient(180deg, rgba(19,19,22,.9), rgba(10,10,11,.9));
+    }
+    .magnet-mark{color:var(--gold); font-size:1.4rem; margin-bottom:1rem}
+    .magnet .section-title{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+    .magnet-text{color:var(--smoke); margin:1.2rem 0 .8rem}
+    .magnet-text em{color:var(--paper); font-style:italic}
+    .magnet-extra{color:var(--smoke); font-size:.92rem; font-style:italic; margin:0 0 1.8rem}
+    .magnet-note{margin-top:1.4rem; font-size:.78rem; color:var(--smoke)}
+    .magnet-delivery{margin-top:1.2rem; font-size:.8rem; color:var(--smoke); font-style:italic}
+
+    /* ===== MAILERLITE-OVERSTYRINGER =====
+       universal.js injiserer et eget stilark med hvitt kort, hvitt inputfelt,
+       Open Sans og en duplisert tittel. Reglene deres er på formen
+         #mlb2-<nr>.ml-form-embedContainer .ml-form-embedWrapper
+         .ml-form-embedBody .ml-form-fieldRow input { ... !important }
+       altså 1 ID + 4 klasser + !important. To ting følger av det:
+
+       1. `!important` alene hjelper ikke — en klasseselektor taper på
+          spesifisitet uansett hvor mange !important vi legger på.
+       2. Å matche antallet (1 ID + 4 klasser) gir uavgjort, og da vinner DE,
+          fordi stilarket deres injiseres i body etter vårt i <head>.
+
+       Derfor gjentas ID-en: `#mlForm#mlForm` er gyldig CSS og teller som TO
+       ID-er. Da vinner vi på ID-kolonnen alene, uavhengig av hvor lang
+       klassekjede de bruker — og vi slipper å hardkode #mlb2-nummeret, som
+       endrer seg hvis skjemaet lages på nytt i MailerLite.
+
+       Fjernes dobbel-ID-en, kommer det hvite kortet og feltet tilbake. */
+    #mlForm{max-width:460px; margin:0 auto}
+
+    #mlForm#mlForm .ml-form-embedContainer,
+    #mlForm#mlForm .ml-form-embedWrapper,
+    #mlForm#mlForm .ml-form-embedBody,
+    #mlForm#mlForm .ml-form-successBody{
+      background:transparent !important;
+      border:none !important;
+      box-shadow:none !important;
+    }
+    #mlForm#mlForm .ml-form-embedBody,
+    #mlForm#mlForm .ml-form-formContent{padding:0 !important}
+
+    /* Skjuler MailerLites egen tittel + beskrivelse — seksjonen sier det alt */
+    #mlForm#mlForm .ml-form-embedContent{display:none !important}
+
+    #mlForm#mlForm input[type="email"]{
+      font-family:var(--serif) !important;
+      font-size:1rem !important;
+      padding:.9rem 1rem !important;
+      background:rgba(10,10,11,.6) !important;
+      border:1px solid rgba(232,228,218,.18) !important;
+      color:var(--paper) !important;
+      border-radius:0 !important;
+      outline:none !important;
+      box-shadow:none !important;
+    }
+    #mlForm#mlForm input[type="email"]::placeholder{
+      color:var(--smoke) !important;
+      font-style:italic !important;
+      opacity:1 !important;
+    }
+    #mlForm#mlForm input[type="email"]:focus{border-color:var(--gold) !important}
+
+    #mlForm#mlForm .ml-form-embedSubmit button{
+      font-family:var(--serif) !important;
+      font-size:.76rem !important;
+      font-weight:400 !important;
+      letter-spacing:.2em !important;
+      text-transform:uppercase !important;
+      padding:.95rem 1.9rem !important;
+      background:transparent !important;
+      border:1px solid var(--gold) !important;
+      color:var(--gold) !important;
+      border-radius:0 !important;
+      cursor:pointer !important;
+      box-shadow:none !important;
+      transition:background .35s ease, color .35s ease !important;
+    }
+    #mlForm#mlForm .ml-form-embedSubmit button:hover{
+      background:var(--gold) !important;
+      color:var(--ink) !important;
+    }
+
+    #mlForm#mlForm .ml-form-successContent h4,
+    #mlForm#mlForm .ml-form-successContent p{
+      color:var(--gold-pale) !important;
+      font-family:var(--serif) !important;
+    }
+
+    /* ================= CONFESSIONS ================= */
+    .confess-sec{background:var(--ink-2); border-top:1px solid rgba(201,168,76,.12); border-bottom:1px solid rgba(201,168,76,.12)}
+    .confess-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2rem,5vw,4rem); align-items:start}
+    .confess-intro{color:var(--smoke); margin:0}
+    .confess-intro strong{color:var(--paper); font-weight:400; font-style:italic}
+    .confessions-form{display:flex; flex-direction:column; gap:1rem}
+    .confessions-form textarea,
+    .confessions-form input{
+      width:100%; background:rgba(10,10,11,.6); border:1px solid rgba(232,228,218,.18);
+      color:var(--paper); font-family:var(--serif); font-size:1rem; padding:.9rem 1rem;
+      transition:border-color .35s ease;
+    }
+    .confessions-form textarea{min-height:170px; resize:vertical; line-height:1.6}
+    .confessions-form textarea:focus, .confessions-form input:focus{outline:none; border-color:var(--gold)}
+    .confessions-form ::placeholder{color:var(--smoke); font-style:italic}
+    .confessions-optional{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+    .confessions-submit-row{display:flex; flex-wrap:wrap; align-items:center; gap:1rem}
+    .confessions-privacy{font-size:.72rem; letter-spacing:.08em; color:var(--smoke); font-style:italic}
+    .confessions-success{
+      display:none; border:1px solid rgba(201,168,76,.35); padding:2rem;
+      background:rgba(126,49,40,.12);
+    }
+    .confessions-success.show{display:block}
+    .confessions-success p{margin:0; font-style:italic; color:var(--gold-pale)}
+    @media(max-width:860px){
+      .confess-grid{grid-template-columns:1fr}
+      .confessions-optional{grid-template-columns:1fr}
+    }
+
+    /* ================= FAQ ================= */
+    .faq-list{max-width:760px; border-top:1px solid rgba(201,168,76,.16)}
+    .faq-list details{border-bottom:1px solid rgba(201,168,76,.16)}
+    .faq-list summary{
+      cursor:pointer; list-style:none; padding:1.3rem .2rem;
+      display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem;
+      font-size:1.06rem; color:var(--paper); transition:color .3s ease;
+    }
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{
+      content:'+'; color:var(--gold); font-size:1.1rem; flex-shrink:0; transition:transform .35s ease;
+    }
+    .faq-list details[open] summary{color:var(--gold)}
+    .faq-list details[open] summary::after{transform:rotate(45deg)}
+    .faq-list summary:hover{color:var(--gold)}
+    .faq-answer{padding:0 .2rem 1.5rem; color:var(--smoke); max-width:65ch}
+    .faq-answer p{margin:0}
+    .faq-answer a{color:var(--gold); border-bottom:1px solid rgba(201,168,76,.3)}
+
+    /* ================= KONTAKT ================= */
+    .contact-content{max-width:56ch}
+    .contact-content p{color:var(--smoke); margin:0 0 2rem}
+    .contact-email{
+      display:inline-flex; align-items:center; gap:.7rem; color:var(--gold);
+      font-size:1.05rem; letter-spacing:.06em;
+      border-bottom:1px solid rgba(201,168,76,.35); padding-bottom:.3rem;
+      transition:border-color .35s ease;
+    }
+    .contact-email:hover{border-bottom-color:var(--gold)}
+
+    /* ================= FOOTER ================= */
+    .footer{padding:4rem 0 4.5rem; text-align:center; border-top:1px solid rgba(201,168,76,.14)}
+    .footer-logo{height:44px; width:auto; margin:0 auto 1.2rem; opacity:.85}
+    .footer-name{font-size:.8rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin:0 0 1rem}
+    .footer-copy, .footer-mature{color:var(--smoke); font-size:.78rem; margin:0 0 .4rem}
+    .footer-mature{font-style:italic; opacity:.8}
+
+    /* ================= REDUSERT BEVEGELSE ================= */
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation:none !important; transition-duration:.01ms !important}
+      .rise{opacity:1; transform:none}
+      .grain, .candle{display:none}
+      html{scroll-behavior:auto}
     }
   </style>
 </head>
@@ -2042,385 +1096,540 @@
     </div>
   </div>
 
+  <!-- ===== ATMOSFÆRE ===== -->
+  <div class="smoke" aria-hidden="true"><i></i><i></i></div>
+  <div class="candle" id="candle" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" id="mainNav">
     <a href="#hero" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img"></a>
     <div class="nav-links" id="navLinks">
-      <a href="#read-free" onclick="closeMenu()">Read Free</a>
-      <a href="#books" onclick="closeMenu()">Works</a>
+      <a href="#doors" onclick="closeMenu()">Enter</a>
+      <a href="#shelf" onclick="closeMenu()">Works</a>
+      <a href="#series" onclick="closeMenu()">Series</a>
+      <a href="#free" onclick="closeMenu()">Read Free</a>
       <a href="#about" onclick="closeMenu()">About</a>
       <a href="#newsletter" onclick="closeMenu()">Newsletter</a>
       <a href="#confessions" onclick="closeMenu()">Confess</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
+<main>
+
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-author-pre">A Novel Experience in Darkness</p>
-      <h1>Samuel M. Gray</h1>
-      <div class="hero-divider"></div>
-      <p class="hero-tagline">The darkest labyrinths of the human psyche.<br>Where desire meets consequence.</p>
-      <div class="hero-buttons">
-        <a href="the-beach.html" class="hero-cta">Read a Free Story</a>
-        <a href="https://www.amazon.com/dp/B0GQZ5YMSD" target="_blank" rel="noopener" class="hero-cta hero-cta-secondary">The Bus Ride — #1 Bestseller</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ===== READ FREE ===== -->
-  <section id="read-free">
-    <div class="section-inner reveal">
-      <p class="section-label">Start Here</p>
-      <h2 class="section-title">Read for Free</h2>
-      <div class="section-divider"></div>
-      <div class="read-free-cards">
-        <a href="the-night-shift.html" class="read-free-card">
-          <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift — Cover" loading="lazy">
-          <div class="read-free-card-body">
-            <p class="free-label">Free Novella</p>
-            <h3>The Night Shift</h3>
-            <p>A CEO. Two broken arms. One night nurse who doesn't flinch.</p>
-            <span class="read-now-link">Read Now &rarr;</span>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow hero-eyebrow">A Novel Experience in Darkness</p>
+          <h1>Samuel M.<br>Gray</h1>
+          <p class="hero-tagline">The darkest labyrinths of the human psyche. Where desire meets consequence.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#doors">Choose your descent</a>
+            <a class="btn btn-quiet" href="#free">Three stories, free</a>
           </div>
-        </a>
-        <a href="the-beach.html" class="read-free-card">
-          <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach — Cover" loading="lazy">
-          <div class="read-free-card-body">
-            <p class="free-label">Free Story</p>
-            <h3>The Beach</h3>
-            <p>Two years of silence unraveled in a single afternoon.</p>
-            <span class="read-now-link">Read Now &rarr;</span>
-          </div>
-        </a>
-        <a href="the-key.html" class="read-free-card">
-          <img src="assets/images/covers/web/the-key.jpg" alt="The Key — Cover" loading="lazy">
-          <div class="read-free-card-body">
-            <p class="free-label">Confession I &mdash; Free</p>
-            <h3>The Key</h3>
-            <p>He has the key to her house. She has no idea. Or does she?</p>
-            <span class="read-now-link">Read Now &rarr;</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BOOKS ===== -->
-  <section id="books">
-    <div class="section-inner reveal">
-      <p class="section-label">Bibliography</p>
-      <h2 class="section-title">Works</h2>
-      <div class="section-divider"></div>
-      <!-- ===== FEATURED ===== -->
-      <div class="featured-grid">
-        <!-- BUILD:FEATURED -->
-        <a href="shadow-play.html" class="featured-main">
-          <div class="featured-main-cover">
-            <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play by Samuel M. Gray — book cover">
-          </div>
-          <div class="featured-main-body">
-            <p class="featured-kicker">Featured &middot; New Novella</p>
-            <h3>Shadow Play</h3>
-            <p class="featured-genre">Erotic Novella · Psychological &middot; $3.99 · 95 min read</p>
-            <p class="featured-desc">Four friends in a car at night. A hand that finds his in the dark, half a meter from her sleeping boyfriend. By morning it should have been a mistake — instead, it becomes a game with escalating rules.</p>
-            <p class="featured-tagline">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
-            <span class="featured-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <div class="featured-side">
-          <a href="the-bus-ride.html" class="featured-side-card">
-            <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride — book cover" loading="lazy">
-            <div class="featured-side-body">
-              <p class="featured-kicker">#1 Bestseller · $0.99</p>
-              <h4>The Bus Ride</h4>
-              <p class="featured-side-tag">&ldquo;Some rides take you further than you planned.&rdquo;</p>
+        </div>
+        <!-- BUILD:HERO-BOOK -->
+        <div class="hero-book">
+          <a href="shadow-play.html">
+            <div class="hero-book-frame">
+              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play by Samuel M. Gray — book cover">
             </div>
-          </a>
-          <a href="black-book-1-the-wildcat.html" class="featured-side-card">
-            <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — book cover" loading="lazy">
-            <div class="featured-side-body">
-              <p class="featured-kicker">New Series Opener · $0.99</p>
-              <h4>The Wildcat</h4>
-              <p class="featured-side-tag">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
+            <div class="hero-book-meta">
+              <span class="hero-book-label">The newest descent</span>
+              <h2 class="hero-book-title">Shadow Play</h2>
+              <p class="hero-book-hook">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
+              <p class="hero-book-line">Erotic Novella &middot; 95 min &middot; <b>$3.99</b></p>
             </div>
           </a>
         </div>
-<!-- /BUILD:FEATURED -->
+<!-- /BUILD:HERO-BOOK -->
       </div>
-
-      <!-- ===== CHOOSE YOUR PATH ===== -->
-      <div class="paths-grid">
-        <a href="books.html#shelf-free" class="path-card" style="background-image: url('assets/images/headers/the-night-swim.jpg');">
-          <div class="path-body">
-            <p class="path-kicker">No signup. No price.</p>
-            <h3>Free Stories</h3>
-            <span class="path-cta">Three complete stories &rarr;</span>
-          </div>
-        </a>
-        <a href="books.html#shelf-series" class="path-card" style="background-image: url('assets/images/headers/the-black-book.jpg');">
-          <div class="path-body">
-            <p class="path-kicker">Reading order matters</p>
-            <h3>The Series</h3>
-            <span class="path-cta">The Black Book &middot; The Dare Trilogy &middot; Posed &rarr;</span>
-          </div>
-        </a>
-        <a href="books.html" class="path-card" style="background-image: url('assets/images/headers/site.jpg');">
-          <div class="path-body">
-            <p class="path-kicker">Browse by mood</p>
-            <h3>The Library</h3>
-            <span class="path-cta">All stories &amp; novellas &rarr;</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- ===== NEW RELEASES ===== -->
-      <div class="shelf-heading">
-        <p class="section-label">Fresh Ink</p>
-        <h3>New Releases</h3>
-      </div>
-      <div class="books-carousel-wrapper">
-        <button class="carousel-arrow left" onclick="scrollCarousel(-1)" aria-label="Previous">&#8249;</button>
-        <button class="carousel-arrow right" onclick="scrollCarousel(1)" aria-label="Next">&#8250;</button>
-        <div class="books-grid" id="newReleasesRow">
-          <!-- BUILD:NEW-RELEASES -->
-        <a class="book-card" href="black-book-2-the-game.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/black-book-2-the-game.jpg" alt="The Game — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $2.99</p>
-            <h3 class="book-title">The Game</h3>
-            <p class="book-genre">Erotic Psychological Thriller</p>
-            <p class="book-excerpt">&ldquo;Secrets built on stolen knowledge always come due.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="shadow-play.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $3.99</p>
-            <h3 class="book-title">Shadow Play</h3>
-            <p class="book-genre">Erotic Novella · Psychological</p>
-            <p class="book-excerpt">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="the-guest.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $3.99</p>
-            <h3 class="book-title">The Guest</h3>
-            <p class="book-genre">Erotic Novella · MFM</p>
-            <p class="book-excerpt">&ldquo;Is he asleep — or does he know exactly what he's doing?&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="the-monkey-game.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $2.99</p>
-            <h3 class="book-title">The Monkey Game</h3>
-            <p class="book-genre">Erotic Thriller</p>
-            <p class="book-excerpt">&ldquo;Monkey see, monkey do.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="mad.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $2.99</p>
-            <h3 class="book-title">MAD</h3>
-            <p class="book-genre">Erotica · Psychological Thriller</p>
-            <p class="book-excerpt">&ldquo;Some victories come at a price. Some prices buy your silence forever.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="the-fitting-room.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $2.99</p>
-            <h3 class="book-title">The Fitting Room</h3>
-            <p class="book-genre">Erotica · Power Exchange</p>
-            <p class="book-excerpt">&ldquo;Ten seconds. Thousands of kroner. Everything changes.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="my-first-brazilian.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $2.99</p>
-            <h3 class="book-title">My First Brazilian</h3>
-            <p class="book-genre">Erotica · F/F</p>
-            <p class="book-excerpt">&ldquo;Some doors, once opened, never close again.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card" href="black-book-1-the-wildcat.html">
-          <div class="book-cover-image">
-            <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — Cover" loading="lazy">
-          </div>
-          <div class="book-card-body">
-            <p class="book-number">New · $0.99</p>
-            <h3 class="book-title">The Wildcat</h3>
-            <p class="book-genre">Erotic Psychological Thriller</p>
-            <p class="book-excerpt">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
-            <span class="book-card-cta">Details &amp; Excerpt &rarr;</span>
-          </div>
-        </a>
-        <a class="book-card library-endcap" href="books.html">
-          <div class="endcap-inner">
-            <span class="endcap-mark">&#10022;</span>
-            <p class="endcap-count">The full collection of stories and novellas</p>
-            <span class="endcap-cta">Enter the Library &rarr;</span>
-          </div>
-        </a>
-<!-- /BUILD:NEW-RELEASES -->
-        </div>
-      </div>
-      <a href="books.html" class="books-view-all">Enter the Library &rarr;</a>
+      <p class="scroll-hint">Descend<span></span></p>
     </div>
   </section>
 
-  <!-- ===== WHAT READERS SAY ===== -->
+  <hr class="rule">
+
+  <!-- ===== MOOD-DØRER ===== -->
+  <section id="doors">
+    <div class="wrap">
+      <!-- BUILD:DOORS -->
+        <div class="rise">
+          <p class="eyebrow">Twenty-two stories</p>
+          <h2 class="section-title">Where do you want to be taken?</h2>
+          <p class="section-lede">Not a catalogue. A set of doors. Choose the appetite, not the title &mdash; each one opens on the stories that answer it.</p>
+        </div>
+        <div class="rise">
+          <div class="doors">
+            <a class="door" href="books.html?mood=dare,escalation">
+              <span class="door-count">Four stories</span>
+              <h3 class="door-name">Games &amp; Dares</h3>
+              <p class="door-whisper">It starts as a joke. Then someone raises the stakes, and nobody says stop.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+            <a class="door" href="books.html?mood=power+play,BDSM">
+              <span class="door-count">Eight stories</span>
+              <h3 class="door-name">Power &amp; Surrender</h3>
+              <p class="door-whisper">Someone holds the leash. It is rarely the one you expect, and never for long.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+            <a class="door" href="books.html?mood=stranger+encounter,public+setting">
+              <span class="door-count">Four stories</span>
+              <h3 class="door-name">Strangers</h3>
+              <p class="door-whisper">A bus. A plane. A fitting room. No names exchanged, no line uncrossed.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+            <a class="door" href="books.html?mood=voyeurism">
+              <span class="door-count">Seven stories</span>
+              <h3 class="door-name">Watched</h3>
+              <p class="door-whisper">Being seen is the point. The question is who is holding the camera.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+            <a class="door" href="books.html?mood=slow+burn">
+              <span class="door-count">Seven stories</span>
+              <h3 class="door-name">Slow Burn</h3>
+              <p class="door-whisper">Nothing happens for a very long time. Everything happens in that nothing.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+            <a class="door" href="books.html?mood=masks,deception">
+              <span class="door-count">Five stories</span>
+              <h3 class="door-name">Masks &amp; Deception</h3>
+              <p class="door-whisper">Two faces, one reflection. Somebody is lying, and enjoying it.</p>
+              <span class="door-arrow">Open &rarr;</span>
+            </a>
+          </div>
+        </div>
+<!-- /BUILD:DOORS -->
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ===== HYLLEN / WORKS ===== -->
+  <section id="shelf">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">Fresh ink</p>
+        <h2 class="section-title">Touch one and it confesses</h2>
+        <p class="section-lede">Every cover keeps its hook, its appetites and its price one gesture away. Hover, and the story tells you what it is.</p>
+      </div>
+      <div class="rise">
+        <!-- BUILD:SHELF -->
+        <div class="shelf">
+          <a class="card" href="black-book-2-the-game.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/black-book-2-the-game.jpg" alt="The Game — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Secrets built on stolen knowledge always come due.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>obsession</i><i>psychological</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Game</h3>
+              <p class="card-price">Erotic Psychological Thriller &middot; <b>$2.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="shadow-play.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>slow burn</i><i>psychological</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">Shadow Play</h3>
+              <p class="card-price">Erotic Novella &middot; <b>$3.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="the-guest.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Is he asleep — or does he know exactly what he's doing?&rdquo;</p>
+                <div class="card-tags"><i>MFM</i><i>slow burn</i><i>awakening</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Guest</h3>
+              <p class="card-price">Erotic Novella &middot; <b>$3.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="the-monkey-game.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Monkey see, monkey do.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>dare</i><i>escalation</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Monkey Game</h3>
+              <p class="card-price">Erotic Thriller &middot; <b>$2.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="mad.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Some victories come at a price. Some prices buy your silence forever.&rdquo;</p>
+                <div class="card-tags"><i>MFF</i><i>dark</i><i>power play</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">MAD</h3>
+              <p class="card-price">Erotica &middot; <b>$2.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="the-fitting-room.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Ten seconds. Thousands of kroner. Everything changes.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>power play</i><i>voyeurism</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Fitting Room</h3>
+              <p class="card-price">Erotica &middot; <b>$2.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="my-first-brazilian.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Some doors, once opened, never close again.&rdquo;</p>
+                <div class="card-tags"><i>FF</i><i>first time</i><i>awakening</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">My First Brazilian</h3>
+              <p class="card-price">Erotica &middot; <b>$2.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="black-book-1-the-wildcat.html">
+            <div class="card-frame">
+              
+              <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>masks</i><i>psychological</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Wildcat</h3>
+              <p class="card-price">Erotic Psychological Thriller &middot; <b>$0.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="the-bus-ride.html">
+            <div class="card-frame">
+              <span class="card-badge">#1 Bestseller</span>
+              <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride — book cover" loading="lazy">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;Some rides take you further than you planned.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>stranger encounter</i><i>public setting</i></div>
+                <span class="card-go">Read the excerpt &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The Bus Ride</h3>
+              <p class="card-price">Erotic Short Story &middot; <b>$0.99</b></p>
+            </div>
+          </a>
+          <a class="card card-endcap" href="books.html">
+            <div class="card-frame">
+              <div>
+                <span class="endcap-mark">&#10022;</span>
+                <p class="endcap-count">All twenty-two stories and novellas, shelved by mood.</p>
+                <span class="endcap-cta">Enter the Library &rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+<!-- /BUILD:SHELF -->
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ===== SERIESTIGEN ===== -->
+  <section id="series">
+    <div class="wrap">
+      <!-- BUILD:LADDER -->
+      <div class="ladder-grid">
+        <div class="rise">
+          <p class="eyebrow">Reading order matters</p>
+          <h2 class="section-title">The Black Book</h2>
+          <p class="section-lede">A five-book erotic psychological thriller about masks, desire, obsession and trust. Read in order — it ends where it began: at the club, with a single name said out loud.</p>
+
+          <ol class="ladder">
+            <li>
+              <span class="num">I</span>
+              <span class="name">The Wildcat<em>The nice guy just learned the rules of the game.</em></span>
+              <span class="state now">$0.99</span>
+            </li>
+            <li>
+              <span class="num">II</span>
+              <span class="name">The Game<em>Secrets built on stolen knowledge always come due.</em></span>
+              <span class="state now">$2.99</span>
+            </li>
+            <li>
+              <span class="num">III</span>
+              <span class="name">The Exploration<em>Pleasure was the easy part.</em></span>
+              <span class="state">Coming</span>
+            </li>
+            <li>
+              <span class="num">IV</span>
+              <span class="name">The Contract<em>Trust is built, broken, and reforged in the ruins.</em></span>
+              <span class="state">Coming</span>
+            </li>
+            <li>
+              <span class="num">V</span>
+              <span class="name">Queen's Gambit<em>The queen has been playing longer than either of them knows.</em></span>
+              <span class="state">Coming</span>
+            </li>
+          </ol>
+
+          <p class="ladder-cta">
+            <a class="btn" href="black-book-1-the-wildcat.html">Begin with Book One &mdash; $0.99</a>
+          </p>
+
+          <div class="ladder-more">
+          <a href="the-dare.html">The Dare Trilogy &mdash; 3 books &rarr;</a>
+          <a href="posed-the-bait.html">Posed &mdash; 2 books &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ladder-art rise">
+          <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Black Book &mdash; book cover" loading="lazy">
+        </div>
+      </div>
+<!-- /BUILD:LADDER -->
+    </div>
+  </section>
+
+  <!-- ===== GRATIS Å LESE + SLØRET ===== -->
+  <section class="free-sec" id="free">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">No signup. No price.</p>
+        <h2 class="section-title">Read for Free</h2>
+        <p class="section-lede">Three complete stories, whole and unpaywalled, right here on this site.</p>
+      </div>
+
+      <div class="rise">
+        <!-- BUILD:FREE -->
+        <div class="free-cards">
+          <a class="free-card" href="the-night-shift.html">
+            <div class="free-card-cover">
+              <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift — book cover" loading="lazy">
+            </div>
+            <div class="free-card-body">
+              <p class="free-label">Free Novella</p>
+              <h3>The Night Shift</h3>
+              <p>&ldquo;The most dangerous person in the building isn't wearing a suit — she's wearing scrubs.&rdquo;</p>
+              <span class="card-go">Read now &rarr;</span>
+            </div>
+          </a>
+          <a class="free-card" href="the-beach.html">
+            <div class="free-card-cover">
+              <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach — book cover" loading="lazy">
+            </div>
+            <div class="free-card-body">
+              <p class="free-label">Free Story</p>
+              <h3>The Beach</h3>
+              <p>&ldquo;Two years of silence unraveled in a single afternoon.&rdquo;</p>
+              <span class="card-go">Read now &rarr;</span>
+            </div>
+          </a>
+          <a class="free-card" href="the-key.html">
+            <div class="free-card-cover">
+              <img src="assets/images/covers/web/the-key.jpg" alt="The Key — book cover" loading="lazy">
+            </div>
+            <div class="free-card-body">
+              <p class="free-label">Confession I &mdash; Free</p>
+              <h3>The Key</h3>
+              <p>&ldquo;A confession. A story. A boundary crossed.&rdquo;</p>
+              <span class="card-go">Read now &rarr;</span>
+            </div>
+          </a>
+        </div>
+<!-- /BUILD:FREE -->
+      </div>
+
+      <div class="veil-box rise">
+        <p class="eyebrow">Read before you decide</p>
+        <h2 class="section-title">The first page of <em>The Night Shift</em></h2>
+        <p class="section-lede">A free novella. No signup, no price &mdash; the whole thing is on this site.</p>
+
+        <div class="veil-text">
+          <p>Outside the large, immune-clad windows of Haukeland Hospital, snowflakes danced in the cold, gray December light. They settled like a thick, white, treacherous blanket over a city brought to a standstill. It was the same sheet of ice on the road that had sent his company car into an uncontrolled pirouette and placed him here.</p>
+          <p>Here. In this bed. In this room, with the smell of disinfectant and stale coffee, and the constant, muffled beeping of machines he couldn&rsquo;t see. Trapped.</p>
+          <p>Henrik Dahl, fifty-two years old, CEO accustomed to running an international corporation with an iron fist, stared up at the sterile white ceiling and was seized by a wave of pure, unfiltered rage. Both his arms were encased in hard, white plaster from fingertip to above the elbow, resting like two useless, dead logs on the duvet.</p>
+          <p>&ldquo;Nurse!&rdquo; he bellowed into the shared room, ignoring the elderly man snoring in the bed beside him.</p>
+        </div>
+
+        <p class="veil-cta">
+          <a class="btn" href="the-night-shift.html">Continue the novella &mdash; free &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANMELDELSER ===== -->
   <section id="reviews">
-    <div class="section-inner reveal">
-      <p class="section-label">From the Shadows</p>
-      <h2 class="section-title">What Readers Say</h2>
-      <div class="section-divider"></div>
-      <div class="reviews-grid">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">From the shadows</p>
+        <h2 class="section-title">What Readers Say</h2>
+        <p class="section-lede">Four lines from Amazon readers who did not put it down.</p>
+      </div>
+      <div class="reviews-grid rise">
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"I finished it in one sitting. My hands were shaking by the end."</p>
+          <p class="review-text">&ldquo;I finished it in one sitting. My hands were shaking by the end.&rdquo;</p>
           <p class="review-source">Amazon Reader</p>
         </div>
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Not your typical erotica. This is psychological, layered, and genuinely surprising."</p>
+          <p class="review-text">&ldquo;Not your typical erotica. This is psychological, layered, and genuinely surprising.&rdquo;</p>
           <p class="review-source">Amazon Reader</p>
         </div>
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Gray writes desire the way it actually feels — messy, obsessive, and impossible to look away from."</p>
+          <p class="review-text">&ldquo;Gray writes desire the way it actually feels &mdash; messy, obsessive, and impossible to look away from.&rdquo;</p>
           <p class="review-source">Amazon Reader</p>
         </div>
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"The dual perspective blew my mind. You think you know who's in control — then everything flips."</p>
+          <p class="review-text">&ldquo;The dual perspective blew my mind. You think you know who&rsquo;s in control &mdash; then everything flips.&rdquo;</p>
           <p class="review-source">Amazon Reader</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <hr class="rule">
+
+  <!-- ===== OM FORFATTEREN ===== -->
   <section id="about">
-    <div class="section-inner reveal">
-      <p class="section-label">The Author</p>
-      <h2 class="section-title">Who Is Samuel M. Gray?</h2>
-      <div class="section-divider"></div>
-      <div class="about-text">
-        <p>Some stories are not written — they are excavated. Samuel M. Gray works in the space between confession and fiction, pulling narratives from the shadows that most writers refuse to enter. His work explores psychological dominance, forbidden arrangements, and the volatile territory where power and vulnerability collide.</p>
-        <p>Nothing is known of Gray beyond the page. He offers no interviews, no appearances, and no apologies. The work speaks. The rest is silence.</p>
-        <p class="about-signature">— The Storyteller of Shadows</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NEWSLETTER ===== -->
-  <section id="newsletter">
-    <div class="section-inner reveal">
-      <div class="newsletter-inner">
-        <div class="newsletter-icon">✦</div>
-        <p class="section-label" style="text-align:center;">The Inner Circle</p>
-        <h2 class="section-title" style="text-align:center;">Join the Shadows</h2>
-        <div class="section-divider" style="margin: 0.8rem auto 1.5rem;"></div>
-        <p class="newsletter-text">Subscribe and receive <em>The Night Shift: Maria's Perspective</em> — an exclusive retelling you can't buy anywhere. See the story through her eyes. Free. Instant download.</p>
-        <p class="newsletter-exclusive">Plus: early access to new releases, subscriber-only stories, and the confessions that inspired them.</p>
-        <div class="ml-embedded" data-form="0yEjb2"></div>
-        <p class="newsletter-delivery-note">After signing up, check your Promotions or Spam folder — and drag the email to your Primary inbox so you never miss a story.</p>
-        <p class="newsletter-note">No spam. Unsubscribe at any time. Your darkness is your own.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONFESSIONS ===== -->
-  <section id="confessions">
-    <div class="section-inner reveal">
-      <p class="section-label">Your Story, My Pen</p>
-      <h2 class="section-title">Confessions</h2>
-      <div class="section-divider"></div>
-      <p class="confessions-intro">Everyone carries a story they'll never tell out loud — a fantasy that keeps them awake, a memory they can't shake, a moment that crossed every line. Send it to me. Anonymously or not. The ones that haunt me most become stories. Your truth, rewritten as fiction. No names. No judgments. Only the dark honesty of desire.</p>
-      <form class="confessions-form" id="confessionsForm" onsubmit="handleConfession(event)">
-        <textarea name="confession" placeholder="Tell me your darkest confession, your most forbidden fantasy, or a truth you've never spoken aloud..." required></textarea>
-        <div class="confessions-optional">
-          <input type="text" name="name" placeholder="Name (optional)">
-          <input type="email" name="email" placeholder="Email (optional — for when your story is published)">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">The author</p>
+        <h2 class="section-title">Who Is Samuel M. Gray?</h2>
+        <div class="about-text">
+          <p>Some stories are not written &mdash; they are excavated. Samuel M. Gray works in the space between confession and fiction, pulling narratives from the shadows that most writers refuse to enter. His work explores psychological dominance, forbidden arrangements, and the volatile territory where power and vulnerability collide.</p>
+          <p>Nothing is known of Gray beyond the page. He offers no interviews, no appearances, and no apologies. The work speaks. The rest is silence.</p>
+          <p class="about-signature">&mdash; The Storyteller of Shadows</p>
         </div>
-        <div class="confessions-submit-row">
-          <button type="submit" class="confessions-submit">Send Confession</button>
-          <span class="confessions-privacy">Anonymous by default. Your secret is safe.</span>
-        </div>
-      </form>
-      <div class="confessions-success" id="confessionSuccess">
-        <p>Your confession has been received. If it haunts me enough — it will become a story.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- ===== NYHETSBREV ===== -->
+  <section class="inner-circle" id="newsletter">
+    <div class="wrap">
+      <div class="magnet rise">
+        <div class="magnet-mark">&#10022;</div>
+        <p class="eyebrow">The inner circle</p>
+        <h2 class="section-title">Join the Shadows</h2>
+        <p class="magnet-text">Subscribe and receive <em>The Night Shift: Maria&rsquo;s Perspective</em> &mdash; an exclusive retelling you can&rsquo;t buy anywhere. See the story through her eyes. Free. Instant download.</p>
+        <p class="magnet-extra">Plus: early access to new releases, subscriber-only stories, and the confessions that inspired them.</p>
+        <div class="ml-embedded" id="mlForm" data-form="0yEjb2"></div>
+        <p class="magnet-delivery">After signing up, check your Promotions or Spam folder &mdash; and drag the email to your Primary inbox so you never miss a story.</p>
+        <p class="magnet-note">No spam. Unsubscribe at any time. Your darkness is your own.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONFESSIONS (rett etter nyhetsbrevet) ===== -->
+  <section class="confess-sec" id="confessions">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">Your story, my pen</p>
+        <h2 class="section-title">Confessions</h2>
+        <p class="section-lede">The ones that haunt me most become stories.</p>
+      </div>
+
+      <div class="confess-grid rise">
+        <p class="confess-intro">Everyone carries a story they&rsquo;ll never tell out loud &mdash; a fantasy that keeps them awake, a memory they can&rsquo;t shake, a moment that crossed every line. Send it to me. Anonymously or not. <strong>Your truth, rewritten as fiction.</strong> No names. No judgments. Only the dark honesty of desire.</p>
+
+        <div>
+          <form class="confessions-form" id="confessionsForm" onsubmit="handleConfession(event)">
+            <textarea name="confession" placeholder="Tell me your darkest confession, your most forbidden fantasy, or a truth you've never spoken aloud&hellip;" required aria-label="Your confession"></textarea>
+            <div class="confessions-optional">
+              <input type="text" name="name" placeholder="Name (optional)" aria-label="Name (optional)">
+              <input type="email" name="email" placeholder="Email (optional)" aria-label="Email (optional)">
+            </div>
+            <div class="confessions-submit-row">
+              <button type="submit" class="btn">Send Confession</button>
+              <span class="confessions-privacy">Anonymous by default. Your secret is safe.</span>
+            </div>
+          </form>
+          <div class="confessions-success" id="confessionSuccess">
+            <p>Your confession has been received. If it haunts me enough &mdash; it will become a story.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FAQ ===== -->
   <section id="faq">
-    <div class="section-inner reveal">
-      <p class="section-label">Questions</p>
-      <h2 class="section-title">Frequently Asked</h2>
-      <div class="section-divider"></div>
-      <div style="max-width:720px;margin:0 auto;text-align:left;">
-        <div style="margin-bottom:2rem;">
-          <h3 style="color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;">Where can I read Samuel M. Gray stories for free?</h3>
-          <p style="color:var(--mid-gray);line-height:1.8;">Three complete stories are free to read right here on the site, no signup required: <a href="the-night-shift.html" style="color:var(--gold);">The Night Shift</a> (a dark erotic novella), <a href="the-beach.html" style="color:var(--gold);">The Beach</a> and <a href="the-key.html" style="color:var(--gold);">The Key</a>. Newsletter subscribers also receive an exclusive free novella.</p>
-        </div>
-        <div style="margin-bottom:2rem;">
-          <h3 style="color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;">Where can I buy the books?</h3>
-          <p style="color:var(--mid-gray);line-height:1.8;">All published books are available worldwide on Amazon Kindle, priced $0.99–$3.99. Browse the full catalog in <a href="books.html" style="color:var(--gold);">The Library</a> — each book page has a free opening excerpt and a direct Amazon link.</p>
-        </div>
-        <div style="margin-bottom:2rem;">
-          <h3 style="color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;">What kind of fiction does Samuel M. Gray write?</h3>
-          <p style="color:var(--mid-gray);line-height:1.8;">Dark, psychological erotic short fiction: stories about desire, power dynamics, and the lines people cross. Explicit content between consenting adults, written for readers 18+. Expect slow-burn tension, games and dares, and endings that shift the balance of power.</p>
-        </div>
-        <div style="margin-bottom:2rem;">
-          <h3 style="color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;">Are the stories standalone, or should I read them in order?</h3>
-          <p style="color:var(--mid-gray);line-height:1.8;">Most stories are complete standalones — start anywhere. The exceptions are the series: <a href="the-black-book.html" style="color:var(--gold);">The Black Book</a> (read books 1–5 in order), the Posed series (start with <a href="posed-the-bait.html" style="color:var(--gold);">The Bait</a>), and The Dare Trilogy (start with <a href="the-dare.html" style="color:var(--gold);">The Dare</a>).</p>
-        </div>
-        <div style="margin-bottom:2rem;">
-          <h3 style="color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;">How do I hear about new releases?</h3>
-          <p style="color:var(--mid-gray);line-height:1.8;">Join the <a href="#newsletter" style="color:var(--gold);">newsletter</a>. Subscribers get launch alerts before anyone else, plus an exclusive novella — The Night Shift: Maria's Perspective — free on signup.</p>
-        </div>
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">Questions</p>
+        <h2 class="section-title">Frequently Asked</h2>
+        <p class="section-lede">Five things readers ask before they start.</p>
+      </div>
+
+      <div class="faq-list rise">
+        <details>
+          <summary>Where can I read Samuel M. Gray stories for free?</summary>
+          <div class="faq-answer"><p>Three complete stories are free to read right here on the site, no signup required: <a href="the-night-shift.html">The Night Shift</a> (a dark erotic novella), <a href="the-beach.html">The Beach</a> and <a href="the-key.html">The Key</a>. Newsletter subscribers also receive an exclusive free novella.</p></div>
+        </details>
+        <details>
+          <summary>Where can I buy the books?</summary>
+          <div class="faq-answer"><p>All published books are available worldwide on Amazon Kindle, priced $0.99&ndash;$3.99. Browse the full catalog in <a href="books.html">The Library</a> &mdash; each book page has a free opening excerpt and a direct Amazon link.</p></div>
+        </details>
+        <details>
+          <summary>What kind of fiction does Samuel M. Gray write?</summary>
+          <div class="faq-answer"><p>Dark, psychological erotic short fiction: stories about desire, power dynamics, and the lines people cross. Explicit content between consenting adults, written for readers 18+. Expect slow-burn tension, games and dares, and endings that shift the balance of power.</p></div>
+        </details>
+        <details>
+          <summary>Are the stories standalone, or should I read them in order?</summary>
+          <div class="faq-answer"><p>Most stories are complete standalones &mdash; start anywhere. The exceptions are the series: <a href="the-black-book.html">The Black Book</a> (read books 1&ndash;5 in order), the Posed series (start with <a href="posed-the-bait.html">The Bait</a>), and The Dare Trilogy (start with <a href="the-dare.html">The Dare</a>).</p></div>
+        </details>
+        <details>
+          <summary>How do I hear about new releases?</summary>
+          <div class="faq-answer"><p>Join the <a href="#newsletter">newsletter</a>. Subscribers get launch alerts before anyone else, plus an exclusive novella &mdash; The Night Shift: Maria&rsquo;s Perspective &mdash; free on signup.</p></div>
+        </details>
       </div>
     </div>
   </section>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2455,26 +1664,34 @@
   }
   </script>
 
+  <hr class="rule">
+
+  <!-- ===== KONTAKT ===== -->
   <section id="contact">
-    <div class="section-inner reveal">
-      <p class="section-label">Correspondence</p>
-      <h2 class="section-title">Contact</h2>
-      <div class="section-divider"></div>
-      <div class="contact-content">
-        <p>For press inquiries, rights negotiations, or messages that warrant a response — write to the address below. Not all letters receive a reply. Those that do are worth the wait.</p>
-        <a href="mailto:contact@samuelmgray.com" class="contact-email">
-          <span>✉</span> contact@samuelmgray.com
-        </a>
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow">Correspondence</p>
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+          <p>For press inquiries, rights negotiations, or messages that warrant a response &mdash; write to the address below. Not all letters receive a reply. Those that do are worth the wait.</p>
+          <a href="mailto:contact@samuelmgray.com" class="contact-email">
+            <span>&#9993;</span> contact@samuelmgray.com
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
+</main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <img src="assets/images/Logo/SMG_logo_transparent.png" alt="SMG monogram" class="footer-logo">
-    <p class="footer-name">Samuel M. Gray</p>
-    <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
-    <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
+    <div class="wrap">
+      <img src="assets/images/Logo/SMG_logo_transparent.png" alt="SMG monogram" class="footer-logo">
+      <p class="footer-name">Samuel M. Gray</p>
+      <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
+      <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
+    </div>
   </footer>
 
   <!-- ===== JAVASCRIPT ===== -->
@@ -2500,13 +1717,8 @@
 
     // --- Navigation scroll ---
     window.addEventListener('scroll', function () {
-      var nav = document.getElementById('mainNav');
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
 
     // --- Mobile menu ---
     function toggleMenu() {
@@ -2520,47 +1732,36 @@
     }
 
     // --- Scroll reveal ---
-    var revealElements = document.querySelectorAll('.reveal');
+    // Terskel 0 + negativ rootMargin, slik at seksjoner som er høyere enn
+    // vinduet også utløses. Uten dette blir høye seksjoner aldri synlige.
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('seen');
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
 
-    revealElements.forEach(function (el) {
-      revealObserver.observe(el);
-    });
+    document.querySelectorAll('.rise').forEach(function (el) { revealObserver.observe(el); });
 
-    // --- New releases row ---
-    function scrollCarousel(dir) {
-      var row = document.getElementById('newReleasesRow');
-      if (!row) return;
-      var card = row.querySelector('.book-card');
-      var cardWidth = card.offsetWidth + 24;
-      row.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
-    }
+    // Sikkerhetsnett: vis alt uansett etter 2,5 s dersom observeren svikter
+    setTimeout(function () {
+      document.querySelectorAll('.rise:not(.seen)').forEach(function (el) { el.classList.add('seen'); });
+    }, 2500);
 
-    // --- Story excerpt toggle ---
-    function toggleExcerpt() {
-      var expanded = document.getElementById('storyExpanded');
-      var toggle = document.getElementById('storyToggle');
-      var fade = toggle.closest('.story-fade');
-      if (expanded.style.display === 'none') {
-        expanded.style.display = 'block';
-        toggle.textContent = 'Show less';
-        fade.style.marginTop = '0';
-        fade.style.paddingTop = '1rem';
-        fade.style.background = 'none';
-      } else {
-        expanded.style.display = 'none';
-        toggle.textContent = 'Continue reading\u2026';
-        fade.style.marginTop = '-4rem';
-        fade.style.paddingTop = '6rem';
-        fade.style.background = 'linear-gradient(to bottom, transparent, var(--black) 70%)';
-      }
+    // --- Levende lys (kun mus/penn) ---
+    if (matchMedia('(hover:hover) and (pointer:fine)').matches &&
+        !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var candle = document.getElementById('candle'), cx = 0, cy = 0, raf = null;
+      window.addEventListener('mousemove', function (e) {
+        cx = e.clientX; cy = e.clientY;
+        candle.classList.add('lit');
+        if (!raf) raf = requestAnimationFrame(function () {
+          candle.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+          raf = null;
+        });
+      }, { passive: true });
     }
 
     // --- Confessions form ---
@@ -2577,12 +1778,12 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
-      }).then(function(response) {
+      }).then(function (response) {
         if (response.ok) {
           form.style.display = 'none';
           document.getElementById('confessionSuccess').classList.add('show');
         }
-      }).catch(function() {
+      }).catch(function () {
         form.style.display = 'none';
         document.getElementById('confessionSuccess').classList.add('show');
       });
@@ -2594,9 +1795,7 @@
         e.preventDefault();
         closeMenu();
         var target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>
