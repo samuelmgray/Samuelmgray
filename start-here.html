@@ -47,34 +47,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Which Samuel M. Gray story should I read first?",
+        "name": "Which story should I read first?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Start with The Night Shift, a complete dark erotic novella that is free to read on samuelmgray.com with no signup. If you would rather buy, The Bus Ride is $0.99 and is the story that started the catalogue."
+          "text": "Read The Night Shift. It is a complete dark erotic novella, it is free on this site, and it needs no signup. If you would rather buy, The Bus Ride is $0.99 and is the story the whole catalogue grew out of."
         }
       },
       {
         "@type": "Question",
-        "name": "Do Samuel M. Gray's stories need to be read in order?",
+        "name": "Do the stories need to be read in order?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most do not. 14 stories and novellas are complete standalones and can be read in any order. Only the three series have a required order: The Black Book (books 1-5 in numbered order), Posed (start with The Bait) and The Dare Trilogy (start with The Dare)."
+          "text": "Mostly no. Fourteen of the stories and novellas are complete standalones and can be read in any order. Only three series have a required order, and they are listed above."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the reading order for The Black Book series?",
+        "name": "What is the reading order for The Black Book?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Wildcat, then The Game, then The Exploration, then The Contract, then Queen's Gambit. Book one, The Wildcat, is $0.99."
+          "text": "The Wildcat, then The Game, then The Exploration, then The Contract, then Queen’s Gambit. Book one is $0.99."
         }
       },
       {
         "@type": "Question",
-        "name": "Are any Samuel M. Gray stories free?",
+        "name": "Are any of the stories free?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. 3 complete stories are free to read on samuelmgray.com with no signup: The Night Shift, The Beach, The Key. Newsletter subscribers also receive an exclusive free novella."
+          "text": "Yes — three complete stories, with no signup and no payment: The Night Shift, The Beach, The Key. Newsletter subscribers also get an exclusive novella that is not sold anywhere."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long are they?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most are one-sitting reads, roughly 20 to 45 minutes. The longest, Shadow Play, runs about 95 minutes."
         }
       }
     ]
@@ -170,6 +178,21 @@
       letter-spacing:.2em; text-transform:uppercase;
       transition:background .35s ease,color .35s ease}
     .btn:hover{background:var(--gold); color:var(--ink)}
+
+    .faq{max-width:70ch; border-top:1px solid rgba(201,168,76,.16)}
+    .faq details{border-bottom:1px solid rgba(201,168,76,.16)}
+    .faq summary{cursor:pointer; list-style:none; padding:1.2rem .2rem;
+      display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem;
+      font-size:1.05rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+'; color:var(--gold); flex-shrink:0;
+      transition:transform .35s ease}
+    .faq details[open] summary{color:var(--gold)}
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq summary:hover{color:var(--gold)}
+    .faq-a{padding:0 .2rem 1.4rem; color:var(--smoke)}
+    .faq-a p{margin:0}
+    .faq-a a{color:var(--gold); border-bottom:1px solid rgba(201,168,76,.3)}
 
     footer{padding:3rem 0 4rem; text-align:center; color:var(--smoke); font-size:.8rem;
       border-top:1px solid rgba(201,168,76,.14)}
@@ -360,6 +383,35 @@
         </ol>
       </div>
       <a class="btn" href="books.html">Browse all twenty-two stories &rarr;</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2>Common questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Which story should I read first?</summary>
+          <div class="faq-a"><p>Read <a href="the-night-shift.html">The Night Shift</a>. It is a complete dark erotic novella, it is free on this site, and it needs no signup. If you would rather buy, <a href="the-bus-ride.html">The Bus Ride</a> is $0.99 and is the story the whole catalogue grew out of.</p></div>
+        </details>
+        <details>
+          <summary>Do the stories need to be read in order?</summary>
+          <div class="faq-a"><p>Mostly no. Fourteen of the stories and novellas are complete standalones and can be read in any order. Only three series have a required order, and they are listed above.</p></div>
+        </details>
+        <details>
+          <summary>What is the reading order for The Black Book?</summary>
+          <div class="faq-a"><p>The Wildcat, then The Game, then The Exploration, then The Contract, then Queen&rsquo;s Gambit. Book one is $0.99.</p></div>
+        </details>
+        <details>
+          <summary>Are any of the stories free?</summary>
+          <div class="faq-a"><p>Yes &mdash; three complete stories, with no signup and no payment: The Night Shift, The Beach, The Key. Newsletter subscribers also get an exclusive novella that is not sold anywhere.</p></div>
+        </details>
+        <details>
+          <summary>How long are they?</summary>
+          <div class="faq-a"><p>Most are one-sitting reads, roughly 20 to 45 minutes. The longest, <a href="shadow-play.html">Shadow Play</a>, runs about 95 minutes.</p></div>
+        </details>
+      </div>
     </div>
   </section>
 
