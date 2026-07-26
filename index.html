@@ -585,7 +585,7 @@
       -webkit-font-smoothing:antialiased; overflow-x:hidden;
     }
     a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
+    img{max-width:100%; display:block; height:auto}   /* height:auto kreves fordi bildene har width/height-attributter */
     :focus-visible{outline:1px solid var(--gold); outline-offset:3px}
 
     /* ================= ALDERSPORT ================= */
@@ -1103,8 +1103,9 @@
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" id="mainNav">
-    <a href="#hero" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img"></a>
+    <a href="#hero" class="nav-logo"><img src="assets/images/Logo/SMG_logo_transparent.png" alt="S. M. Gray" class="nav-logo-img" width="120" height="120" fetchpriority="low"></a>
     <div class="nav-links" id="navLinks">
+      <a href="start-here.html">Start Here</a>
       <a href="#doors" onclick="closeMenu()">Enter</a>
       <a href="#shelf" onclick="closeMenu()">Works</a>
       <a href="#series" onclick="closeMenu()">Series</a>
@@ -1138,7 +1139,8 @@
         <div class="hero-book">
           <a href="shadow-play.html">
             <div class="hero-book-frame">
-              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play by Samuel M. Gray — book cover">
+              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play by Samuel M. Gray — book cover"
+                   width="800" height="1280" fetchpriority="high" decoding="async">
             </div>
             <div class="hero-book-meta">
               <span class="hero-book-label">The newest descent</span>
@@ -1167,37 +1169,37 @@
         </div>
         <div class="rise">
           <div class="doors">
-            <a class="door" href="books.html?mood=dare,escalation">
+            <a class="door" href="stories-games-and-dares.html">
               <span class="door-count">Four stories</span>
               <h3 class="door-name">Games &amp; Dares</h3>
               <p class="door-whisper">It starts as a joke. Then someone raises the stakes, and nobody says stop.</p>
               <span class="door-arrow">Open &rarr;</span>
             </a>
-            <a class="door" href="books.html?mood=power+play,BDSM">
+            <a class="door" href="stories-power-and-surrender.html">
               <span class="door-count">Eight stories</span>
               <h3 class="door-name">Power &amp; Surrender</h3>
               <p class="door-whisper">Someone holds the leash. It is rarely the one you expect, and never for long.</p>
               <span class="door-arrow">Open &rarr;</span>
             </a>
-            <a class="door" href="books.html?mood=stranger+encounter,public+setting">
+            <a class="door" href="stories-strangers.html">
               <span class="door-count">Four stories</span>
               <h3 class="door-name">Strangers</h3>
               <p class="door-whisper">A bus. A plane. A fitting room. No names exchanged, no line uncrossed.</p>
               <span class="door-arrow">Open &rarr;</span>
             </a>
-            <a class="door" href="books.html?mood=voyeurism">
+            <a class="door" href="stories-watched.html">
               <span class="door-count">Seven stories</span>
               <h3 class="door-name">Watched</h3>
               <p class="door-whisper">Being seen is the point. The question is who is holding the camera.</p>
               <span class="door-arrow">Open &rarr;</span>
             </a>
-            <a class="door" href="books.html?mood=slow+burn">
+            <a class="door" href="stories-slow-burn.html">
               <span class="door-count">Seven stories</span>
               <h3 class="door-name">Slow Burn</h3>
               <p class="door-whisper">Nothing happens for a very long time. Everything happens in that nothing.</p>
               <span class="door-arrow">Open &rarr;</span>
             </a>
-            <a class="door" href="books.html?mood=masks,deception">
+            <a class="door" href="stories-masks-and-deception.html">
               <span class="door-count">Five stories</span>
               <h3 class="door-name">Masks &amp; Deception</h3>
               <p class="door-whisper">Two faces, one reflection. Somebody is lying, and enjoying it.</p>
@@ -1225,7 +1227,7 @@
           <a class="card" href="black-book-2-the-game.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/black-book-2-the-game.jpg" alt="The Game — book cover" loading="lazy">
+              <img src="assets/images/covers/web/black-book-2-the-game.jpg" alt="The Game — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Secrets built on stolen knowledge always come due.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>obsession</i><i>psychological</i></div>
@@ -1240,7 +1242,7 @@
           <a class="card" href="shadow-play.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play — book cover" loading="lazy">
+              <img src="assets/images/covers/web/shadow-play.jpg" alt="Shadow Play — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;The most dangerous games are played in the dark.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>slow burn</i><i>psychological</i></div>
@@ -1255,7 +1257,7 @@
           <a class="card" href="the-guest.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-guest.jpg" alt="The Guest — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Is he asleep — or does he know exactly what he's doing?&rdquo;</p>
                 <div class="card-tags"><i>MFM</i><i>slow burn</i><i>awakening</i></div>
@@ -1270,7 +1272,7 @@
           <a class="card" href="the-monkey-game.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-monkey-game.jpg" alt="The Monkey Game — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Monkey see, monkey do.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>dare</i><i>escalation</i></div>
@@ -1285,7 +1287,7 @@
           <a class="card" href="mad.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) — book cover" loading="lazy">
+              <img src="assets/images/covers/web/mad.jpg" alt="MAD (Mutual Assured Destruction) — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Some victories come at a price. Some prices buy your silence forever.&rdquo;</p>
                 <div class="card-tags"><i>MFF</i><i>dark</i><i>power play</i></div>
@@ -1300,7 +1302,7 @@
           <a class="card" href="the-fitting-room.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-fitting-room.jpg" alt="The Fitting Room — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Ten seconds. Thousands of kroner. Everything changes.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>power play</i><i>voyeurism</i></div>
@@ -1315,7 +1317,7 @@
           <a class="card" href="my-first-brazilian.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian — book cover" loading="lazy">
+              <img src="assets/images/covers/web/my-first-brazilian.jpg" alt="My First Brazilian — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Some doors, once opened, never close again.&rdquo;</p>
                 <div class="card-tags"><i>FF</i><i>first time</i><i>awakening</i></div>
@@ -1330,7 +1332,7 @@
           <a class="card" href="black-book-1-the-wildcat.html">
             <div class="card-frame">
               
-              <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — book cover" loading="lazy">
+              <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Wildcat — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;The nice guy just learned the rules of the game.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>masks</i><i>psychological</i></div>
@@ -1345,7 +1347,7 @@
           <a class="card" href="the-bus-ride.html">
             <div class="card-frame">
               <span class="card-badge">#1 Bestseller</span>
-              <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-bus-ride.jpg" alt="The Bus Ride — book cover" width="800" height="1280" loading="lazy" decoding="async">
               <div class="card-veil">
                 <p class="card-hook">&ldquo;Some rides take you further than you planned.&rdquo;</p>
                 <div class="card-tags"><i>FM</i><i>stranger encounter</i><i>public setting</i></div>
@@ -1355,6 +1357,21 @@
             <div class="card-base">
               <h3 class="card-title">The Bus Ride</h3>
               <p class="card-price">Erotic Short Story &middot; <b>$0.99</b></p>
+            </div>
+          </a>
+          <a class="card" href="the-river.html">
+            <div class="card-frame">
+              <span class="card-badge">Coming</span>
+              <img src="assets/images/covers/web/the-river.jpg" alt="The River — book cover" width="800" height="1280" loading="lazy" decoding="async">
+              <div class="card-veil">
+                <p class="card-hook">&ldquo;The crossing takes eight minutes. The consequences take everything.&rdquo;</p>
+                <div class="card-tags"><i>FM</i><i>dark</i><i>psychological</i></div>
+                <span class="card-go">Details &rarr;</span>
+              </div>
+            </div>
+            <div class="card-base">
+              <h3 class="card-title">The River</h3>
+              <p class="card-price">Coming soon</p>
             </div>
           </a>
           <a class="card card-endcap" href="books.html">
@@ -1423,7 +1440,7 @@
         </div>
 
         <div class="ladder-art rise">
-          <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Black Book &mdash; book cover" loading="lazy">
+          <img src="assets/images/covers/web/black-book-1-the-wildcat.jpg" alt="The Black Book &mdash; book cover" width="800" height="1280" loading="lazy" decoding="async">
         </div>
       </div>
 <!-- /BUILD:LADDER -->
@@ -1444,7 +1461,7 @@
         <div class="free-cards">
           <a class="free-card" href="the-night-shift.html">
             <div class="free-card-cover">
-              <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-night-shift.jpg" alt="The Night Shift — book cover" width="800" height="1280" loading="lazy" decoding="async">
             </div>
             <div class="free-card-body">
               <p class="free-label">Free Novella</p>
@@ -1455,7 +1472,7 @@
           </a>
           <a class="free-card" href="the-beach.html">
             <div class="free-card-cover">
-              <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-beach.jpg" alt="The Beach — book cover" width="800" height="1280" loading="lazy" decoding="async">
             </div>
             <div class="free-card-body">
               <p class="free-label">Free Story</p>
@@ -1466,7 +1483,7 @@
           </a>
           <a class="free-card" href="the-key.html">
             <div class="free-card-cover">
-              <img src="assets/images/covers/web/the-key.jpg" alt="The Key — book cover" loading="lazy">
+              <img src="assets/images/covers/web/the-key.jpg" alt="The Key — book cover" width="800" height="1280" loading="lazy" decoding="async">
             </div>
             <div class="free-card-body">
               <p class="free-label">Confession I &mdash; Free</p>
@@ -1687,7 +1704,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="wrap">
-      <img src="assets/images/Logo/SMG_logo_transparent.png" alt="SMG monogram" class="footer-logo">
+      <img src="assets/images/Logo/SMG_logo_transparent.png" alt="SMG monogram" class="footer-logo" width="120" height="120" loading="lazy" decoding="async">
       <p class="footer-name">Samuel M. Gray</p>
       <p class="footer-copy">&copy; 2026 Samuel M. Gray. All rights reserved.</p>
       <p class="footer-mature">This site contains mature content intended for readers 18 years and older.</p>
