@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samuelmgray.com/sitemap.xml
+Sitemap: https://www.samuelmgray.com/sitemap.xml

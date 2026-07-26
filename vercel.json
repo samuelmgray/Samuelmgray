@@ -1,0 +1,191 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/black-book-1-the-wildcat",
+      "destination": "/black-book-1-the-wildcat.html",
+      "permanent": true
+    },
+    {
+      "source": "/black-book-2-the-game",
+      "destination": "/black-book-2-the-game.html",
+      "permanent": true
+    },
+    {
+      "source": "/black-book-3-the-exploration",
+      "destination": "/black-book-3-the-exploration.html",
+      "permanent": true
+    },
+    {
+      "source": "/black-book-4-the-contract",
+      "destination": "/black-book-4-the-contract.html",
+      "permanent": true
+    },
+    {
+      "source": "/black-book-5-queens-gambit",
+      "destination": "/black-book-5-queens-gambit.html",
+      "permanent": true
+    },
+    {
+      "source": "/books",
+      "destination": "/books.html",
+      "permanent": true
+    },
+    {
+      "source": "/flight-sk4481",
+      "destination": "/flight-sk4481.html",
+      "permanent": true
+    },
+    {
+      "source": "/mad",
+      "destination": "/mad.html",
+      "permanent": true
+    },
+    {
+      "source": "/my-first-brazilian",
+      "destination": "/my-first-brazilian.html",
+      "permanent": true
+    },
+    {
+      "source": "/posed-the-bait",
+      "destination": "/posed-the-bait.html",
+      "permanent": true
+    },
+    {
+      "source": "/shadow-play",
+      "destination": "/shadow-play.html",
+      "permanent": true
+    },
+    {
+      "source": "/start-here",
+      "destination": "/start-here.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-games-and-dares",
+      "destination": "/stories-games-and-dares.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-masks-and-deception",
+      "destination": "/stories-masks-and-deception.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-power-and-surrender",
+      "destination": "/stories-power-and-surrender.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-slow-burn",
+      "destination": "/stories-slow-burn.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-strangers",
+      "destination": "/stories-strangers.html",
+      "permanent": true
+    },
+    {
+      "source": "/stories-watched",
+      "destination": "/stories-watched.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-beach",
+      "destination": "/the-beach.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-black-book",
+      "destination": "/the-black-book.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-bus-ride",
+      "destination": "/the-bus-ride.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-dare",
+      "destination": "/the-dare.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-fitting-room",
+      "destination": "/the-fitting-room.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-forbidden-touch",
+      "destination": "/the-forbidden-touch.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-guest",
+      "destination": "/the-guest.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-key",
+      "destination": "/the-key.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-monkey-game",
+      "destination": "/the-monkey-game.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-night-shift",
+      "destination": "/the-night-shift.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-night-swim",
+      "destination": "/the-night-swim.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-reflection",
+      "destination": "/the-reflection.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-river",
+      "destination": "/the-river.html",
+      "permanent": true
+    },
+    {
+      "source": "/confessions",
+      "destination": "/index.html#confessions",
+      "permanent": true
+    },
+    {
+      "source": "/newsletter",
+      "destination": "/index.html#newsletter",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html#about",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html#contact",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
