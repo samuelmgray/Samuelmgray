@@ -52,6 +52,11 @@
       "permanent": true
     },
     {
+      "source": "/seven-nights",
+      "destination": "/seven-nights.html",
+      "permanent": true
+    },
+    {
       "source": "/shadow-play",
       "destination": "/shadow-play.html",
       "permanent": true
